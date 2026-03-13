@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#138aec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Shopping Bag - CCOOP</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 border-b border-slate-200 dark:border-slate-800 justify-between">
+<div class="flex items-center gap-3">
+<a class="text-slate-900 dark:text-slate-100 flex items-center justify-center p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800" href="#">
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+<h1 class="text-xl font-bold tracking-tight">Your Bag</h1>
+</div>
+<div class="flex items-center">
+<button class="flex items-center justify-center p-2 text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</header>
+<!-- Cart Items -->
+<main class="flex-1 p-4 space-y-6">
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="flex gap-4 bg-white dark:bg-slate-900/50 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-24 shrink-0" data-alt="Classic white organic cotton t-shirt" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB8az7kn8MvMrAeQ1jvHOuCaRaZzuE8o8F8y7Ge__AAk9YNPcKu0GALx8na0FaJ1UIwSqnBXifrd9fWm2x2je6jOGxA_DUNvIzJdD9A1nCtbmXM__sGXe-nkP9Y18lh3KRbFQvoZ2L5eskOTX3hn7R4k6adusP36jeHQOdlt95wMk9-IEd_LP5a4GcsIFQSd6VzHZEdCnApPV1vBt6IHtKCLXAmnjTrXR8Xb3PRNhwjrefCC7W0mXouHctnNe-jgoHZyS_Qfa_HuwI");'></div>
+<div class="flex flex-1 flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="text-base font-semibold">Premium Cotton Tee</h3>
+<p class="text-base font-bold text-primary">$32.00</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Size: M | Color: Arctic White</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex items-center gap-3 bg-slate-100 dark:bg-slate-800 rounded-full px-3 py-1">
+<button class="text-slate-500 hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="text-sm font-bold w-4 text-center">1</span>
+<button class="text-slate-500 hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<button class="text-slate-400 hover:text-red-500">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-4 bg-white dark:bg-slate-900/50 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-24 shrink-0" data-alt="Slim fit dark blue denim jeans" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGz7dbKcTCjKck3RGcnYHp1r10q-Mvgg9g-ijuMw-3AXItV1fXSaGS4kZ8ZL8mKGzcx7Nk2h2eZlLf81_BrR-d3oeOkDomHPB8stEENfNs_ahGPCN8aInHtGE0I9FaaOe8PRdaa8SwKMKFXZOL0Ob0z5pG36FvfJt5OVEIfjT8hKagUJYGW72xdIqXrPGYfTONQ6MJkzkxyuHw3Qo6Rk-5sPpDK3ENMkQh26yWQjs-jynZSxxkSpLGmKNZPX8Wn-e5nNXR2dwoiNo");'></div>
+<div class="flex flex-1 flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="text-base font-semibold">Slim Fit Denim</h3>
+<p class="text-base font-bold text-primary">$89.00</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Size: 32 | Color: Indigo</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex items-center gap-3 bg-slate-100 dark:bg-slate-800 rounded-full px-3 py-1">
+<button class="text-slate-500 hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="text-sm font-bold w-4 text-center">1</span>
+<button class="text-slate-500 hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<button class="text-slate-400 hover:text-red-500">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Promo Code Section -->
+<div class="pt-4">
+<label class="flex flex-col w-full">
+<p class="text-sm font-semibold mb-2 ml-1">Promo Code</p>
+<div class="flex w-full items-stretch rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+<input class="flex-1 bg-transparent border-none text-sm focus:ring-0 placeholder:text-slate-500 p-4" placeholder="Enter code (e.g. CCOOP10)"/>
+<button class="bg-primary/10 text-primary font-bold px-6 text-sm hover:bg-primary/20 transition-colors">Apply</button>
+</div>
+</label>
+</div>
+<!-- Order Summary -->
+<div class="bg-slate-100 dark:bg-slate-900/80 p-5 rounded-2xl space-y-3">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Subtotal</span>
+<span class="font-medium">$121.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Tax (8%)</span>
+<span class="font-medium">$9.68</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Shipping</span>
+<span class="text-green-500 font-medium">FREE</span>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 my-2 pt-3 flex justify-between items-center">
+<span class="text-lg font-bold">Total</span>
+<span class="text-2xl font-bold text-primary">$130.68</span>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span>Checkout Now</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<!-- Recommended Section -->
+<div class="pt-8 pb-20">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold">Recommended for You</h2>
+<a class="text-sm text-primary font-medium" href="#">View All</a>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar -mx-4 px-4">
+<!-- Recommendation 1 -->
+<div class="min-w-[160px] max-w-[160px] bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+<div class="h-32 bg-cover bg-center" data-alt="Modern lightweight bomber jacket in navy" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBViERmJkpzsWW40UiogNygTG5jdGqn-Nhe-BlQE6JdFBUcELSY6meFBCtFvrEwVq7KcxA4ugavVb7dzRTOVKwyviYNwvR_-FseVI_PNdgbUM598fbySuFRJGKY3u7dR7lJ7JyHkOMuI6lQDKm9GqlHFnWqc5b_pDLhv_T3jLO2YndBDWR8QfLp1175WEh8lLilrSimhl4NBuTAPP0bAHMwFHm1fRNjWW-FYGm-cQNVJ76NHqS-zuZuL0ogTquPOp-n4Gt4HSn_ZCw");'></div>
+<div class="p-3">
+<h4 class="text-xs font-medium line-clamp-1">Light Bomber</h4>
+<p class="text-sm font-bold text-primary mt-1">$55.00</p>
+</div>
+</div>
+<!-- Recommendation 2 -->
+<div class="min-w-[160px] max-w-[160px] bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+<div class="h-32 bg-cover bg-center" data-alt="Minimalist white ceramic analog watch" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzMKI2WN77gnvyvKyb8bC2t1mDajNVCEuedcK56sm_-DDZ3d6xFF5SkbWBePmHfF1DbO704WdCjaQg-y3cEK30zT7JNPau3AMcmeDP39HnoKIhp2o6UX-6oPQX3AyoQ4Gya3kSURx_tzLl6HA6VnSLNhTgr_eHMjPam8BgA6EdLwyyPh-qApbRImi-dgp8yacr1guUwvjMbXknhiNvfwl1OT-sfZmF7yvGgwirYrewMM7UYYVLP91EdZEl4FnQAdOkzi3wPIjabP0");'></div>
+<div class="p-3">
+<h4 class="text-xs font-medium line-clamp-1">Minimalist Watch</h4>
+<p class="text-sm font-bold text-primary mt-1">$120.00</p>
+</div>
+</div>
+<!-- Recommendation 3 -->
+<div class="min-w-[160px] max-w-[160px] bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+<div class="h-32 bg-cover bg-center" data-alt="Black luxury leather wallet" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUo3EfPAqIDPUL16aXY0BiBSdLfzCeH81IEYmN-AAVlMSntKNRok0mfSV-FFLOD2JsLAASDlTtkogeSymANu8BhuqmnETre1mVaQSiEjw93sT58xD1vZecNO9EUjEeLY5LgcEeZ3HihO5w95ayiELtO7fETirOctCcFhUzJ2YLIzs_TVkFI1EbzVSzjs6u4Aw_IkMS1-L1AkWMNTAuaKr8xYh7n_fLuw4q3AO-G8qoeP1CldeDZi3mKMR2JYiEbdx5DutYUAxF308");'></div>
+<div class="p-3">
+<h4 class="text-xs font-medium line-clamp-1">Leather Wallet</h4>
+<p class="text-sm font-bold text-primary mt-1">$45.00</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-background-light dark:bg-slate-900/95 border-t border-slate-200 dark:border-slate-800 backdrop-blur-lg">
+<div class="flex items-center justify-around px-4 pb-6 pt-3">
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Home</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">search</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Shop</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<div class="relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[8px] rounded-full size-4 flex items-center justify-center font-bold">2</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Bag</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Profile</p>
+</a>
+</div>
+</nav>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

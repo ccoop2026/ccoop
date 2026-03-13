@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Balance Payment &amp; Pickup QR</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-dark": "#1b2631",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom Blur Effect for Locked State */
+        .qr-blur {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .shimmer-text {
+            background: linear-gradient(90deg, #ffffff 0%, #a1a1aa 50%, #ffffff 100%);
+            background-size: 200% auto;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: shine 3s linear infinite;
+        }
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased min-h-screen flex flex-col overflow-x-hidden text-slate-900 dark:text-white">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between p-4 bg-white dark:bg-background-dark sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Order #28190</h1>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">help</span>
+</button>
+</header>
+<main class="flex-1 w-full max-w-md mx-auto flex flex-col gap-6 p-4 pb-24">
+<!-- Status Banner -->
+<div class="relative overflow-hidden rounded-xl bg-primary text-white p-6 shadow-lg">
+<div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white opacity-10 rounded-full blur-2xl"></div>
+<div class="absolute bottom-0 left-0 -mb-4 -ml-4 w-32 h-32 bg-black opacity-10 rounded-full blur-2xl"></div>
+<div class="relative z-10 flex flex-col gap-2">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-3xl">celebration</span>
+<h2 class="text-2xl font-bold leading-tight">Your Gear is Here!</h2>
+</div>
+<p class="text-blue-50 font-medium opacity-90">Ready for pickup at the Student Center.</p>
+</div>
+</div>
+<!-- Timeline Tracker -->
+<section class="bg-white dark:bg-surface-dark rounded-xl p-5 border border-slate-200 dark:border-slate-800/50">
+<div class="flex flex-col gap-0">
+<!-- Step 1 -->
+<div class="flex gap-4 min-h-[3rem]">
+<div class="flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-white text-[16px] font-bold">check</span>
+</div>
+<div class="w-0.5 flex-1 bg-green-500 my-1"></div>
+</div>
+<div class="pb-6">
+<p class="text-sm font-medium text-slate-900 dark:text-white">Production</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Completed on Oct 12</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-4 min-h-[3rem]">
+<div class="flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-white text-[16px] font-bold">check</span>
+</div>
+<div class="w-0.5 flex-1 bg-primary my-1"></div>
+</div>
+<div class="pb-6">
+<p class="text-sm font-medium text-slate-900 dark:text-white">Shipping to Campus</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Arrived at Hub</p>
+</div>
+</div>
+<!-- Step 3 (Current) -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-primary ring-4 ring-primary/20 flex items-center justify-center z-10 animate-pulse">
+<span class="material-symbols-outlined text-white text-[16px]">inventory_2</span>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold text-primary">Ready for Pickup</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Awaiting Final Payment</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Payment & QR Section -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between px-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Complete Payment</h3>
+<span class="text-xs font-medium px-2 py-1 rounded bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-200">Required</span>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800/50">
+<!-- Locked Content Area -->
+<div class="relative w-full aspect-[2/1] sm:aspect-[2.5/1] bg-slate-100 dark:bg-slate-800/50 flex items-center justify-center overflow-hidden">
+<!-- Background Pattern representing QR -->
+<div class="absolute inset-0 opacity-20 dark:opacity-10" data-alt="Abstract dotted pattern representing a hidden QR code" style="background-image:  radial-gradient(#444cf7 0.75px, transparent 0.75px), radial-gradient(#444cf7 0.75px, #ffffff 0.75px); background-size: 30px 30px; background-position: 0 0,15px 15px;">
+</div>
+<!-- Blur Overlay -->
+<div class="absolute inset-0 bg-white/60 dark:bg-black/40 qr-blur z-0"></div>
+<!-- Lock Content -->
+<div class="relative z-10 flex flex-col items-center justify-center text-center p-4">
+<div class="w-12 h-12 bg-slate-900 dark:bg-white rounded-full flex items-center justify-center mb-3 shadow-lg">
+<span class="material-symbols-outlined text-white dark:text-slate-900 text-2xl">lock</span>
+</div>
+<p class="text-sm font-medium text-slate-800 dark:text-white max-w-[200px]">Pay balance to reveal your unique Pickup QR Code</p>
+</div>
+</div>
+<!-- Action Area -->
+<div class="p-5 flex flex-col gap-4">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wide">Remaining Balance</p>
+<p class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">₹500</p>
+</div>
+<div class="text-right">
+<p class="text-xs text-slate-500 dark:text-slate-400">Total: ₹1000</p>
+<p class="text-xs text-green-600 dark:text-green-400">Paid: ₹500</p>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-blue-600 active:bg-blue-700 text-white font-semibold py-3.5 px-4 rounded-lg shadow-md shadow-blue-500/20 transition-all flex items-center justify-center gap-2 group">
+<span class="material-symbols-outlined group-hover:animate-bounce">payments</span>
+                        Pay Now to Unlock
+                    </button>
+<p class="text-xs text-center text-slate-400 dark:text-slate-500">Secure payment via UPI, Card, or Netbanking</p>
+</div>
+</div>
+</section>
+<!-- Pickup Details Card -->
+<section class="bg-white dark:bg-surface-dark rounded-xl p-5 border border-slate-200 dark:border-slate-800/50 flex flex-col gap-4">
+<h3 class="text-base font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-3">Pickup Details</h3>
+<div class="flex gap-4 items-start">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">person</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Drop Host</p>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Rahul S.</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Student Council Rep</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">location_on</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Location</p>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Student Center</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Main Lobby, Counter 3</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">schedule</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Hours</p>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Mon - Fri</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">12:00 PM - 04:00 PM</p>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="mt-2 w-full h-32 rounded-lg bg-slate-200 dark:bg-slate-800 relative overflow-hidden group cursor-pointer">
+<img alt="Map showing the location of the Student Center on campus" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity" data-location="College Campus Map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJbLKmsa2UFJMbfYxDKzUOYquqGxnGqTx4xXJcX_LMp_weCKmWSVN-_LH19T6ekaVi5uzj9TdC_9QiLdjAPSwLZjGU1KatA-ogf8_Ue--cXV6-P5blBNk_9Jb4uhW6g4V3W5PMSrOk44tVVvkNoJfnYBpMaS1rwJ5CaNozF2IlOTg42f6woo8j5hPc_s1oLCySjROjL7381HULDyLBFFJ-XlXE5_TZeD6tcdBgck9AiBJpm_voXkapxu4idMFf1ZXY4Asq2qYkLjo"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="bg-white/90 dark:bg-black/70 px-3 py-1.5 rounded-full text-xs font-medium backdrop-blur-sm shadow-sm">View on Map</span>
+</div>
+</div>
+</section>
+<!-- Ordered Items Summary (Compact) -->
+<section class="bg-transparent px-2">
+<details class="group">
+<summary class="flex items-center justify-between cursor-pointer list-none text-sm text-slate-500 dark:text-slate-400 font-medium hover:text-primary transition-colors">
+<span>View Ordered Items (2)</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 flex flex-col gap-3">
+<div class="flex gap-3 bg-white dark:bg-surface-dark p-3 rounded-lg border border-slate-100 dark:border-slate-800">
+<div class="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center shrink-0 overflow-hidden">
+<img alt="Close up of a folded dark blue hoodie" class="w-full h-full object-cover" data-alt="Dark blue hoodie folded neatly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAps3fPXERLcGN1ZAn5w6v7BGSgb8yW-judU1KXXgBW3Sw8uSctqdMcUauGrM7ZYhmIUyEL2YZSEF4yY4qXWSe0byIL6bVs4GOZu5MuymroXFtdvqEJx_3Y95RKnBvTIqVPQHvNE5MOrofPm-hB7kMMiJR9Prh0wiFgpOWZF1-KlYAR-5hY0gndx2AUvJlpj_6WJk6753ztBoyb0J3x5kr0Aimg2eBabWg9G7GGrsf6YV0QyVV2d-LF98QzzMwVQ0Tig6lNmEYvzGc"/>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-white">College Hoodie - Navy</p>
+<p class="text-xs text-slate-500">Size: M • Qty: 1</p>
+</div>
+</div>
+<div class="flex gap-3 bg-white dark:bg-surface-dark p-3 rounded-lg border border-slate-100 dark:border-slate-800">
+<div class="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center shrink-0 overflow-hidden">
+<img alt="White t-shirt with college logo" class="w-full h-full object-cover" data-alt="White t-shirt with graphic print" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGqv6UBxH6Fess7bJJQQt6ne94zi4mlTMabwHC-VX8S22w4BR83vez8xMHc-vk-V_0aNR91CDLHKOzNQbv8ALUqm_VbeE4voNvWhMqN7RXh7o409BrE9MbHsyOSpE0XvqbpZc_b7wfIVRmZzC_vFmU-cvJdWs3M21N5SuGwvY_imQbZJsIommFrABimiSDYcUBmmjuCqgsdKXtbZpkSV1xZwTlzFKNuSb94eEVjIrOjz49ShryD2W8o8YnwUfc4gaSElkkU0JBsDc"/>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-white">Classic Tee - White</p>
+<p class="text-xs text-slate-500">Size: M • Qty: 1</p>
+</div>
+</div>
+</div>
+</details>
+</section>
+</main>
+<!-- Bottom Sticky Action (Optional for long scrolls, ensuring CTA is always visible) -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 z-40 sm:hidden">
+<button class="w-full bg-primary hover:bg-blue-600 active:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg shadow-lg flex items-center justify-center gap-2">
+            Pay ₹500
+            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</body></html>

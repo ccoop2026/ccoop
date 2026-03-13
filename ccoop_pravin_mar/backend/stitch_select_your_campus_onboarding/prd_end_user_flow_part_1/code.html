@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-size: 24px; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-3">
+<div class="flex items-center justify-between gap-8 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">hub</span>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white">ccoop.in PRD</h2>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary text-sm font-semibold border-b-2 border-primary pb-1" href="#">Document</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Flows</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Assets</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Settings</a>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<label class="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-xl bg-primary/5 dark:bg-primary/10 border border-primary/10 overflow-hidden">
+<div class="text-primary flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 text-sm placeholder:text-slate-400 dark:placeholder:text-slate-500" placeholder="Search documentation..."/>
+</div>
+</label>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-xl h-10 px-6 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+<span>Export</span>
+</button>
+<div class="bg-primary/20 rounded-full size-10 flex items-center justify-center overflow-hidden border border-primary/20">
+<span class="material-symbols-outlined text-primary">account_circle</span>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col lg:flex-row max-w-7xl mx-auto w-full px-4 lg:px-10 py-8 gap-8">
+<!-- Left Sidebar Navigation -->
+<aside class="w-full lg:w-72 flex-shrink-0">
+<div class="sticky top-24 space-y-6">
+<div class="flex items-center gap-3 p-3 rounded-xl bg-primary/5 dark:bg-primary/10 border border-primary/20">
+<div class="bg-primary text-white rounded-lg p-1.5 flex items-center justify-center">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-white text-sm font-bold">Navigation Index</h1>
+<p class="text-primary text-xs font-medium">End-User Primary Flow</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary text-white shadow-md shadow-primary/20 group" href="#">
+<span class="material-symbols-outlined">person_add</span>
+<p class="text-sm font-semibold">1. User Acquisition</p>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-primary">shopping_cart</span>
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium group-hover:text-primary">2. Core Ordering</p>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-primary">package_2</span>
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium group-hover:text-primary">3. Post-Purchase</p>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-primary">groups</span>
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium group-hover:text-primary">4. Community Hub</p>
+</a>
+</nav>
+<div class="pt-6 border-t border-primary/10">
+<p class="text-[10px] uppercase tracking-widest font-bold text-slate-400 px-4 mb-2">Status</p>
+<div class="px-4 py-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-lg text-xs font-bold inline-flex items-center gap-2">
+<span class="size-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Draft Approved
+                    </div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1 space-y-12 pb-20">
+<!-- Section Header -->
+<section class="space-y-4">
+<div class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
+                    Flow Phase 1
+                </div>
+<h1 class="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white leading-tight">
+                    User Acquisition &amp; Identity
+                </h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+                    Pledge, Pre-order, Pickup - The entry point for the ccoop.in ecosystem, transforming casual browsers into active campus co-op members.
+                </p>
+</section>
+<!-- Landing Page Card -->
+<section class="group bg-white dark:bg-background-dark/40 border border-primary/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col @[864px]:flex-row">
+<div class="w-full @[864px]:w-2/5 aspect-video @[864px]:aspect-square relative overflow-hidden bg-primary/5">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent"></div>
+<img alt="Students collaborating on campus" class="w-full h-full object-cover opacity-80" data-alt="Students collaborating on campus with a modern interface overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbbSQyfuG6ngG6ASH2cxC3juTMtyr4dZWr-Y6G4M0zqRNSeBLl_JIOFtbbMGlcshHze3MHLp-lUm-TJX7BLm_F1on2PNXEigFBDo_C9Fo8i9lUEZ8OCmS9auK04S5f6xtzjLb24pk2QoJlX_XxreLQeBwrdimRKW2MaNP6fxvk7wu1Ff-9dgSoVXNTCxTHyUTIHN1h6bTIeoOiJnd6wJA0mg7i_LIAEV-SKoar3Occc9OVK8lSHmi6ziRBxBSnLvAmERJ_p87794k"/>
+<div class="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-3 py-1.5 rounded-lg border border-primary/20 shadow-xl">
+<span class="text-[10px] font-bold text-primary uppercase">Reference: {{DATA:SCREEN:SCREEN_28}}</span>
+</div>
+</div>
+<div class="p-8 @[864px]:w-3/5 space-y-4 flex flex-col justify-center">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-xs font-bold uppercase tracking-widest">Discovery Hub</span>
+</div>
+<h2 class="text-2xl font-extrabold text-slate-900 dark:text-white">Landing Page (Non-Logged In)</h2>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            High-level value proposition focusing on collective buying power. Visitors can browse active campus pledges without signing in, creating a "window-shopping" effect for bulk discounts.
+                        </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2 py-1 rounded bg-background-light dark:bg-primary/5 border border-primary/10 text-[10px] font-semibold">Public Catalog</span>
+<span class="px-2 py-1 rounded bg-background-light dark:bg-primary/5 border border-primary/10 text-[10px] font-semibold">Active Pledges</span>
+<span class="px-2 py-1 rounded bg-background-light dark:bg-primary/5 border border-primary/10 text-[10px] font-semibold">Campus Stats</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Details Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Authentication -->
+<div class="p-6 rounded-2xl border border-primary/10 bg-white dark:bg-background-dark/20 space-y-4">
+<div class="flex items-start justify-between">
+<div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">fingerprint</span>
+</div>
+<span class="text-[10px] font-bold text-slate-400 uppercase">Ref: {{DATA:SCREEN:SCREEN_82}}</span>
+</div>
+<h3 class="text-xl font-bold">Unified Authentication</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">
+                        Frictionless OTP-based login using mobile/email. A persistent 'Guest Browse' option allows users to add items to a temporary cart before checkout forces registration.
+                    </p>
+<ul class="text-xs space-y-2 text-slate-500">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px] text-emerald-500">check_circle</span> 6-Digit SMS Verification</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px] text-emerald-500">check_circle</span> Remember Me persistence</li>
+</ul>
+</div>
+<!-- Academic Onboarding -->
+<div class="p-6 rounded-2xl border border-primary/10 bg-white dark:bg-background-dark/20 space-y-4">
+<div class="flex items-start justify-between">
+<div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<span class="text-[10px] font-bold text-slate-400 uppercase">Ref: {{DATA:SCREEN:SCREEN_92}}</span>
+</div>
+<h3 class="text-xl font-bold">Academic Onboarding</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">
+                        Capturing student identity markers: Primary Campus vs. Alma Mater (for alumni). Departmental segmentation for targeted bulk deals and Batch year for graduation logistics.
+                    </p>
+<div class="bg-primary/5 p-3 rounded-lg border border-primary/10 flex gap-4">
+<div class="flex-1 text-[10px] font-bold text-primary">Campus<br/><span class="text-slate-900 dark:text-white font-medium">Main Hub</span></div>
+<div class="flex-1 text-[10px] font-bold text-primary">Dept<br/><span class="text-slate-900 dark:text-white font-medium">Comp Sci</span></div>
+<div class="flex-1 text-[10px] font-bold text-primary">Year<br/><span class="text-slate-900 dark:text-white font-medium">2024</span></div>
+</div>
+</div>
+<!-- Profile & Preferences -->
+<div class="md:col-span-2 p-8 rounded-2xl border border-primary/10 bg-white dark:bg-background-dark/20 flex flex-col lg:flex-row gap-8 items-center">
+<div class="lg:w-1/3 w-full space-y-4">
+<div class="size-14 rounded-2xl bg-primary shadow-lg shadow-primary/30 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-4xl">contact_page</span>
+</div>
+<h3 class="text-2xl font-bold">Profile &amp; Interest Map</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">
+                            Custom address book logic for campus life: Primary toggle between 'Hostel Delivery' and 'Home Address'. Capturing career interests and volunteer intent for community tiers.
+                        </p>
+<div class="pt-2">
+<span class="text-[10px] font-bold text-slate-400 uppercase">Ref: {{DATA:SCREEN:SCREEN_42}}</span>
+</div>
+</div>
+<div class="lg:w-2/3 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="p-4 rounded-xl border border-primary/5 bg-primary/5">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<h4 class="font-bold text-sm">Dual-Address System</h4>
+</div>
+<p class="text-xs text-slate-500">Switching between hostel room delivery for daily needs and home delivery for break periods.</p>
+</div>
+<div class="p-4 rounded-xl border border-primary/5 bg-primary/5">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary">volunteer_activism</span>
+<h4 class="font-bold text-sm">Incentive Profile</h4>
+</div>
+<p class="text-xs text-slate-500">Mapping career interests to unlock relevant category discounts and brand partnerships.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Meta -->
+<footer class="w-full bg-slate-100 dark:bg-background-dark/60 py-6 px-10 border-t border-primary/10">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 dark:text-slate-400 text-[10px] uppercase font-bold tracking-[0.2em]">
+<div class="flex items-center gap-4">
+<span>Phase: MVP-1.0</span>
+<span class="size-1 rounded-full bg-slate-300"></span>
+<span>Last Updated: Oct 24, 2023</span>
+</div>
+<div class="flex items-center gap-2">
+<span>Page 01 of 12</span>
+<div class="flex gap-1">
+<div class="w-8 h-1 bg-primary rounded-full"></div>
+<div class="w-8 h-1 bg-primary/20 rounded-full"></div>
+<div class="w-8 h-1 bg-primary/20 rounded-full"></div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

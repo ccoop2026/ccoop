@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#138aec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<header class="sticky top-0 z-10 border-b border-primary/20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center p-4 justify-between max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-3">
+<div class="text-primary size-10 flex items-center justify-center bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined">globe</span>
+</div>
+<div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">Global Administration</h2>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Campus &amp; Partner Oversight</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="size-10 rounded-full bg-primary/20 overflow-hidden border-2 border-primary/30">
+<img alt="Admin Profile" data-alt="Professional administrator profile avatar photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAved09-_uExadCUZBAwU92TPaUjoKoAnUVJCtfKG2Zga1b747btPSbaWyhkJ-U2iSYq6hHHf6i5Mu1din9dhvWORiArBzJP-2tf9jugIiNgMiEz1hkKisb3HXVvZgY1GAm5p1jwsYtyebYjV4BFbzDx5Q1yuzD-erpkPFy2_5BIdbrJtyxGMT1Kebv_kiWJMSX0XmpbcNfF6zuwikPc0vgJ0cPP3QGTC6kWpKOOU-QGWWYAjWtstUcedQujeQSTyPy3AM_zqVD63o"/>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full p-4 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-primary/20 bg-primary/5">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Partners</p>
+<span class="material-symbols-outlined text-primary text-xl">handshake</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 tracking-tight text-3xl font-bold leading-tight">48</p>
+<div class="flex items-center gap-1 text-emerald-500 text-xs font-semibold">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+<span>+12% from last month</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-primary/20 bg-primary/5">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Active Campuses</p>
+<span class="material-symbols-outlined text-primary text-xl">domain</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 tracking-tight text-3xl font-bold leading-tight">42</p>
+<div class="flex items-center gap-1 text-primary text-xs font-semibold">
+<span class="material-symbols-outlined text-xs">info</span>
+<span>6 currently onboarding</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-primary/20 bg-primary/5">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Annual Revenue</p>
+<span class="material-symbols-outlined text-primary text-xl">payments</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 tracking-tight text-3xl font-bold leading-tight">$2.4M</p>
+<div class="flex items-center gap-1 text-emerald-500 text-xs font-semibold">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+<span>+8.4% performance</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-tight">Partner Colleges</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Manage educational institutions and revenue streams</p>
+</div>
+<div class="flex gap-2">
+<button class="flex h-10 items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+                    Add New Campus
+                </button>
+</div>
+</div>
+<div class="flex gap-2 pb-2 overflow-x-auto scrollbar-hide">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-4 text-white text-sm font-medium">
+                All Partners
+            </button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 border border-primary/20 px-4 text-slate-700 dark:text-slate-200 text-sm font-medium">
+                Active
+                <span class="bg-primary/20 px-1.5 rounded text-[10px]">42</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 border border-primary/20 px-4 text-slate-700 dark:text-slate-200 text-sm font-medium">
+                Onboarding
+                <span class="bg-primary/20 px-1.5 rounded text-[10px]">6</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 border border-primary/20 px-4 text-slate-700 dark:text-slate-200 text-sm font-medium">
+                High Revenue
+            </button>
+</div>
+<div class="overflow-hidden rounded-xl border border-primary/10 bg-white dark:bg-primary/5">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-primary/10 bg-primary/5 dark:bg-primary/10">
+<th class="p-4 text-sm font-semibold text-slate-600 dark:text-slate-300">College &amp; Campus</th>
+<th class="p-4 text-sm font-semibold text-slate-600 dark:text-slate-300">Status</th>
+<th class="p-4 text-sm font-semibold text-slate-600 dark:text-slate-300">Contact Person</th>
+<th class="p-4 text-sm font-semibold text-slate-600 dark:text-slate-300">Revenue (MTD)</th>
+<th class="p-4 text-sm font-semibold text-slate-600 dark:text-slate-300 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/5">
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-primary font-bold">SV</div>
+<div>
+<p class="font-semibold text-slate-900 dark:text-slate-100">Silicon Valley Tech</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Palo Alto, CA</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-xs font-medium text-emerald-500">
+<span class="mr-1 h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                                    Active
+                                </span>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<p class="text-sm font-medium">Sarah Jenkins</p>
+<button class="text-primary hover:text-primary/70"><span class="material-symbols-outlined text-base">mail</span></button>
+</div>
+</td>
+<td class="p-4 text-sm font-bold text-slate-900 dark:text-slate-100">$84,200</td>
+<td class="p-4 text-right">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-primary font-bold">EU</div>
+<div>
+<p class="font-semibold text-slate-900 dark:text-slate-100">Empire University</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">New York, NY</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
+<span class="mr-1 h-1.5 w-1.5 rounded-full bg-primary"></span>
+                                    Onboarding
+                                </span>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<p class="text-sm font-medium">Marcus Chen</p>
+<button class="text-primary hover:text-primary/70"><span class="material-symbols-outlined text-base">mail</span></button>
+</div>
+</td>
+<td class="p-4 text-sm font-bold text-slate-900 dark:text-slate-100">$12,500</td>
+<td class="p-4 text-right">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-primary font-bold">LH</div>
+<div>
+<p class="font-semibold text-slate-900 dark:text-slate-100">Lakehead Institute</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Chicago, IL</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-xs font-medium text-emerald-500">
+<span class="mr-1 h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                                    Active
+                                </span>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<p class="text-sm font-medium">David Ross</p>
+<button class="text-primary hover:text-primary/70"><span class="material-symbols-outlined text-base">mail</span></button>
+</div>
+</td>
+<td class="p-4 text-sm font-bold text-slate-900 dark:text-slate-100">$61,900</td>
+<td class="p-4 text-right">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-primary font-bold">SA</div>
+<div>
+<p class="font-semibold text-slate-900 dark:text-slate-100">St. Andrews Academy</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Austin, TX</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-xs font-medium text-emerald-500">
+<span class="mr-1 h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                                    Active
+                                </span>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<p class="text-sm font-medium">Elena Rodriguez</p>
+<button class="text-primary hover:text-primary/70"><span class="material-symbols-outlined text-base">mail</span></button>
+</div>
+</td>
+<td class="p-4 text-sm font-bold text-slate-900 dark:text-slate-100">$102,400</td>
+<td class="p-4 text-right">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 border-t border-primary/10 flex items-center justify-between">
+<p class="text-sm text-slate-500 dark:text-slate-400">Showing 4 of 48 colleges</p>
+<div class="flex gap-2">
+<button class="flex size-8 items-center justify-center rounded border border-primary/20 text-slate-500 dark:text-slate-400 hover:bg-primary/10">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<button class="flex size-8 items-center justify-center rounded bg-primary text-white">1</button>
+<button class="flex size-8 items-center justify-center rounded border border-primary/20 text-slate-500 dark:text-slate-400 hover:bg-primary/10">2</button>
+<button class="flex size-8 items-center justify-center rounded border border-primary/20 text-slate-500 dark:text-slate-400 hover:bg-primary/10">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-auto border-t border-primary/20 bg-background-light dark:bg-primary/10">
+<div class="flex gap-2 px-4 pb-6 pt-2 max-w-lg mx-auto">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-xs font-medium leading-normal tracking-tight">Dashboard</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">domain</span>
+<p class="text-xs font-medium leading-normal tracking-tight">Campuses</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">handshake</span>
+<p class="text-xs font-medium leading-normal tracking-tight">Partners</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-xs font-medium leading-normal tracking-tight">Settings</p>
+</a>
+</div>
+</footer>
+</body></html>

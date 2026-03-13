@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ccoop.in | Global Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#138aec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #138aec44;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-2 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white">hub</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">ccoop.in</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-widest">Global Administration</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">notifications</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-6 space-y-8 custom-scrollbar">
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm transition-all hover:border-primary/50">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Revenue (MTD)</p>
+<span class="material-symbols-outlined text-primary">payments</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight">₹12,45,000</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-emerald-500 text-sm">trending_up</span>
+<p class="text-emerald-500 text-xs font-semibold">+12.5% vs last month</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm transition-all hover:border-primary/50">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Active Campuses</p>
+<span class="material-symbols-outlined text-primary">school</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight">48</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-rose-500 text-sm">trending_down</span>
+<p class="text-rose-500 text-xs font-semibold">-2.1% week over week</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm transition-all hover:border-primary/50">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Pending Curator Payouts</p>
+<span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight">₹84,200</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-emerald-500 text-sm">check_circle</span>
+<p class="text-slate-500 dark:text-slate-400 text-xs">12 batches ready</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm transition-all hover:border-primary/50">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Production Queue</p>
+<span class="material-symbols-outlined text-primary">conveyor_belt</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight">124 Orders</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 text-sm">bolt</span>
+<p class="text-amber-500 text-xs font-semibold">Peak efficiency: 94%</p>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-xl font-bold tracking-tight">Global Production Volume</h2>
+<select class="bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 rounded-lg text-sm focus:ring-primary">
+<option>Last 7 Days</option>
+<option>Last 30 Days</option>
+</select>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex flex-col gap-2 mb-8">
+<p class="text-slate-900 dark:text-slate-100 text-3xl font-bold">2,840 units</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Average daily throughput across all hubs</p>
+</div>
+<div class="grid grid-cols-7 gap-4 items-end h-48 px-2">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-full bg-primary/20 rounded-t-lg transition-all group-hover:bg-primary/40" style="height: 100%;"></div>
+<span class="text-[10px] font-bold text-slate-500 uppercase">Mon</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-full bg-primary/20 rounded-t-lg transition-all group-hover:bg-primary/40" style="height: 70%;"></div>
+<span class="text-[10px] font-bold text-slate-500 uppercase">Tue</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-full bg-primary/20 rounded-t-lg transition-all group-hover:bg-primary/40" style="height: 40%;"></div>
+<span class="text-[10px] font-bold text-slate-500 uppercase">Wed</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-full bg-primary/20 rounded-t-lg transition-all group-hover:bg-primary/40" style="height: 85%;"></div>
+<span class="text-[10px] font-bold text-slate-500 uppercase">Thu</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-full bg-primary/20 rounded-t-lg transition-all group-hover:bg-primary/40" style="height: 30%;"></div>
+<span class="text-[10px] font-bold text-slate-500 uppercase">Fri</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-full bg-primary/20 rounded-t-lg transition-all group-hover:bg-primary/40" style="height: 55%;"></div>
+<span class="text-[10px] font-bold text-slate-500 uppercase">Sat</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-full bg-primary/20 rounded-t-lg transition-all group-hover:bg-primary/40" style="height: 75%;"></div>
+<span class="text-[10px] font-bold text-slate-500 uppercase">Sun</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h2 class="text-xl font-bold tracking-tight">Recent Activity</h2>
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 divide-y divide-slate-100 dark:divide-slate-800">
+<div class="p-4 flex gap-4">
+<div class="h-8 w-8 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-emerald-500 text-lg">check_circle</span>
+</div>
+<div>
+<p class="text-sm font-medium">Payout Batch #842 Processed</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">24 curators in IIT Delhi hub paid out.</p>
+<p class="text-[10px] text-slate-400 mt-1">2 mins ago</p>
+</div>
+</div>
+<div class="p-4 flex gap-4">
+<div class="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-lg">add_location_alt</span>
+</div>
+<div>
+<p class="text-sm font-medium">New Campus Registered</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">BITS Pilani (Goa Campus) successfully onboarded.</p>
+<p class="text-[10px] text-slate-400 mt-1">45 mins ago</p>
+</div>
+</div>
+<div class="p-4 flex gap-4">
+<div class="h-8 w-8 rounded-full bg-amber-500/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-amber-500 text-lg">warning</span>
+</div>
+<div>
+<p class="text-sm font-medium">High Volume Alert</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Queue at Mumbai Hub exceeds daily capacity.</p>
+<p class="text-[10px] text-slate-400 mt-1">2 hours ago</p>
+</div>
+</div>
+<div class="p-4 flex gap-4">
+<div class="h-8 w-8 rounded-full bg-slate-500/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-slate-500 text-lg">settings</span>
+</div>
+<div>
+<p class="text-sm font-medium">System Update</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Global Admin portal version 4.2.0 deployed.</p>
+<p class="text-[10px] text-slate-400 mt-1">5 hours ago</p>
+</div>
+</div>
+<button class="w-full p-3 text-sm font-semibold text-primary hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                        View All Activity
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<nav class="sticky bottom-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 py-2 flex items-center justify-between md:justify-center md:gap-12">
+<a class="flex flex-col items-center gap-1 p-2 rounded-xl text-primary transition-all" href="#">
+<span class="material-symbols-outlined font-variation-fill">dashboard</span>
+<p class="text-[10px] font-bold uppercase tracking-tight">Overview</p>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 rounded-xl text-slate-400 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">apartment</span>
+<p class="text-[10px] font-bold uppercase tracking-tight">Campuses</p>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 rounded-xl text-slate-400 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">account_balance</span>
+<p class="text-[10px] font-bold uppercase tracking-tight">Payouts</p>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 rounded-xl text-slate-400 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<p class="text-[10px] font-bold uppercase tracking-tight">Production</p>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 rounded-xl text-slate-400 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-[10px] font-bold uppercase tracking-tight">System</p>
+</a>
+</nav>
+</body></html>

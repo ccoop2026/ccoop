@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create New Campaign - Campus Curator</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        /* Hide scrollbar for cleaner mobile look */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-white dark:bg-[#111a24] shadow-xl overflow-x-hidden pb-24">
+<!-- Header -->
+<div class="sticky top-0 z-20 flex items-center bg-white/90 dark:bg-[#111a24]/90 backdrop-blur-md p-4 border-b border-[#f0f2f4] dark:border-[#2a3441] justify-between">
+<button class="text-[#111418] dark:text-white text-sm font-medium hover:text-primary transition-colors">Cancel</button>
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">New Campaign</h2>
+<button class="text-primary text-sm font-bold">Save</button>
+</div>
+<!-- Main Scrollable Content -->
+<div class="flex flex-col p-4 gap-6">
+<!-- Asset Upload Section -->
+<div class="flex flex-col gap-2">
+<label class="text-[#111418] dark:text-white text-base font-bold leading-normal">Campaign Assets</label>
+<div class="flex flex-col items-center gap-4 rounded-xl border-2 border-dashed border-[#dbe0e6] dark:border-[#2a3441] px-6 py-10 bg-[#f8f9fa] dark:bg-[#1a232e] group hover:border-primary/50 transition-colors cursor-pointer">
+<div class="flex flex-col items-center gap-2">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">cloud_upload</span>
+</div>
+<p class="text-[#111418] dark:text-white text-sm font-bold leading-tight text-center">Upload Merch Design</p>
+<p class="text-[#617589] dark:text-[#9ca3af] text-xs font-normal leading-normal text-center max-w-[200px]">Tap to upload PNG or JPG mockup (Max 10MB)</p>
+</div>
+</div>
+</div>
+<hr class="border-t border-[#f0f2f4] dark:border-[#2a3441]"/>
+<!-- Campaign Details Section -->
+<div class="flex flex-col gap-4">
+<h3 class="text-[#111418] dark:text-white text-lg font-bold leading-tight">Details</h3>
+<div class="space-y-4">
+<label class="flex flex-col gap-1.5 w-full">
+<span class="text-[#111418] dark:text-gray-200 text-sm font-medium">Campaign Title</span>
+<input class="w-full rounded-lg border border-[#dbe0e6] dark:border-[#2a3441] bg-white dark:bg-[#1a232e] text-[#111418] dark:text-white h-12 px-4 placeholder:text-[#617589] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="e.g. Winter Hoodie Drop"/>
+</label>
+<label class="flex flex-col gap-1.5 w-full">
+<span class="text-[#111418] dark:text-gray-200 text-sm font-medium">Description</span>
+<textarea class="w-full rounded-lg border border-[#dbe0e6] dark:border-[#2a3441] bg-white dark:bg-[#1a232e] text-[#111418] dark:text-white min-h-[100px] p-4 placeholder:text-[#617589] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none" placeholder="Describe the vibe, fabric, and fit..."></textarea>
+</label>
+<!-- Color Picker -->
+<div class="flex flex-col gap-2">
+<span class="text-[#111418] dark:text-gray-200 text-sm font-medium">Brand Accent Color</span>
+<div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+<button class="w-10 h-10 rounded-full bg-red-500 border-2 border-transparent hover:scale-110 focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-all"></button>
+<button class="w-10 h-10 rounded-full bg-blue-500 border-2 border-white ring-2 ring-blue-500 shadow-md hover:scale-110 transition-all"></button>
+<button class="w-10 h-10 rounded-full bg-green-500 border-2 border-transparent hover:scale-110 focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-all"></button>
+<button class="w-10 h-10 rounded-full bg-yellow-400 border-2 border-transparent hover:scale-110 focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400 transition-all"></button>
+<button class="w-10 h-10 rounded-full bg-purple-600 border-2 border-transparent hover:scale-110 focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 transition-all"></button>
+<button class="w-10 h-10 rounded-full bg-black border-2 border-transparent hover:scale-110 focus:ring-2 focus:ring-offset-2 focus:ring-black transition-all dark:border-white"></button>
+</div>
+</div>
+</div>
+</div>
+<hr class="border-t border-[#f0f2f4] dark:border-[#2a3441]"/>
+<!-- Goals & Configuration -->
+<div class="flex flex-col gap-4">
+<h3 class="text-[#111418] dark:text-white text-lg font-bold leading-tight">Pre-order Logic</h3>
+<!-- Toggle -->
+<div class="flex items-center justify-between p-4 bg-[#f8f9fa] dark:bg-[#1a232e] rounded-xl border border-[#dbe0e6] dark:border-[#2a3441]">
+<div class="flex flex-col">
+<span class="text-[#111418] dark:text-white font-medium">MOQ Bound</span>
+<span class="text-xs text-[#617589] dark:text-gray-400">Campaign fails if goal isn't met</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<label class="flex flex-col gap-1.5 w-full">
+<span class="text-[#111418] dark:text-gray-200 text-sm font-medium">Min. Goal (Units)</span>
+<input class="w-full rounded-lg border border-[#dbe0e6] dark:border-[#2a3441] bg-white dark:bg-[#1a232e] text-[#111418] dark:text-white h-12 px-4 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="100" type="number"/>
+</label>
+<label class="flex flex-col gap-1.5 w-full">
+<span class="text-[#111418] dark:text-gray-200 text-sm font-medium">Deadline</span>
+<div class="relative">
+<input class="w-full rounded-lg border border-[#dbe0e6] dark:border-[#2a3441] bg-white dark:bg-[#1a232e] text-[#111418] dark:text-white h-12 px-4 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" type="date"/>
+</div>
+</label>
+</div>
+</div>
+<hr class="border-t border-[#f0f2f4] dark:border-[#2a3441]"/>
+<!-- Financials Section -->
+<div class="flex flex-col gap-4">
+<h3 class="text-[#111418] dark:text-white text-lg font-bold leading-tight">Financials</h3>
+<div class="grid grid-cols-1 gap-4">
+<label class="flex flex-col gap-1.5 w-full">
+<span class="text-[#111418] dark:text-gray-200 text-sm font-medium">Retail Price (₹)</span>
+<div class="relative flex items-center">
+<span class="absolute left-4 text-[#617589] font-medium">₹</span>
+<input class="w-full rounded-lg border border-[#dbe0e6] dark:border-[#2a3441] bg-white dark:bg-[#1a232e] text-[#111418] dark:text-white h-12 pl-8 pr-4 text-lg font-semibold placeholder:text-[#617589] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="0.00" type="number" value="499"/>
+</div>
+</label>
+<div class="flex items-center gap-3 p-4 bg-primary/10 rounded-lg border border-primary/20">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-xl">payments</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-[#617589] dark:text-primary/80 uppercase font-bold tracking-wider">Token Advance (50%)</span>
+<span class="text-[#111418] dark:text-white text-xl font-bold">₹249.50</span>
+</div>
+</div>
+</div>
+</div>
+<hr class="border-t border-[#f0f2f4] dark:border-[#2a3441]"/>
+<!-- Timeline Section -->
+<div class="flex flex-col gap-4 mb-4">
+<h3 class="text-[#111418] dark:text-white text-lg font-bold leading-tight">Timeline Roadmap</h3>
+<div class="relative pl-2">
+<!-- Vertical Line -->
+<div class="absolute left-[15px] top-4 bottom-4 w-0.5 bg-[#dbe0e6] dark:bg-[#2a3441]"></div>
+<!-- Step 1 -->
+<div class="relative flex gap-4 pb-8 items-start">
+<div class="z-10 flex-shrink-0 w-7 h-7 rounded-full bg-primary flex items-center justify-center text-white shadow-sm ring-4 ring-white dark:ring-[#111a24]">
+<span class="material-symbols-outlined text-[14px] font-bold">factory</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<span class="text-sm font-bold text-[#111418] dark:text-white">Production Start</span>
+<input class="w-full text-sm rounded-md border border-[#dbe0e6] dark:border-[#2a3441] bg-white dark:bg-[#1a232e] text-[#111418] dark:text-white h-10 px-3 focus:outline-none focus:ring-1 focus:ring-primary" type="date"/>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex gap-4 pb-8 items-start">
+<div class="z-10 flex-shrink-0 w-7 h-7 rounded-full bg-white dark:bg-[#2a3441] border-2 border-primary flex items-center justify-center text-primary shadow-sm ring-4 ring-white dark:ring-[#111a24]">
+<span class="material-symbols-outlined text-[14px] font-bold">local_shipping</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<span class="text-sm font-bold text-[#111418] dark:text-white">Est. Delivery</span>
+<input class="w-full text-sm rounded-md border border-[#dbe0e6] dark:border-[#2a3441] bg-white dark:bg-[#1a232e] text-[#111418] dark:text-white h-10 px-3 focus:outline-none focus:ring-1 focus:ring-primary" type="date"/>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex gap-4 items-start">
+<div class="z-10 flex-shrink-0 w-7 h-7 rounded-full bg-white dark:bg-[#2a3441] border-2 border-[#dbe0e6] dark:border-gray-500 flex items-center justify-center text-[#617589] shadow-sm ring-4 ring-white dark:ring-[#111a24]">
+<span class="material-symbols-outlined text-[14px] font-bold">storefront</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<span class="text-sm font-bold text-[#111418] dark:text-white">Pickup Window Start</span>
+<input class="w-full text-sm rounded-md border border-[#dbe0e6] dark:border-[#2a3441] bg-white dark:bg-[#1a232e] text-[#111418] dark:text-white h-10 px-3 focus:outline-none focus:ring-1 focus:ring-primary" type="date"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Footer -->
+<div class="fixed bottom-0 w-full max-w-md bg-white dark:bg-[#111a24] border-t border-[#f0f2f4] dark:border-[#2a3441] p-4 z-20 pb-8">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-blue-500/30 transition-all active:scale-[0.98]">
+<span class="truncate">Launch Campaign</span>
+<span class="material-symbols-outlined ml-2 text-xl">rocket_launch</span>
+</button>
+</div>
+</div>
+</body></html>

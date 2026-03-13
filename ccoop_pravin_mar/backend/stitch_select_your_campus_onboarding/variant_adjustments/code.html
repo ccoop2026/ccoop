@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mid-Campaign Variant Adjustment Tool</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<div class="flex items-center bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 p-4 sticky top-0 z-10 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<div class="flex flex-col items-center">
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">Mid-Campaign Adjustment</h2>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">Spring Collection '24</p>
+</div>
+<div class="flex w-10 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-full size-10 bg-transparent text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto pb-24">
+<!-- Campaign Status Overview -->
+<div class="p-4 bg-primary/10 dark:bg-primary/5 m-4 rounded-xl border border-primary/20">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-primary font-bold text-sm uppercase">Global Progress</h3>
+<span class="text-primary font-bold text-lg">72%</span>
+</div>
+<div class="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 72%"></div>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-400 mt-2">4 days remaining until standard deadline</p>
+</div>
+<!-- Variant Health Section -->
+<div class="px-4 py-2">
+<h2 class="text-slate-900 dark:text-slate-100 text-[20px] font-bold leading-tight tracking-[-0.015em] mb-4">Variant Health</h2>
+<!-- Variant: At Risk -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-800 mb-3 group">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16 shrink-0 relative" data-alt="Blue hoodie apparel product shot" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuApSbvgQE-1zcWO4UoAcFhnIEClod0UyxxekQfAXg-fQXSR5SM9cdrLbZoYve8U7TRjMH_OOQnDTmrUv4gawmXxDboFaPLvljXleG7tOopZarGl1zmqLXBa-OQXWebSXnm21e9J9BFdQs9oe4vOSVXydJ6mpBWx6nGy7VQvTQIj_X01w3poy4ezN1L2HXryeCIzV41efckutyHAE6Om2WZxgERa4as0hWCoWeYJBi9p9PCVS2Auq6oqr7j3qJKwbdeimqt85AbiqSI");'>
+<div class="absolute -top-1 -right-1 bg-red-500 size-4 rounded-full border-2 border-white dark:border-slate-800"></div>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold">Blue Hoodie (At Risk)</p>
+<span class="text-xs font-bold text-red-500 bg-red-50 dark:bg-red-900/20 px-2 py-0.5 rounded">MOQ GAP: 38</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal">12/50 MOQ — 24% reached</p>
+<div class="mt-2 flex gap-2">
+<button class="bg-primary text-white text-xs font-bold py-1.5 px-3 rounded-lg flex items-center gap-1 hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-sm">swap_horiz</span>
+                                Trigger Substitution Logic
+                            </button>
+</div>
+</div>
+</div>
+<!-- Variant: Healthy -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-800 mb-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16 shrink-0 relative" data-alt="Black hoodie apparel product shot" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqdMJ2SK3Iiwt2AjfLva5xW2_3A-P5erF0HJ7KHJEQlgFkUQJnIumNxUoJy0eLlvjuGm7wsPTd30Krg7P9B7iqO4V6vciHzGr-fGnPKxs4kQyjGzKweWRKLtH-ty-fNs3J2Jfq8xq8IL3caxFSRzA7CeMWLniuJibiTbxQm92wjiCkiHoGI_aIRrwaAX7Y50olvuAkyALa0ozDtHK1CYnMcZtG03xv53fVly9fzUd-ZO1VjlUvNb0SOY5bDjIL2pNjIoN2i9evcHc");'>
+<div class="absolute -top-1 -right-1 bg-emerald-500 size-4 rounded-full border-2 border-white dark:border-slate-800"></div>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold">Black Hoodie (Successful)</p>
+<span class="text-xs font-bold text-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-0.5 rounded">STABLE</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal">65/50 MOQ — 130% reached</p>
+</div>
+</div>
+</div>
+<!-- Tactical Tools -->
+<div class="px-4 py-6 border-t border-slate-200 dark:border-slate-800 mt-4">
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold mb-4">Tactical Options</h2>
+<div class="grid grid-cols-1 gap-4">
+<!-- Extend Deadline -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 mb-3 text-primary">
+<span class="material-symbols-outlined">event</span>
+<span class="font-bold">Extend Deadline</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Grant this campaign extra time to mobilize more pledges.</p>
+<div class="flex gap-2">
+<input class="flex-1 bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 rounded-lg text-sm px-3 py-2 focus:ring-primary focus:border-primary" type="date"/>
+<button class="bg-slate-900 dark:bg-primary text-white px-4 py-2 rounded-lg font-bold text-sm">Update</button>
+</div>
+</div>
+<!-- Admin Override -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 mb-3 text-primary">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="font-bold">Admin Override Request</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Ask Global Admin to guarantee production regardless of MOQ status.</p>
+<button class="w-full bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100 py-3 rounded-lg font-bold text-sm flex items-center justify-center gap-2 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">
+<span class="material-symbols-outlined text-xl">mail</span>
+                            Message Global Admin
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-20">
+<div class="flex gap-2 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-4 pb-6 pt-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">inventory_2</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Campaigns</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">palette</span>
+</div>
+<p class="text-[10px] font-bold leading-normal tracking-wide">Variants</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Analytics</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">settings</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Settings</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

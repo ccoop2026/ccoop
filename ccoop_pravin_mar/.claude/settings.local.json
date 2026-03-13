@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(dir:*)",
+      "Bash(\".venv\\Scripts\\activate\")",
+      "Bash(\"..\\.venv\\Scripts\\activate\")",
+      "Bash(npm install)",
+      "Bash(npm run build:*)",
+      "Bash(\"..\\.venv\\Scripts\\python\" manage.py makemigrations)",
+      "Bash(\"..\\.venv\\Scripts\\python\" manage.py migrate)",
+      "Bash(\".venv\\Scripts\\pip\" install -r backendrequirements.txt)",
+      "Bash(\"..\\.venv\\Scripts\\pip\" install -r requirements.txt)",
+      "Bash(del db.sqlite3)",
+      "Bash(\"..\\.venv\\Scripts\\python\" manage.py load_sample_data)",
+      "Bash(\"..\\.venv\\Scripts\\python\" manage.py collectstatic --noinput)",
+      "Bash(\"..\\.venv\\Scripts\\python\" manage.py runserver)",
+      "Bash(timeout 5 bash:*)",
+      "Bash(curl:*)",
+      "Bash(...venvScriptspython manage.py runserver)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Campus Curator - Timeline &amp; Financials</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="max-w-md mx-auto min-h-screen flex flex-col shadow-xl bg-background-light dark:bg-background-dark">
+<!-- TopAppBar -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined" data-icon="arrow_back" data-size="24px">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Timeline &amp; Financials</h2>
+<div class="size-12"></div> <!-- Spacer for centering -->
+</div>
+<!-- Progress Indicator -->
+<div class="flex w-full flex-row items-center justify-center gap-3 py-5">
+<div class="h-2 w-2 rounded-full bg-primary/20"></div>
+<div class="h-2 w-2 rounded-full bg-primary/20"></div>
+<div class="h-2 w-8 rounded-full bg-primary"></div>
+</div>
+<div class="px-4 flex-1">
+<section class="mb-8">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] pb-4">Project Timeline</h3>
+<!-- Pledge Deadline -->
+<div class="flex items-center gap-4 bg-slate-100 dark:bg-slate-800/50 rounded-xl px-4 min-h-[72px] py-2 justify-between mb-3 border border-slate-200 dark:border-slate-700">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium leading-normal line-clamp-1">Pledge Deadline</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal line-clamp-2">When the campaign ends</p>
+</div>
+</div>
+<div class="shrink-0">
+<input class="bg-transparent border-none text-right text-primary font-medium focus:ring-0 p-0 w-24" type="text" value="Oct 24, 2023"/>
+</div>
+</div>
+<!-- Production Start Date -->
+<div class="flex items-center gap-4 bg-slate-100 dark:bg-slate-800/50 rounded-xl px-4 min-h-[72px] py-2 justify-between mb-3 border border-slate-200 dark:border-slate-700">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined" data-icon="factory">factory</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium leading-normal line-clamp-1">Production Start Date</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal line-clamp-2">Manufacturing begins</p>
+</div>
+</div>
+<div class="shrink-0">
+<input class="bg-transparent border-none text-right text-primary font-medium focus:ring-0 p-0 w-24" type="text" value="Nov 01, 2023"/>
+</div>
+</div>
+<!-- Estimated Delivery -->
+<div class="flex items-center gap-4 bg-slate-100 dark:bg-slate-800/50 rounded-xl px-4 min-h-[72px] py-2 justify-between mb-3 border border-slate-200 dark:border-slate-700">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium leading-normal line-clamp-1">Estimated Delivery</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal line-clamp-2">Arrival at supporters</p>
+</div>
+</div>
+<div class="shrink-0">
+<input class="bg-transparent border-none text-right text-primary font-medium focus:ring-0 p-0 w-24" type="text" value="Dec 15, 2023"/>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] pb-4">Financial Settings</h3>
+<!-- Token Advance Percentage -->
+<div class="p-4 bg-slate-100 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 mb-4">
+<div class="flex justify-between items-center mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="payments">payments</span>
+<span class="font-medium">Token Advance Percentage</span>
+</div>
+<span class="text-primary font-bold">50%</span>
+</div>
+<input class="w-full h-2 bg-slate-300 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-primary" max="100" min="0" type="range" value="50"/>
+<div class="flex justify-between text-xs text-slate-500 dark:text-slate-400 mt-2">
+<span>0%</span>
+<span>Initial capital for production</span>
+<span>100%</span>
+</div>
+</div>
+<!-- Retail Markup -->
+<div class="p-4 bg-slate-100 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700">
+<div class="flex justify-between items-center mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="trending_up">trending_up</span>
+<span class="font-medium">Retail Markup</span>
+</div>
+<div class="relative w-24">
+<span class="absolute left-2 top-1/2 -translate-y-1/2 text-slate-500">%</span>
+<input class="w-full pl-6 pr-2 py-1 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 rounded-lg text-right text-primary font-bold" type="number" value="25"/>
+</div>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">The markup applied to the campaign price for post-campaign public sales on the marketplace.</p>
+</div>
+</section>
+</div>
+<!-- Footer Actions -->
+<div class="p-4 mt-auto border-t border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark">
+<div class="flex gap-4">
+<button class="flex-1 py-4 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-colors">
+                    Save Draft
+                </button>
+<button class="flex-1 py-4 bg-primary text-white font-bold rounded-xl hover:opacity-90 transition-opacity">
+                    Confirm &amp; Review
+                </button>
+</div>
+</div>
+</div>
+</body></html>

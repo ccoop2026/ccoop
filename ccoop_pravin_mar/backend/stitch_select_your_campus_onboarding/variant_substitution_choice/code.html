@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Variant Substitution Choice</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1a2632",
+              "text-main-light": "#111418",
+              "text-main-dark": "#ffffff",
+              "text-sub-light": "#617589",
+              "text-sub-dark": "#9ca3af",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .material-symbols-filled {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex justify-center items-start pt-0 md:pt-10 pb-0 md:pb-10 transition-colors duration-200">
+<!-- Mobile Device Container -->
+<div class="relative w-full max-w-[420px] bg-surface-light dark:bg-surface-dark md:rounded-2xl md:shadow-2xl overflow-hidden flex flex-col min-h-screen md:min-h-[840px]">
+<!-- Header -->
+<header class="flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark sticky top-0 z-10">
+<div class="w-10"></div> <!-- Spacer for centering title if needed, or back button placeholder -->
+<h1 class="text-lg font-bold text-text-main-light dark:text-text-main-dark tracking-tight">Order Update</h1>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-background-light dark:hover:bg-background-dark transition-colors text-text-sub-light dark:text-text-sub-dark">
+<span class="material-symbols-outlined">help</span>
+</button>
+</header>
+<!-- Scrollable Content -->
+<main class="flex-1 overflow-y-auto px-5 pb-32">
+<!-- Notification Icon -->
+<div class="flex justify-center mt-4 mb-4">
+<div class="w-16 h-16 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined !text-4xl">info</span>
+</div>
+</div>
+<!-- Main Message -->
+<div class="text-center mb-8">
+<h2 class="text-2xl font-bold text-text-main-light dark:text-text-main-dark mb-2 leading-tight">Goal Missed on Blue</h2>
+<p class="text-text-sub-light dark:text-text-sub-dark text-base leading-relaxed">
+                    Unfortunately, the Blue Hoodie didn't reach the campus goal. However, the Black variant is confirmed!
+                </p>
+</div>
+<!-- Comparison / Product Cards -->
+<div class="space-y-4 relative">
+<!-- Connecting Line Visual -->
+<div class="absolute left-[26px] top-8 bottom-8 w-0.5 bg-gray-200 dark:bg-gray-700 -z-0"></div>
+<!-- Failed Item Card -->
+<div class="relative z-10 flex items-center gap-4 p-3 pr-4 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 opacity-70 grayscale">
+<div class="w-14 h-14 rounded-lg bg-gray-200 dark:bg-gray-700 flex-shrink-0 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Faded blue hoodie folded" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDP1gWFvEXv8tmydBZJPSA58fErvu3t_GSinZNgNGKzfYnxb4TK60xHPcpJsO1Br656PgCXVEjBXu4FqOmNg4GvF_jqREDOf9IEJqAaJRKbMwJWgE-8ERm-VVWfDSkVzgUCZ2r84tI11OmsgzyQu7JZV832GQWl3f1X84DjwSs68_QJJ2vRhIvX7a5cAc6dbI7gf6O6ZO03I2dA-4I7e58Y_NPnxOsJ7CTHRBnQNVuNPAVomk0u6lhz_S-W3ZEN_O4TgMw6FAkivAU");'></div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-semibold text-text-main-light dark:text-text-main-dark truncate">Blue Hoodie</h3>
+<p class="text-xs font-medium text-red-500 dark:text-red-400 mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined !text-[14px]">cancel</span>
+                            Goal Missed
+                        </p>
+</div>
+</div>
+<!-- Successful Substitute Card -->
+<div class="relative z-10 flex flex-col p-4 rounded-xl bg-surface-light dark:bg-surface-dark border-2 border-primary shadow-lg dark:shadow-primary/10">
+<div class="flex items-start justify-between gap-4 mb-3">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-gray-100 dark:bg-gray-800 flex-shrink-0 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Black hoodie hanging clearly visible" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC25693YVHLpHZUzrkN4BrwKVc3TUlrIsk-K9-awt8pOXZbc3Qo6yyfwXzQ5Xs9XQ_s9ySCpcokmv2B1H3hnklSHxzXWMiBMcKNReJCpq1fMQLr6QveueJyRzUiByZFQ75isnttXkPVZpoCqrPK3V-fNixvA47uytCoGwpt6AUNSUcldRwSg7gHSF5Ktbc5zSJ-Kzpy5lObyPqfh56KERSfr-niuxHCTXY4dTQ84FoTMnqFPre0VDk00BdU0cfwjoQyTcOaBCRdZOY");'></div>
+</div>
+<div>
+<p class="text-xs font-medium text-primary mb-1 uppercase tracking-wider">Suggested Swap</p>
+<h3 class="text-lg font-bold text-text-main-light dark:text-text-main-dark">Black Hoodie</h3>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined !text-xl">check_circle</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-green-50 dark:bg-green-900/20 px-3 py-2 rounded-lg w-fit mb-1">
+<span class="material-symbols-filled !text-lg text-green-600 dark:text-green-400">verified</span>
+<span class="text-sm font-semibold text-green-700 dark:text-green-300">Confirmed for Production</span>
+</div>
+</div>
+</div>
+<!-- Value Prop / Incentive -->
+<div class="mt-8 bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 flex items-start gap-3">
+<div class="bg-primary text-white p-1.5 rounded-full mt-0.5 shadow-sm">
+<span class="material-symbols-outlined !text-lg">percent</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-text-main-light dark:text-text-main-dark">Save your discount</h4>
+<p class="text-sm text-text-sub-light dark:text-text-sub-dark mt-0.5">Switching to Black keeps your <span class="font-bold text-primary">50% Token applied</span> instantly. No extra payment needed.</p>
+</div>
+</div>
+</main>
+<!-- Sticky Footer Actions -->
+<div class="absolute bottom-0 left-0 right-0 p-5 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-sm border-t border-gray-100 dark:border-gray-800 flex flex-col gap-3">
+<!-- Primary Action -->
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold h-14 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+<span>Switch to Black Hoodie</span>
+<span class="material-symbols-outlined !text-lg">arrow_forward</span>
+</button>
+<!-- Secondary Actions -->
+<div class="grid grid-cols-2 gap-3 pt-1">
+<button class="w-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-text-main-light dark:text-text-main-dark font-semibold h-12 rounded-lg text-sm flex items-center justify-center transition-colors">
+                    Choose Other Item
+                </button>
+<button class="w-full bg-transparent border border-transparent hover:bg-red-50 dark:hover:bg-red-900/20 text-red-600 dark:text-red-400 font-semibold h-12 rounded-lg text-sm flex items-center justify-center transition-colors">
+                    Refund to UPI
+                </button>
+</div>
+</div>
+</div>
+</body></html>

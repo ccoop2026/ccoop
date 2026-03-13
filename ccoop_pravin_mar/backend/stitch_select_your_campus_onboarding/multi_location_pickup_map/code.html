@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Campus Logistics Map</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between p-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-20 border-b border-slate-200 dark:border-slate-800">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="text-center">
+<h1 class="text-lg font-bold leading-tight tracking-tight">Campus Drop Points</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400">3 items arriving today</p>
+</div>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+</header>
+<!-- Main Content (Map Area) -->
+<main class="relative flex-1 @container">
+<!-- Map Background -->
+<div class="absolute inset-0 z-0 bg-slate-200 dark:bg-slate-900 overflow-hidden" data-alt="Detailed minimalist campus map with paths and buildings" data-location="Stanford University Campus" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAT-VUO3vWaWt0E0-t0_4VN-JEAhWIWtcjimO0ILjcTvdsKhdUq9fIriMTcr2B-1z4SQ5GzZZH2Ex40zKggkfsjODK8-7e98Dm8X0PxCcUz3A7DKWjRq2EC1yQn4xg5IeQfkZQYbXWMY6kns5VX5-rI2DVewPCo5dZuAhbR6Ebbh3jdTcvo2sSS4y7Zqufqu4GqaOg2HLzYOxdAIAGY3s5DIkmKKNQgGNUWbPS6y8y_cH4ZUu7HN0P7Kr3WEYqPA2LOIENHh-Ws0Z8'); background-size: cover; background-position: center;">
+<!-- Map Overlay Gradient -->
+<div class="absolute inset-0 bg-primary/5 dark:bg-primary/10"></div>
+<!-- Custom Map Markers (Drop Hosts) -->
+<!-- Marker 1: Student Center (Active) -->
+<div class="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="flex flex-col items-center">
+<div class="bg-primary text-white p-2 rounded-full shadow-lg shadow-primary/40 ring-4 ring-white dark:ring-slate-800 scale-110">
+<span class="material-symbols-outlined filled-icon text-xl">location_on</span>
+</div>
+<div class="mt-2 px-3 py-1 bg-white dark:bg-slate-800 rounded-full shadow-md border border-slate-200 dark:border-slate-700">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary">Student Center</span>
+</div>
+</div>
+</div>
+<!-- Marker 2: North Library -->
+<div class="absolute top-1/2 right-1/3 -translate-x-1/2 -translate-y-1/2 group cursor-pointer opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex flex-col items-center">
+<div class="bg-slate-600 dark:bg-slate-500 text-white p-2 rounded-full shadow-lg ring-4 ring-white dark:ring-slate-800">
+<span class="material-symbols-outlined filled-icon text-xl">location_on</span>
+</div>
+<div class="mt-2 px-3 py-1 bg-white dark:bg-slate-800 rounded-full shadow-md border border-slate-200 dark:border-slate-700">
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">North Library</span>
+</div>
+</div>
+</div>
+<!-- Marker 3: Engineering Quad -->
+<div class="absolute bottom-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 group cursor-pointer opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex flex-col items-center">
+<div class="bg-slate-600 dark:bg-slate-500 text-white p-2 rounded-full shadow-lg ring-4 ring-white dark:ring-slate-800">
+<span class="material-symbols-outlined filled-icon text-xl">location_on</span>
+</div>
+<div class="mt-2 px-3 py-1 bg-white dark:bg-slate-800 rounded-full shadow-md border border-slate-200 dark:border-slate-700">
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Eng. Quad</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Controls -->
+<div class="absolute right-4 top-4 flex flex-col gap-2 z-10">
+<div class="flex flex-col rounded-xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-800">
+<button class="bg-white dark:bg-slate-800 p-3 hover:bg-slate-50 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">add</span>
+</button>
+<div class="h-px bg-slate-200 dark:bg-slate-700"></div>
+<button class="bg-white dark:bg-slate-800 p-3 hover:bg-slate-50 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">remove</span>
+</button>
+</div>
+<button class="bg-white dark:bg-slate-800 p-3 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-primary">my_location</span>
+</button>
+</div>
+<!-- Bottom Sheet / Order Details -->
+<div class="absolute bottom-0 left-0 right-0 z-30 transition-transform transform translate-y-0">
+<div class="bg-background-light dark:bg-background-dark rounded-t-xl shadow-[0_-10px_30px_rgba(0,0,0,0.1)] border-t border-slate-200 dark:border-slate-800 pb-2">
+<div class="flex justify-center py-3">
+<div class="w-12 h-1.5 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+</div>
+<div class="px-5 pb-6">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h2 class="text-xl font-bold">Student Center</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">Open until 9:00 PM • Locker 42-B</p>
+</div>
+<div class="bg-primary/10 text-primary px-3 py-1.5 rounded-lg text-sm font-semibold">
+                                2 Items Here
+                            </div>
+</div>
+<!-- Item List -->
+<div class="space-y-3">
+<!-- Item 1 -->
+<div class="flex items-center gap-4 p-3 bg-slate-100 dark:bg-slate-800/50 rounded-xl border border-transparent hover:border-primary/30 transition-all">
+<div class="size-14 rounded-lg bg-slate-200 dark:bg-slate-700 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-slate-400">inventory_2</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-semibold text-sm">Organic Biology Textbook</h3>
+<span class="text-xs font-bold text-green-500 uppercase">Ready</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400">ID: #ORD-9921</p>
+<div class="mt-2 h-1.5 w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-green-500 w-full"></div>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4 p-3 bg-slate-100 dark:bg-slate-800/50 rounded-xl border border-transparent hover:border-primary/30 transition-all">
+<div class="size-14 rounded-lg bg-slate-200 dark:bg-slate-700 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-slate-400">package_2</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-semibold text-sm">Tech Gear: Wireless Mouse</h3>
+<span class="text-xs font-bold text-primary uppercase">In Transit</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Arriving in 15 mins</p>
+<div class="mt-2 h-1.5 w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 bg-primary hover:bg-primary/90 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-xl">qr_code_2</span>
+                            Show Pickup QR
+                        </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 px-6 py-2 flex items-center justify-between z-40">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined filled-icon">map</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors" href="#">
+<span class="material-symbols-outlined">package</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Orders</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Updates</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

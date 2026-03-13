@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head></head><body><div style="font-family: sans-serif; padding: 40px; color: #333; max-width: 800px; margin: auto; background: #fff; line-height: 1.6;">
+<h1 style="color: rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); padding-bottom: 10px;" class="">Product Requirements Document (PRD): ccoop.in MVP</h1>
+<h2 style="color: rgb(68, 68, 68); margin-top: 30px;" class="">1. Project Overview</h2>
+<p class="" style=""><strong>ccoop.in</strong> is a multi-campus, mobile-first e-commerce platform designed for college merchandise. The platform utilizes a unique "Soft Launch" pre-order model to validate demand and minimize inventory risk through Minimum Order Quantity (MOQ) targets.</p>
+<h2 style="color: rgb(68, 68, 68); margin-top: 30px;" class="">2. Core Architecture</h2>
+<ul>
+<li class="" style=""><strong>Multi-Tenancy:</strong> Single platform hosting multiple independent campus storefronts.</li>
+<li class="" style=""><strong>Contextual Onboarding:</strong> Users must select a campus to enter a specific store context (persistent via cookies/profiles).</li>
+<li class="" style=""><strong>User Roles:</strong> Student/Alumni (End-user), Drop-Host (On-campus logistics), Campus Curator (Store management), and Super Admin (Global ops).</li>
+</ul>
+<h2 style="color: rgb(68, 68, 68); margin-top: 30px;" class="">3. The Pre-Order Campaign Lifecycle (The "Drop")</h2>
+<p class="" style="">The platform's primary innovation is a 5-stage campaign flow:</p>
+<h3 style="color: rgb(85, 85, 85);" class="">Phase 1: The Pledge (Soft Launch)</h3>
+<h3 style="color: rgb(85, 85, 85);" class="">Phase 2: The Green Light (Conversion)</h3>
+<p class="" style="">Triggered when the campaign reaches its target. Users receive a notification with a payment link valid for a limited window (e.g., 24-48h). <em>Dev Requirement: Automated SMS/Email/WhatsApp triggers upon reaching MOQ.</em></p>
+<h3 style="color: rgb(85, 85, 85);" class="">Phase 3: Token Payment (Commitment)</h3>
+<p class="" style="">Users pay a 50% "Token Advance" to secure their order. <em>Dev Requirement: Robust payment gateway integration with support for partial payments and "Balance Due" tracking in order history.</em></p>
+<h3 style="color: rgb(85, 85, 85);" class="">Phase 4: Production &amp; Tallying</h3>
+<p class="" style="">Admin manages factory vendors and stock arrival. <em>Dev Requirement: Warehouse/Drop-Host dashboard for scanning barcodes to tally incoming factory stock against expected orders.</em></p>
+<h3 style="color: rgb(85, 85, 85);" class="">Phase 5: Final Settlement &amp; Pickup</h3>
+<p class="" style="">Users are notified when items arrive at the campus "Drop Host." Final 50% balance must be paid digitally to unlock the "Pickup QR Code." <em>Dev Requirement: QR scanning logic that validates payment status before marking an item as "Dispatched."</em></p>
+<h2 style="color: rgb(68, 68, 68); margin-top: 30px;" class="">4. Key Business Logic &amp; Edge Cases</h2>
+<ul>
+<li class="" style=""><strong>Variant-Level MOQ:</strong> Campaigns can succeed at the product level but fail at the color level.</li>
+<li class="" style=""><strong>Failure Handling:</strong> Logic for issuing 110% store credit or UPI refunds if MOQ is not met.</li>
+<li class="" style=""><strong>Admin Overrides:</strong> Ability for Super Admins to "Force Production" even if targets are slightly missed.</li>
+</ul>
+<p class="" style=""><br></p>
+<h2 style="color: rgb(68, 68, 68); margin-top: 30px;" class="">5. Project Screens</h2><ul><li class="" style=""><strong>Campus Selection:</strong> Landing page for selecting a specific campus store.</li><li class="" style=""><strong>Product Gallery:</strong> Grid view of active 'Drops' and product categories.</li><li class="" style=""><strong>Product Detail Page:</strong> Detailed view with 'Pledge' button and real-time progress.</li><li class="" style=""><strong>User Dashboard:</strong> Tracking pledges, payment history, and pickup QR codes.</li><li class="" style=""><strong>Admin Panel:</strong> Management interface for MOQ tracking and logistics.</li></ul></div></body></html>

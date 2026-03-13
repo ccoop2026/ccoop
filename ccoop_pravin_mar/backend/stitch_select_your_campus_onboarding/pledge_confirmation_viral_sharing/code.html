@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pledge Confirmed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        /* Hide scrollbar for clean mobile look */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex justify-center">
+<div class="w-full max-w-md bg-white dark:bg-slate-900 shadow-xl overflow-hidden min-h-screen relative flex flex-col">
+<!-- Navigation/Header Area -->
+<div class="px-4 py-3 flex justify-between items-center z-10">
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">close</span>
+</button>
+<div class="text-sm font-medium text-slate-400 dark:text-slate-500 uppercase tracking-wider">Order #88392</div>
+</div>
+<!-- Success Hero Section -->
+<div class="flex flex-col items-center pt-2 pb-6 px-6 text-center">
+<div class="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-4 animate-bounce-slow">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400 text-5xl">check_circle</span>
+</div>
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">You're on the list!</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base leading-relaxed">
+                Your pledge for the <span class="font-semibold text-slate-800 dark:text-slate-200">University Varsity Hoodie</span> is secure.
+            </p>
+</div>
+<!-- Pledge Summary Card -->
+<div class="px-4 mb-6">
+<div class="bg-slate-50 dark:bg-slate-800 rounded-xl p-4 flex gap-4 shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="w-24 h-24 rounded-lg bg-gray-200 flex-shrink-0 bg-cover bg-center" data-alt="Navy Blue University Hoodie folded neatly" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAO6oSaf8MBuZ2FA7ZLH_ux4BKeLiUBLjjV4aYEqEkoa39UMnQ8RK6-ssYLKbFBovDxloAsT4QA35EvELDw68O0W7fteLBZ9XyTzecKFWNFCibzbSDLHLrb3MvY_JY1hZDTRX3iud7xC9AlmCmx2z6HHryRemgjojgHcCy14mbvHG3qMbkrY-LpGr0_BrFxgXNx88hu_82z4c8OAg1hY4qZDLoN5BxHWv1XCml2TKGP_xUhxpL9koS7srhrgvmxrWGBoB11A30vStI');"></div>
+<div class="flex flex-col justify-center flex-1">
+<div class="text-xs font-semibold text-primary uppercase tracking-wide mb-1">Pledge Summary</div>
+<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight mb-1">Varsity Hoodie</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Navy Blue • Size L</p>
+<div class="mt-2 text-slate-900 dark:text-white font-semibold">₹1,299</div>
+</div>
+</div>
+</div>
+<!-- Viral Unlock Meter -->
+<div class="px-4 mb-8">
+<div class="bg-white dark:bg-slate-900 rounded-xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm relative overflow-hidden">
+<!-- Background decoration -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 pointer-events-none"></div>
+<div class="flex justify-between items-end mb-2 relative z-10">
+<div>
+<span class="text-2xl font-bold text-primary">75</span>
+<span class="text-slate-400 dark:text-slate-500 text-sm font-medium">/ 100 Pledges</span>
+</div>
+<span class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">75% Funded</span>
+</div>
+<div class="h-3 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden mb-3 relative z-10">
+<div class="h-full bg-primary rounded-full" style="width: 75%"></div>
+</div>
+<div class="flex items-start gap-2 relative z-10">
+<span class="material-symbols-outlined text-orange-500 text-lg mt-0.5">local_fire_department</span>
+<p class="text-sm text-slate-600 dark:text-slate-300 font-medium">
+                        Only <span class="text-orange-500 font-bold">25 more needed</span> to unlock production! Don't let this drop fail.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Social Sharing Section -->
+<div class="px-4 mb-8">
+<h2 class="text-sm font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-wider text-center">Share with your batchmates</h2>
+<div class="grid grid-cols-2 gap-3 mb-3">
+<button class="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 px-4 rounded-xl font-semibold transition-transform active:scale-95 shadow-md shadow-green-200 dark:shadow-none">
+<!-- WhatsApp Icon handled by font since no svg provided, simulating with circle/phone -->
+<span class="text-xl font-bold">WA</span>
+<span>WhatsApp</span>
+</button>
+<button class="flex items-center justify-center gap-2 bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white py-3 px-4 rounded-xl font-semibold transition-transform active:scale-95 shadow-md shadow-pink-200 dark:shadow-none">
+<span class="material-symbols-outlined">add_a_photo</span>
+<span>Stories</span>
+</button>
+</div>
+<button class="w-full flex items-center justify-center gap-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 py-3 px-4 rounded-xl font-medium transition-colors">
+<span class="material-symbols-outlined text-lg">link</span>
+<span>Copy Campaign Link</span>
+</button>
+</div>
+<!-- Timeline Section -->
+<div class="px-6 pb-24">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white mb-6">What happens next?</h2>
+<div class="relative pl-4 border-l-2 border-slate-200 dark:border-slate-700 ml-2 space-y-8">
+<!-- Step 1 -->
+<div class="relative">
+<div class="absolute -left-[23px] bg-green-500 border-4 border-white dark:border-slate-900 w-5 h-5 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[10px] font-bold">check</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Pledge Secured</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Your order is locked in.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<div class="absolute -left-[23px] bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 w-5 h-5 rounded-full"></div>
+<div>
+<p class="text-sm font-semibold text-slate-500 dark:text-slate-400">Campaign Ends</p>
+<p class="text-xs text-slate-400 dark:text-slate-500 mt-0.5">Oct 24th, 2023</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative">
+<div class="absolute -left-[23px] bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 w-5 h-5 rounded-full"></div>
+<div>
+<p class="text-sm font-semibold text-slate-500 dark:text-slate-400">Production Starts</p>
+<p class="text-xs text-slate-400 dark:text-slate-500 mt-0.5">Est. 2 weeks</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative">
+<div class="absolute -left-[23px] bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 w-5 h-5 rounded-full"></div>
+<div>
+<p class="text-sm font-semibold text-slate-500 dark:text-slate-400">Dispatch &amp; Delivery</p>
+<p class="text-xs text-slate-400 dark:text-slate-500 mt-0.5">To Campus Hub</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Action -->
+<div class="absolute bottom-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm border-t border-slate-100 dark:border-slate-800 p-4">
+<button class="w-full text-center text-primary font-semibold py-3 rounded-lg hover:bg-primary/5 transition-colors">
+                View My Orders
+            </button>
+</div>
+</div>
+</body></html>

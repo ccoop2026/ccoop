@@ -1,0 +1,79 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+        h1 { color: #f46a25; border-bottom: 2px solid #f46a25; padding-bottom: 10px; }
+        h2 { color: #222; margin-top: 30px; border-left: 4px solid #f46a25; padding-left: 15px; }
+        h3 { color: #444; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        .role-box {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .highlight { color: #f46a25; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>ccoop.in Unified Navigation Strategy</h1>
+    
+    <p>For the best UX and operational security, ccoop.in utilizes a <strong>unified app shell with role-based navigation</strong>.</p>
+
+    <div class="role-box">
+        <h2>1. The Single-App Approach</h2>
+        <p>All users (Buyers, Hosts, Curators, Admins) log in through the same mobile web interface. Role-based access control (RBAC) determines which navigation elements and screens are visible.</p>
+    </div>
+
+    <h2>2. Role-Based Navigation Maps</h2>
+
+    <div class="role-box">
+        <h3>A. End-User (Buyer)</h3>
+        <ul>
+            <li><strong>Primary Nav:</strong> Home (Drops/Retail) | Discover | My Campus | Profile.</li>
+            <li><strong>Profile Menu:</strong> Order History, Wallet, Saved Items, Help, Settings.</li>
+        </ul>
+    </div>
+
+    <div class="role-box">
+        <h3>B. Drop Host (Campus Staff)</h3>
+        <ul>
+            <li><strong>Primary Nav:</strong> Home | Discover | <span class="highlight">Host Tools</span> | Profile.</li>
+            <li><strong>Host Tools:</strong> Incoming Scan, Dispatch Check, Stock Tally, Pickup Manifest.</li>
+        </ul>
+    </div>
+
+    <div class="role-box">
+        <h3>C. Campus Curator (Store Manager)</h3>
+        <ul>
+            <li><strong>Primary Nav:</strong> Home | Discover | <span class="highlight">Curator Dashboard</span> | Profile.</li>
+            <li><strong>Curator Dashboard:</strong> Campaign Creator, Sales Analytics, Inventory Management.</li>
+        </ul>
+    </div>
+
+    <div class="role-box">
+        <h3>D. Global Admin (ccoop.in Team)</h3>
+        <ul>
+            <li><strong>Primary Nav:</strong> Home | Discover | <span class="highlight">Admin Console</span> | Profile.</li>
+            <li><strong>Admin Console:</strong> Global Analytics, Partner Onboarding, Production Control.</li>
+        </ul>
+    </div>
+
+    <h2>3. Navigation Best Practices</h2>
+    <ul>
+        <li><strong>The 'Role Switcher':</strong> For users with dual roles, the Profile section includes a prominent 'Switch to Admin View' toggle.</li>
+        <li><strong>Universal Header:</strong> Always displays the 'Active Campus' and a search icon.</li>
+        <li><strong>Persistent Back Logic:</strong> Navigation follows a 'Stack' model, allowing users to jump back to the Global Hub easily.</li>
+    </ul>
+</body>
+</html>

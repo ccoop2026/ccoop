@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#138aec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Select Your Campus</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-primary flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Select Your Campus</h2>
+</div>
+<!-- Progress Bar -->
+<div class="flex flex-col gap-3 p-4">
+<div class="flex gap-6 justify-between items-end">
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium leading-normal">Onboarding</p>
+<p class="text-primary text-sm font-semibold leading-normal">Step 2 of 4</p>
+</div>
+<div class="rounded-full bg-slate-200 dark:bg-slate-800 h-2 overflow-hidden">
+<div class="h-2 rounded-full bg-primary" style="width: 50%;"></div>
+</div>
+</div>
+<!-- Header Content -->
+<div class="px-4 py-6 text-center">
+<h3 class="text-slate-900 dark:text-slate-100 tracking-tight text-3xl font-bold leading-tight pb-3">Where do you study?</h3>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-relaxed max-w-md mx-auto">
+                Picking a campus helps us personalize your events, clubs, and networking experience.
+            </p>
+</div>
+<!-- Search and Location -->
+<div class="px-4 py-2 space-y-4">
+<label class="flex flex-col w-full">
+<div class="flex w-full items-stretch rounded-xl h-14 bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 focus-within:border-primary transition-colors">
+<div class="text-slate-400 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-slate-900 dark:text-slate-100 focus:outline-0 focus:ring-0 border-none bg-transparent px-4 text-base font-normal leading-normal placeholder:text-slate-500" placeholder="Search for your university" value=""/>
+</div>
+</label>
+<button class="flex items-center justify-center gap-2 w-full h-14 rounded-xl bg-primary/10 dark:bg-primary/20 text-primary font-semibold hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined">my_location</span>
+<span>Use My Location</span>
+</button>
+</div>
+<!-- Trending Universities Grid -->
+<div class="px-4 pt-8 pb-10">
+<div class="flex items-center justify-between mb-4">
+<h4 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Trending Campuses</h4>
+<span class="text-primary text-sm font-medium cursor-pointer">View All</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- University Card 1 -->
+<div class="group flex flex-col p-4 rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700 hover:border-primary dark:hover:border-primary transition-all cursor-pointer">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center mb-3">
+<img class="size-8 object-contain" data-alt="University crest logo placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3xHb9AXCgYj8x5UkG4TaFtnK7r8-93PiffuVmC8sEKVk2So_RtHPD1BsFumPukwd0Nb2h4jbkww4aqqyNxz3HbLMtee1fnBKiM21R50fQL2Q4yfYNN23fblhvzykqcOKIjyf6v4cMr7P7rIFSIy-cV1x55nEeYBNjKYYiw47a-m9EyG9vVcqimOmy1Jz2GHgmCr_0AOChiFAHlqH_Z4-b7cE_s0NrDxNj1kiOieLcUq1Wy7oPmCmNxdrP5trqLMEGcA4aHQLXxDQ"/>
+</div>
+<p class="text-slate-900 dark:text-slate-100 font-bold text-sm leading-tight">IIT Delhi</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">New Delhi, India</p>
+</div>
+<!-- University Card 2 -->
+<div class="group flex flex-col p-4 rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700 hover:border-primary dark:hover:border-primary transition-all cursor-pointer">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center mb-3">
+<img class="size-8 object-contain" data-alt="Modern university building icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5WtpiVt10jQisgHgmmHNR3o1tA0PeRmdRZeHfH-LFj-PKGm69k5LafrQN9bpwRRvCZhkr2VmwyUt5JwEAdE0X0IA_zkfTVwMSErl6qLjIXHxo1oxTyTuYp2UYjTyj0Cvrmo3OpD7gamt8qk6yBMGK9nzNM8GhaZHTPQu2KFs56Zq7ovwlz_3RenltQsUA0ED1VXYQjuOtaKwSJfWy415b0ukN3_dNFU_3Are7lo4VQ1uLr5_j1FbuUMD3dr1gm4KXAmatjSqoKsU"/>
+</div>
+<p class="text-slate-900 dark:text-slate-100 font-bold text-sm leading-tight">BITS Pilani</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Rajasthan, India</p>
+</div>
+<!-- University Card 3 -->
+<div class="group flex flex-col p-4 rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700 hover:border-primary dark:hover:border-primary transition-all cursor-pointer">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center mb-3">
+<img class="size-8 object-contain" data-alt="Classic campus architecture logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4lI22d54FGFWIJoIpps_vW9xn4NdHTzIibOnWTAgvpIJ1kcHHPVj0S_jiAHNMyKq_S9knjIyqD0C4x8z1oex7ZGYFvuC5dp3ao6Bf717Qy4w_lQUlqRz-zWPt2qJzJSFDaEUG2ZoWkX5ERm2gBbvvEijKYh7Mbwoq8xYIHypLadcuUfTxUYZdt34blTnesL0aDLG5Z4pOKnHE2nAjy7VwST8u3yETCVUcNJCfNGnVnlpLs8uqXRfNp3YA16qrFpeGCuja4OQSqbE"/>
+</div>
+<p class="text-slate-900 dark:text-slate-100 font-bold text-sm leading-tight">IIT Bombay</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Mumbai, India</p>
+</div>
+<!-- University Card 4 -->
+<div class="group flex flex-col p-4 rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700 hover:border-primary dark:hover:border-primary transition-all cursor-pointer">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center mb-3">
+<img class="size-8 object-contain" data-alt="Academic cap and shield emblem" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdNYBxW5jQOzt7LGCsJgRr8XDDf5FV4BrOhg7RIx_QFcGtPSKumvV2iqZTcH2n76DMET5SCZgn2h8DkgUkjvkT1qGiG3fXXGxqfhMX4wMM1AIiq2-s7gwriy1O6b35ZPZPz9UPmW4-K6dXc54SnwsmMeMlTG7wn92SIJwIP7bjbbOjd0TwIfQRWLXGsqkpHB09Ae1upAD_eEGnxUhuiR0owYFjfdPWMv1zOM5zvdYy7xPa7iVcbYkY7ufm8QA1Qyr28fz_owDf9FQ"/>
+</div>
+<p class="text-slate-900 dark:text-slate-100 font-bold text-sm leading-tight">SRM IST</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Chennai, India</p>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Button -->
+<div class="mt-auto p-4 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-slate-100 dark:border-slate-800">
+<button class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 hover:brightness-110 active:scale-[0.98] transition-all">
+                Continue
+            </button>
+<p class="text-center text-slate-500 dark:text-slate-500 text-xs mt-4">
+                Can't find your campus? <span class="text-primary font-medium cursor-pointer">Request to add</span>
+</p>
+</div>
+</div>
+</body></html>

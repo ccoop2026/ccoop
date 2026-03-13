@@ -1,0 +1,126 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ccoop.in - Unified Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#f97316", // Student-centric Orange for ccoop.in
+                "background-light": "#fcfcfc",
+                "background-dark": "#0f172a",
+              },
+              fontFamily: {
+                "display": ["Lexend"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .bg-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(circle at 2px 2px, #1e293b 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" style="">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400" style="">close</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight text-primary" style="">ccoop.in</h1>
+<div class="size-10"></div> <!-- Placeholder for balance -->
+</header>
+<main class="flex-1 flex flex-col items-center justify-center px-6 py-8 @container max-w-md mx-auto w-full">
+<!-- Hero Section -->
+<div class="w-full mb-8 text-center">
+<div class="relative w-full aspect-video rounded-xl overflow-hidden mb-6 shadow-2xl">
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent z-10"></div>
+<img alt="Students collaborating" class="w-full h-full object-cover" data-alt="Students collaborating in a modern campus environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgHaauyBtL3d6a1GgEf-b141A6hiVDAl2nLbWsGVkKAlH8F1UGFRbs-z3Wy9omRW-tlhWyoeM3v3lZOcgvRSHqFUnJ8A2nGZ1EtNk8f8nSfBPkSpmfynl8tgHTWhpqxu4032XOhcAo9XvfN1fYjLHVCkvD_mgSRIL43GGAcB1SsQymsxeDAQoPcr8gPSYhy5sP3orBCnPZJ3_cJEK-rQtNyI4ZhrOBITfQRdG7CEEpjXoxcakpePhfjmueA4edDGHc4Mk_euZ8BxA" style="">
+<div class="absolute bottom-4 left-0 right-0 z-20 px-4">
+<span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider" style="">Unified Access</span>
+</div>
+</div>
+<h2 class="text-3xl font-bold mb-2" style="">Welcome Back</h2>
+<p class="text-slate-500 dark:text-slate-400" style="">Frictionless access for students, alumni, and hosts.</p>
+</div>
+<!-- Login Form -->
+<div class="w-full space-y-6">
+<div class="space-y-4">
+<div class="group">
+<label class="block text-sm font-medium mb-1.5 text-slate-700 dark:text-slate-300" style="">Phone Number / Email</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 material-symbols-outlined" style="">smartphone</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-lg" placeholder="Enter your mobile number / Email" type="tel">
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2" style="">
+                    Get OTP
+                    <span class="material-symbols-outlined" style="">arrow_forward</span>
+</button>
+</div>
+<div class="relative py-4">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-200 dark:border-slate-800"></div>
+</div>
+<div class="relative flex justify-center text-xs uppercase">
+<span class="bg-background-light dark:bg-background-dark px-2 text-slate-500" style="">Discover More</span>
+</div>
+</div>
+<!-- Guest and Other Roles -->
+<div class="grid grid-cols-1 gap-3">
+<a class="flex items-center justify-center gap-3 w-full py-3 px-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-primary" style="">explore</span>
+<span class="font-medium" style="">Continue as Guest</span>
+</a>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="mt-auto pt-10 pb-6 text-center w-full">
+<p class="text-slate-500 dark:text-slate-400" style="">
+                New to ccoop.in? 
+                <a class="text-primary font-bold hover:underline decoration-2 underline-offset-4 ml-1" href="#" style="">Sign Up</a>
+</p>
+<div class="mt-8 grid grid-cols-3 gap-4">
+<div class="flex flex-col items-center opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-sm" style="">school</span>
+</div>
+<span class="text-[10px] font-medium uppercase tracking-tighter" style="">Student/ Allumni</span>
+</div>
+<div class="flex flex-col items-center opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-sm" style="">dashboard_customize</span>
+</div>
+<span class="text-[10px] font-medium uppercase tracking-tighter" style="">Curator</span>
+</div>
+<div class="flex flex-col items-center opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-sm" style="">storefront</span>
+</div>
+<span class="text-[10px] font-medium uppercase tracking-tighter" style="">Host</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Indicator (Mobile) -->
+<div class="h-1.5 w-32 bg-slate-300 dark:bg-slate-700 rounded-full mx-auto mb-2 shrink-0"></div>
+</body></html>

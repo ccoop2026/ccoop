@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#138aec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Production Tracker</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Production Tracker</h1>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto">
+<div class="p-4">
+<h2 class="text-slate-900 dark:text-slate-100 text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-2">Pre-order Status</h2>
+<!-- Item Card -->
+<div class="mb-6 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-lg bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Black and gold limited edition varsity jacket design" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBhpxGLT03WUC3XTUaHvp-K26PBYXjHPz4_Fu2yagYfHmj2Gdu9iASiJd9TJ3nR_G3AhZ8fz06pLWbp_SDrop_cFuko6FZ13_Ptzsfczb0ZKTutLnru6UldO4Kh27MDvlASoD6X-sMIbJ8MmIWkeYQ0mIeu87usPuoCHCMSEUOlI4mKlyIix6uf7afb6kzWAB9Kq4rDlr1Oi4Pzf7UldiadcDkDPIfOv5KhiVpjGoBrpKeGgRHtZFo3t2tiNgXdHuO9KJlqTKKxfc");'>
+</div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 px-4">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">2024 Senior Varsity Jacket</p>
+<span class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">In Progress</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Order #ORD-88291</p>
+<div class="mt-4 flex items-center gap-2 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-sm">event</span>
+<p class="text-sm font-medium">Est. Delivery: Oct 24, 2024</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Progress Bar Section -->
+<div class="flex flex-col gap-3 p-4 bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 mb-6">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-normal">Overall Progress</p>
+<p class="text-primary text-lg font-bold leading-normal">75%</p>
+</div>
+<div class="h-3 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 75%;"></div>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal italic">We're finishing up the final details!</p>
+</div>
+<!-- Timeline Section -->
+<div class="px-2">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold mb-6">Journey Timeline</h3>
+<div class="relative space-y-0">
+<!-- Vertical Line -->
+<div class="absolute left-[19px] top-2 bottom-2 w-0.5 bg-slate-200 dark:bg-slate-700"></div>
+<!-- Stage 1: Completed -->
+<div class="relative flex gap-4 pb-8">
+<div class="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-xl">check</span>
+</div>
+<div class="flex flex-col pt-1">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold">Production Started</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Materials sourced and assembly began on Sep 12</p>
+</div>
+</div>
+<!-- Stage 2: Completed -->
+<div class="relative flex gap-4 pb-8">
+<div class="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-xl">verified</span>
+</div>
+<div class="flex flex-col pt-1">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold">Quality Check</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Passed all safety and durability inspections</p>
+</div>
+</div>
+<!-- Stage 3: Current -->
+<div class="relative flex gap-4 pb-8">
+<div class="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary ring-4 ring-primary/20 text-white">
+<span class="material-symbols-outlined text-xl">local_shipping</span>
+</div>
+<div class="flex flex-col pt-1">
+<p class="text-primary text-base font-bold">In Transit to Campus</p>
+<p class="text-slate-900 dark:text-slate-100 text-sm font-medium">Package is currently with the carrier</p>
+<div class="mt-2 bg-slate-100 dark:bg-slate-700/50 p-3 rounded-lg flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-white dark:bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">map</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Current Location</p>
+<p class="text-sm font-bold" data-location="Los Angeles, CA">Logistics Hub, CA</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Stage 4: Upcoming -->
+<div class="relative flex gap-4">
+<div class="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-xl">school</span>
+</div>
+<div class="flex flex-col pt-1">
+<p class="text-slate-400 dark:text-slate-500 text-base font-bold">Arrived at Drop Host</p>
+<p class="text-slate-400 dark:text-slate-500 text-sm italic">Ready for collection at the Student Union</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h-10"></div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="sticky bottom-0 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pb-6 pt-2">
+<div class="flex gap-2 max-w-md mx-auto">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-normal tracking-[0.015em]">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<p class="text-[10px] font-medium leading-normal tracking-[0.015em]">Orders</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">route</span>
+<p class="text-[10px] font-medium leading-normal tracking-[0.015em]">Tracker</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<p class="text-[10px] font-medium leading-normal tracking-[0.015em]">Profile</p>
+</a>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PRD: ccoop.in MVP Launch</title>
+<!-- Tailwind CSS v3 with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter and Lexend -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="typography">
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Lexend', sans-serif;
+      letter-spacing: -0.02em;
+    }
+  </style>
+<style data-purpose="layout">
+    .prd-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      min-height: 100vh;
+    }
+    .status-tag {
+      background-color: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      color: #374151;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .priority-tag {
+      background-color: #fee2e2;
+      border: 1px solid #fecaca;
+      color: #b91c1c;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+<!-- BEGIN: MainHeader -->
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+<div class="max-auto px-6 py-4 flex justify-between items-center max-w-4xl mx-auto">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 bg-black rounded flex items-center justify-center">
+<span class="text-white font-bold text-xs">C.</span>
+</div>
+<span class="font-bold text-lg tracking-tight">ccoop.in</span>
+</div>
+<div class="flex gap-2">
+<span class="status-tag">Draft v1.0</span>
+<span class="priority-tag">Priority: MVP</span>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: PRD Content -->
+<main class="prd-container shadow-sm p-8 md:p-12 my-8 rounded-lg">
+<!-- BEGIN: Title Section -->
+<section class="mb-12" data-purpose="document-title">
+<h1 class="text-4xl font-bold text-slate-900 mb-4">Product Requirements Document: MVP Launch</h1>
+<p class="text-slate-500 text-lg leading-relaxed">
+        Building a community-driven commerce platform focused on collective purchasing power and optimized retail logistics.
+      </p>
+</section>
+<!-- END: Title Section -->
+<!-- BEGIN: Project Overview -->
+<section class="mb-10" data-purpose="project-overview">
+<div class="flex items-center gap-2 mb-4">
+<div class="h-6 w-1 bg-blue-600 rounded-full"></div>
+<h2 class="text-2xl font-bold">Project Overview</h2>
+</div>
+<div class="prose prose-slate max-w-none">
+<p class="text-slate-700 leading-7">
+          The ccoop.in MVP aims to validate the core loop of community commerce: pooling demand to unlock wholesale pricing for end consumers. By focusing on essential goods and high-velocity retail categories, the platform will facilitate group-buying through a pledge-based pre-order system.
+        </p>
+</div>
+</section>
+<!-- END: Project Overview -->
+<!-- BEGIN: Core User Roles -->
+<section class="mb-10" data-purpose="user-roles">
+<div class="flex items-center gap-2 mb-4">
+<div class="h-6 w-1 bg-blue-600 rounded-full"></div>
+<h2 class="text-2xl font-bold">Core User Roles</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Role: Consumer -->
+<div class="border border-gray-200 p-5 rounded-xl bg-slate-50">
+<h3 class="font-bold text-slate-900 mb-2">Consumer</h3>
+<p class="text-sm text-slate-600">The end-user participating in pledges to receive discounted retail goods via collective action.</p>
+</div>
+<!-- Role: Retail Partner -->
+<div class="border border-gray-200 p-5 rounded-xl bg-slate-50">
+<h3 class="font-bold text-slate-900 mb-2">Retail Partner</h3>
+<h3 class="font-bold text-slate-900 mb-2"></h3>
+<p class="text-sm text-slate-600">Fulfillment nodes that manage local inventory and act as pickup or distribution points.</p>
+</div>
+<!-- Role: Admin/Logistics -->
+<div class="border border-gray-200 p-5 rounded-xl bg-slate-50">
+<h3 class="font-bold text-slate-900 mb-2">Platform Admin</h3>
+<p class="text-sm text-slate-600">Oversees demand aggregation, vendor negotiation, and cross-region logistics coordination.</p>
+</div>
+</div>
+</section>
+<!-- END: Core User Roles -->
+<!-- BEGIN: MVP Features -->
+<section class="mb-10" data-purpose="mvp-features">
+<div class="flex items-center gap-2 mb-6">
+<div class="h-6 w-1 bg-blue-600 rounded-full"></div>
+<h2 class="text-2xl font-bold">Phase 1 Non-Negotiable Features</h2>
+</div>
+<div class="space-y-8">
+<!-- Feature 1: Pledge/Pre-order -->
+<div class="flex flex-col md:flex-row gap-4">
+<div class="flex-shrink-0">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold">1</div>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-2">Pledge &amp; Pre-order Engine</h3>
+<ul class="list-disc ml-5 space-y-2 text-slate-700">
+<li><strong>Dynamic Pricing Tiers:</strong> Price drops as total group pledge volume increases.</li>
+<li><strong>Commitment Tracking:</strong> Real-time dashboard showing progress toward the next price milestone.</li>
+<li><strong>Secure Payment Escrow:</strong> Authorized hold on funds during the pledge window.</li>
+</ul>
+</div>
+</div>
+<!-- Feature 2: Retail Integration -->
+<div class="flex flex-col md:flex-row gap-4">
+<div class="flex-shrink-0">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold">2</div>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-2">Retail Node Management</h3>
+<ul class="list-disc ml-5 space-y-2 text-slate-700">
+<li><strong>Inventory Dashboard:</strong> For retail partners to view upcoming fulfillment batches.</li>
+<li><strong>QR Verification:</strong> Secure hand-off system for consumers picking up their items.</li>
+<li><strong>Settlement Engine:</strong> Automated commission calculation for partner storefronts.</li>
+</ul>
+</div>
+</div>
+<!-- Feature 3: Logistics Core -->
+<div class="flex flex-col md:flex-row gap-4">
+<div class="flex-shrink-0">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold">3</div>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-2">Logistics &amp; Supply Chain</h3>
+<ul class="list-disc ml-5 space-y-2 text-slate-700">
+<li><strong>Batch Routing:</strong> Grouping orders by geolocation for optimized bulk delivery.</li>
+<li><strong>Vendor Portal:</strong> Simplified bulk order generation based on aggregate demand.</li>
+<li><strong>Last-Mile Tracking:</strong> Visibility into batch movement from warehouse to retail node.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- END: MVP Features -->
+<!-- BEGIN: Success Metrics -->
+<section class="mb-10 bg-slate-900 text-white p-8 rounded-2xl" data-purpose="success-metrics">
+<div class="flex items-center gap-2 mb-6">
+<h2 class="text-2xl font-bold">Success Metrics (KPIs)</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<span class="text-slate-400 text-sm block mb-1">Growth</span>
+<div class="text-3xl font-bold mb-2">80% Pledge Fill Rate</div>
+<p class="text-slate-400 text-sm leading-relaxed">Percentage of campaigns that successfully reach their minimum threshold for wholesale ordering.</p>
+</div>
+<div>
+<span class="text-slate-400 text-sm block mb-1">Efficiency</span>
+<div class="text-3xl font-bold mb-2">15% Margin Gain</div>
+<p class="text-slate-400 text-sm leading-relaxed">Average cost reduction for consumers compared to standard retail market prices.</p>
+</div>
+</div>
+</section>
+<!-- END: Success Metrics -->
+<!-- BEGIN: Footer Info -->
+<footer class="mt-16 pt-8 border-t border-gray-100 text-center">
+<p class="text-slate-400 text-sm">Confidential Document © 2023 ccoop.in. For internal circulation only.</p>
+</footer>
+<!-- END: Footer Info -->
+</main>
+<!-- END: PRD Content -->
+</body></html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#138aec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-10">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">arrow_back</span>
+</div>
+<div class="flex-1 ml-2">
+<h1 class="text-lg font-bold leading-tight tracking-tight">Finishing &amp; QC</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400">Line A-12 • Shift 2</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex size-10 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">history</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined">sync</span>
+</button>
+</div>
+</header>
+<nav class="bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-slate-800">
+<div class="flex px-4 gap-6 overflow-x-auto no-scrollbar">
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 py-3 whitespace-nowrap" href="#">
+<span class="text-sm font-semibold">Ironing</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 py-3 whitespace-nowrap" href="#">
+<span class="text-sm font-semibold">Labelling</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary py-3 whitespace-nowrap" href="#">
+<span class="text-sm font-semibold">Quality Check</span>
+</a>
+</div>
+</nav>
+<main class="flex-1 p-4 max-w-2xl mx-auto w-full">
+<div class="mb-6">
+<div class="flex items-center justify-between mb-2">
+<h2 class="text-xl font-bold">Unit ID: #QC-88291</h2>
+<span class="px-2 py-1 bg-primary/20 text-primary text-xs font-bold rounded uppercase">In Progress</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Total Units</p>
+<p class="text-2xl font-bold">1,250</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Passed Today</p>
+<p class="text-2xl font-bold text-green-500">1,180</p>
+</div>
+</div>
+</div>
+<section class="mb-8">
+<h3 class="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-4">Inspection Checklist</h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">straighten</span>
+<span class="font-medium">Dimensions &amp; Sizing</span>
+</div>
+<input checked="" class="h-6 w-6 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+</div>
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">styler</span>
+<span class="font-medium">Stitching Integrity</span>
+</div>
+<input class="h-6 w-6 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+</div>
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">palette</span>
+<span class="font-medium">Color Consistency</span>
+</div>
+<input checked="" class="h-6 w-6 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+</div>
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">label</span>
+<span class="font-medium">Label Accuracy</span>
+</div>
+<input class="h-6 w-6 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">Damage Log</h3>
+<button class="text-primary text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">add_circle</span> Add Entry
+                    </button>
+</div>
+<div class="bg-red-500/5 border border-red-500/20 rounded-xl overflow-hidden">
+<div class="p-4 flex gap-4 border-b border-red-500/10">
+<div class="size-12 bg-red-500/20 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-red-500">priority_high</span>
+</div>
+<div>
+<p class="font-bold text-red-600 dark:text-red-400">Loose Threading</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Found on sleeve hem. Action: Re-stitch required.</p>
+</div>
+</div>
+<div class="p-4 flex gap-4">
+<div class="size-12 bg-red-500/20 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-red-500">ink_eraser</span>
+</div>
+<div>
+<p class="font-bold text-red-600 dark:text-red-400">Small Stain</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Back panel near yoke. Action: Cleaning attempted, failed.</p>
+</div>
+</div>
+</div>
+</section>
+<div class="flex gap-4 mt-8 pb-24">
+<button class="flex-1 h-14 bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">close</span>
+                    FAIL UNIT
+                </button>
+<button class="flex-1 h-14 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">check_circle</span>
+                    PASS UNIT
+                </button>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 px-4 pb-6 pt-2 z-20">
+<div class="flex gap-2 max-w-2xl mx-auto">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">factory</span>
+<p class="text-[10px] font-medium uppercase">Production</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+<p class="text-[10px] font-medium uppercase">QC</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<p class="text-[10px] font-medium uppercase">Reports</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-[10px] font-medium uppercase">Settings</p>
+</a>
+</div>
+</footer>
+</div>
+</body></html>

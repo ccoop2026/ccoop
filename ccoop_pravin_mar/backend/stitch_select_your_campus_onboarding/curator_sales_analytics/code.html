@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Curator Sales Analytics</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-x-hidden min-h-screen flex flex-col">
+<!-- Top App Bar -->
+<header class="flex items-center justify-between p-4 sticky top-0 z-50 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-gray-800">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold">Analytics</h1>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">calendar_month</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col gap-6 p-4 pb-24">
+<!-- Campus Selector -->
+<div class="relative">
+<button class="flex items-center justify-between w-full p-4 bg-white dark:bg-[#1e293b] rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
+<img alt="College campus building" class="w-full h-full object-cover" data-alt="College campus building icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPzgeoBhu9K5DTmFOdVfpa6z5IdgiD7ZT3W4Dl2cyW-CxLUKgg4kGumCftAiM0F8Pvificn64eFlq82xM-E2tqbkkkebNl_WSds-MEjYO-0P6_7CEo3SAPpZ8dNe9flsiRlsmohOzMNvBoVcBaAg-sVkJO2jFxWRR77vaX2blAewxjkJ6Kj_Ih36PsDRhEf0_7oGJNtMZp4SmgmEQgAC5mHXCL7Fjt0XtWQaGgeMe0jDDYUb1PfJzCzJ-Cs_6wX8ae4gLlOASFi0s"/>
+</div>
+<div class="text-left">
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Campus</p>
+<h2 class="text-base font-bold">BITS Pilani</h2>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400">expand_more</span>
+</button>
+</div>
+<!-- KPI Cards -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Revenue Card (Full Width) -->
+<div class="col-span-2 bg-primary p-5 rounded-xl shadow-lg relative overflow-hidden text-white">
+<div class="absolute right-0 top-0 opacity-10 transform translate-x-4 -translate-y-4">
+<span class="material-symbols-outlined text-9xl">payments</span>
+</div>
+<div class="relative z-10">
+<p class="text-sm font-medium text-blue-100 mb-1">Total Revenue</p>
+<h3 class="text-3xl font-bold mb-2">₹12.45L</h3>
+<div class="inline-flex items-center gap-1 bg-white/20 px-2 py-1 rounded text-xs font-medium">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+12% vs last month</span>
+</div>
+</div>
+</div>
+<!-- Active Campaigns -->
+<div class="bg-white dark:bg-[#1e293b] p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+<div class="w-8 h-8 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-xl">campaign</span>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Active Campaigns</p>
+<p class="text-xl font-bold mt-1">4</p>
+</div>
+<!-- Student Base -->
+<div class="bg-white dark:bg-[#1e293b] p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+<div class="w-8 h-8 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-xl">groups</span>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Student Base</p>
+<p class="text-xl font-bold mt-1">4.2k</p>
+</div>
+</div>
+<!-- Sales Trend Graph -->
+<div class="bg-white dark:bg-[#1e293b] p-5 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-base font-bold">Sales Trend</h3>
+<select class="bg-transparent text-sm text-gray-500 dark:text-gray-400 font-medium focus:outline-none cursor-pointer">
+<option>Last 30 Days</option>
+<option>Last 6 Months</option>
+</select>
+</div>
+<!-- Simplified Line Graph Representation -->
+<div class="h-40 w-full flex items-end justify-between gap-2 px-1 relative">
+<!-- Graph Lines using divs and SVG -->
+<svg class="absolute inset-0 w-full h-full overflow-visible" preserveaspectratio="none">
+<path class="drop-shadow-lg" d="M0,120 C40,120 40,80 80,80 C120,80 120,100 160,90 C200,80 200,40 240,30 C280,20 280,50 320,10" fill="none" stroke="#137fec" stroke-width="3" vector-effect="non-scaling-stroke"></path>
+<defs>
+<lineargradient id="gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#137fec;stop-opacity:0.2"></stop>
+<stop offset="100%" style="stop-color:#137fec;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,120 C40,120 40,80 80,80 C120,80 120,100 160,90 C200,80 200,40 240,30 C280,20 280,50 320,10 V160 H0 Z" fill="url(#gradient)" stroke="none"></path>
+</svg>
+<!-- Axis Labels -->
+<div class="absolute -bottom-6 w-full flex justify-between text-[10px] text-gray-400 font-medium uppercase">
+<span>Week 1</span>
+<span>Week 2</span>
+<span>Week 3</span>
+<span>Week 4</span>
+</div>
+</div>
+<div class="h-4"></div> <!-- Spacer for axis labels -->
+</div>
+<!-- Revenue Share Donut -->
+<div class="bg-white dark:bg-[#1e293b] p-5 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+<h3 class="text-base font-bold mb-4">Revenue Split</h3>
+<div class="flex items-center gap-6">
+<div class="relative size-32 shrink-0">
+<svg class="size-full -rotate-90" viewbox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+<!-- Background Circle -->
+<circle class="stroke-current text-gray-200 dark:text-gray-700" cx="18" cy="18" fill="none" r="16" stroke-width="4"></circle>
+<!-- Progress Circle (Campus Fund) -->
+<circle class="stroke-current text-primary" cx="18" cy="18" fill="none" r="16" stroke-dasharray="30 100" stroke-width="4"></circle>
+</svg>
+<!-- Inner Text -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+<span class="text-xs text-gray-500 font-medium">Total</span>
+<span class="block text-sm font-bold">100%</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-gray-200 dark:bg-gray-600"></span>
+<span class="text-sm font-medium">Platform</span>
+</div>
+<span class="text-sm font-bold text-gray-500 dark:text-gray-400">70%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-sm font-medium">Campus Fund</span>
+</div>
+<span class="text-sm font-bold text-primary">30%</span>
+</div>
+<div class="mt-1 pt-2 border-t border-gray-100 dark:border-gray-700">
+<p class="text-xs text-gray-500 dark:text-gray-400">Total Scholarship Generated: <span class="font-bold text-green-500">₹3.73L</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Drops Performance -->
+<section>
+<div class="flex items-center justify-between mb-4 px-1">
+<h3 class="text-lg font-bold">Live Drops Performance</h3>
+<a class="text-sm text-primary font-medium hover:underline" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Drop Item 1 -->
+<div class="bg-white dark:bg-[#1e293b] p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex gap-4">
+<div class="w-20 h-20 shrink-0 bg-gray-100 dark:bg-gray-800 rounded-lg bg-cover bg-center relative" data-alt="Varsity jacket hanging" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAfoeyUWyBegeGsNc0tp5Fu6dS2IYwRBFKawKgUcSK1gg0ue5xapQ-QK8skxdvA9GAPZFk-Xdmww1E7eNP5eRxZ7R3aNqWaHldzaJ36lYjkAaLu2U54iWD3R6mNAJStFwOYpFjdLgKFzzq-qWzfvuRC1H_KD_5abXojJnGeIrzlD7MwNIiNsGzgQ1I4prD7kbGL57rcoPCLgkYGxyF__biv5EIrIucUXGSLGXPM9rB8DjY6miiOOw7KboDTYoMBqDOeriiLmCEeZgk");'>
+<div class="absolute inset-0 bg-black/10 rounded-lg"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold line-clamp-1 pr-2">BITS Varsity Jacket</h4>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 whitespace-nowrap">
+                                    Ends in 2d
+                                </span>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">₹1,499</p>
+</div>
+<div class="mt-2">
+<div class="flex justify-between text-xs mb-1.5">
+<span class="text-gray-500 dark:text-gray-400 font-medium">MOQ Progress</span>
+<span class="font-bold text-primary">85%</span>
+</div>
+<div class="w-full bg-gray-100 dark:bg-gray-700 rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Drop Item 2 -->
+<div class="bg-white dark:bg-[#1e293b] p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex gap-4">
+<div class="w-20 h-20 shrink-0 bg-gray-100 dark:bg-gray-800 rounded-lg bg-cover bg-center relative" data-alt="White t-shirt with design" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuALBgw7bRJCB0JPM3zyZRtrCCmEsBwUpIWvA3eZJIbvYwDwHDO9UMupobHm7iGsSnDSs5b-9_YIV9ROCFr3XQJca73Wd47WVRfpQ3KBOoj7Cu5ETUbFShAWEDlQAdntkGkGly2YwSTgdWm-MMqcLjxYnvThTD2qAWOniTe3LxfDSDBsYaFXAJIe81MiY_SSU91A8c0zBfToO5we9FivRMP65rN59H2bxBUrCwxDRITW0YGd0krZ16y1yVll2PRVzrv1up4ONEMW6FE");'>
+<div class="absolute inset-0 bg-black/10 rounded-lg"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold line-clamp-1 pr-2">Department Tee - CS</h4>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 whitespace-nowrap">
+                                    Active
+                                </span>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">₹499</p>
+</div>
+<div class="mt-2">
+<div class="flex justify-between text-xs mb-1.5">
+<span class="text-gray-500 dark:text-gray-400 font-medium">MOQ Progress</span>
+<span class="font-bold text-yellow-500">40%</span>
+</div>
+<div class="w-full bg-gray-100 dark:bg-gray-700 rounded-full h-1.5 overflow-hidden">
+<div class="bg-yellow-500 h-1.5 rounded-full" style="width: 40%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Drop Item 3 -->
+<div class="bg-white dark:bg-[#1e293b] p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex gap-4 opacity-75">
+<div class="w-20 h-20 shrink-0 bg-gray-100 dark:bg-gray-800 rounded-lg bg-cover bg-center relative" data-alt="Black hoodie folded" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACMGqJHbY_4GzynNJnGC7HvOjjTN8O8FWIJ-xAf708V1n8swowEruls3Th-CPL_kvj0K8Br2EYQIsFuW-T8RGxTqEjrvqJJ-dYuuFhUhYkcVnITkX52S_xMxZkRBstwzuRcpyICkNQZRlimd6eeDupn3PXq9dqMmHZUzaU7-zxpFFGDzajlxukBdeIyrAoc6q4FzqiEX_mYp4aE2XQ3UabRSw9XQCyrCCc32WUuuQ0Xz99i1cLxNoQXjtHmrCs59eI5fPaUFN_U7Q");'>
+<div class="absolute inset-0 bg-black/10 rounded-lg"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold line-clamp-1 pr-2">Oasis Festival Hoodie</h4>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 whitespace-nowrap">
+                                    Finished
+                                </span>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">₹899</p>
+</div>
+<div class="mt-2">
+<div class="flex justify-between text-xs mb-1.5">
+<span class="text-gray-500 dark:text-gray-400 font-medium">Completed</span>
+<span class="font-bold text-green-500">145%</span>
+</div>
+<div class="w-full bg-gray-100 dark:bg-gray-700 rounded-full h-1.5 overflow-hidden">
+<div class="bg-green-500 h-1.5 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full bg-white dark:bg-[#101922] border-t border-gray-200 dark:border-gray-800 px-6 py-3 flex justify-between items-center z-50">
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined text-2xl">shopping_bag</span>
+<span class="text-[10px] font-medium">Drops</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-2xl fill-current">analytics</span>
+<span class="text-[10px] font-bold">Analytics</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+</body></html>

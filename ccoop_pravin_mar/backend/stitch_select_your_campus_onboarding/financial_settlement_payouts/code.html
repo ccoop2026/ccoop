@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CCOOP Global Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .active-nav { color: #ec5b13; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between p-4 max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-2 rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<div>
+<h1 class="text-xl font-bold leading-tight tracking-tight">CCOOP Global Admin</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-widest font-semibold">Central Financial Console</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center overflow-hidden border-2 border-primary/20">
+<img class="object-cover h-full w-full" data-alt="Admin user profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuweR8svJxEd7AKjsPDCMcc9BdAmLUlYbU6QXJI0Dq7-AHymUpLROSm9-ZAkbhSwjzfksMASEEbhg0nrTp-hd3Hti-nVRKxRM1cge7Q-jYj8Qih9UOPgGHh41u-9srq3rXfAGKr68ia6TtIu9mhRmFUet8JjU5yvhC11m08C7-RILxNBxodCwmP5k3mIon9K2-D_58sXoXj5Vp6GXKle_7Eg7bHlaETj0tdpr7KQWrZZ9oKFxQV1N0Mdv5O8FcQk5PcpKoVgAyU-Y"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto p-4 lg:p-6 pb-24">
+<!-- Summary Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Revenue (MTD)</p>
+<span class="material-symbols-outlined text-primary">payments</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 tracking-tight text-2xl font-bold leading-tight">₹45,20,000</p>
+<div class="flex items-center gap-1">
+<span class="text-emerald-600 text-sm font-bold flex items-center"><span class="material-symbols-outlined text-sm">trending_up</span> +12.5%</span>
+<span class="text-slate-400 text-xs">vs last month</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Pending Payouts</p>
+<span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 tracking-tight text-2xl font-bold leading-tight">₹8,45,000</p>
+<div class="flex items-center gap-1">
+<span class="text-amber-500 text-sm font-bold">24 Batches</span>
+<span class="text-slate-400 text-xs">awaiting approval</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Active Campus Partners</p>
+<span class="material-symbols-outlined text-primary">school</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 tracking-tight text-2xl font-bold leading-tight">18</p>
+<div class="flex items-center gap-1">
+<span class="text-primary text-sm font-bold">+2</span>
+<span class="text-slate-400 text-xs">new this week</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Refund Processing</p>
+<span class="material-symbols-outlined text-primary">undo</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 tracking-tight text-2xl font-bold leading-tight">₹1,20,000</p>
+<div class="flex items-center gap-1">
+<span class="text-rose-500 text-sm font-bold">142 Requests</span>
+<span class="text-slate-400 text-xs">failed campaigns</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Side: Distribution & Payouts -->
+<div class="lg:col-span-2 space-y-8">
+<!-- Campus Revenue Chart Placeholder -->
+<section class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-lg font-bold">Campus-wise Revenue Distribution</h2>
+<select class="bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm font-medium focus:ring-primary">
+<option>Last 30 Days</option>
+<option>Last Quarter</option>
+<option>Financial Year</option>
+</select>
+</div>
+<div class="flex items-end justify-between h-48 gap-4 px-2">
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/10 rounded-t-lg relative group">
+<div class="absolute bottom-0 w-full bg-primary/40 rounded-t-lg transition-all duration-500 group-hover:bg-primary" style="height: 45%;"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-500">IITD</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/10 rounded-t-lg relative group">
+<div class="absolute bottom-0 w-full bg-primary/40 rounded-t-lg transition-all duration-500 group-hover:bg-primary" style="height: 85%;"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-500">IITB</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/10 rounded-t-lg relative group">
+<div class="absolute bottom-0 w-full bg-primary/40 rounded-t-lg transition-all duration-500 group-hover:bg-primary" style="height: 100%;"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-500">BITS</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/10 rounded-t-lg relative group">
+<div class="absolute bottom-0 w-full bg-primary/40 rounded-t-lg transition-all duration-500 group-hover:bg-primary" style="height: 30%;"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-500">NITW</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/10 rounded-t-lg relative group">
+<div class="absolute bottom-0 w-full bg-primary/40 rounded-t-lg transition-all duration-500 group-hover:bg-primary" style="height: 55%;"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-500">MU</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/10 rounded-t-lg relative group">
+<div class="absolute bottom-0 w-full bg-primary/40 rounded-t-lg transition-all duration-500 group-hover:bg-primary" style="height: 20%;"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-500">VIT</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/10 rounded-t-lg relative group">
+<div class="absolute bottom-0 w-full bg-primary/40 rounded-t-lg transition-all duration-500 group-hover:bg-primary" style="height: 70%;"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-500">SRM</span>
+</div>
+</div>
+</section>
+<!-- Payout Management Table -->
+<section class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="p-6 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center">
+<h2 class="text-lg font-bold">Pending Curator Payouts</h2>
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-sm">rocket_launch</span> Bulk Process
+                        </button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-slate-50 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 text-xs uppercase font-bold tracking-wider">
+<tr>
+<th class="px-6 py-4">Curator &amp; Campus</th>
+<th class="px-6 py-4">Total Amount</th>
+<th class="px-6 py-4">Period</th>
+<th class="px-6 py-4">Status</th>
+<th class="px-6 py-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary text-xs">AR</div>
+<div>
+<p class="font-bold text-sm">Anshul Rai</p>
+<p class="text-xs text-slate-500">IIT Bombay</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 font-bold text-sm">₹84,200</td>
+<td class="px-6 py-4 text-sm text-slate-500">Oct 1-15, 2023</td>
+<td class="px-6 py-4">
+<span class="bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-[10px] font-bold px-2 py-1 rounded-full uppercase">Pending Verification</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary font-bold text-sm hover:underline">Review</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary text-xs">SP</div>
+<div>
+<p class="font-bold text-sm">Sana Parveen</p>
+<p class="text-xs text-slate-500">BITS Pilani</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 font-bold text-sm">₹1,12,500</td>
+<td class="px-6 py-4 text-sm text-slate-500">Oct 1-15, 2023</td>
+<td class="px-6 py-4">
+<span class="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold px-2 py-1 rounded-full uppercase">Ready</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary font-bold text-sm hover:underline">Review</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary text-xs">MK</div>
+<div>
+<p class="font-bold text-sm">Manoj Kumar</p>
+<p class="text-xs text-slate-500">NIT Warangal</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 font-bold text-sm">₹45,900</td>
+<td class="px-6 py-4 text-sm text-slate-500">Oct 1-15, 2023</td>
+<td class="px-6 py-4">
+<span class="bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-[10px] font-bold px-2 py-1 rounded-full uppercase">On Hold</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary font-bold text-sm hover:underline">Review</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/30 text-center">
+<button class="text-sm font-bold text-slate-500 hover:text-primary transition-colors">View All Payout Requests</button>
+</div>
+</section>
+</div>
+<!-- Right Side: Refund Tracking & Logs -->
+<div class="space-y-8">
+<!-- Refund Status Tracking -->
+<section class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
+<h2 class="text-lg font-bold mb-4">Refund Processing Status</h2>
+<div class="space-y-6">
+<div class="relative pl-6 border-l-2 border-slate-100 dark:border-slate-800">
+<div class="absolute -left-1.5 top-0 h-3 w-3 rounded-full bg-primary border-2 border-white dark:border-slate-900"></div>
+<p class="text-sm font-bold">Failed Campaign: Summer Fest Merch</p>
+<p class="text-xs text-slate-500 mb-2">IIT Delhi • 45 Orders</p>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 85%;"></div>
+</div>
+<p class="text-[10px] mt-1 text-slate-400">85% Processed (38/45)</p>
+</div>
+<div class="relative pl-6 border-l-2 border-slate-100 dark:border-slate-800">
+<div class="absolute -left-1.5 top-0 h-3 w-3 rounded-full bg-amber-500 border-2 border-white dark:border-slate-900"></div>
+<p class="text-sm font-bold">Failed Campaign: Coding Bootcamp</p>
+<p class="text-xs text-slate-500 mb-2">VIT Vellore • 120 Orders</p>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full" style="width: 25%;"></div>
+</div>
+<p class="text-[10px] mt-1 text-slate-400">25% Processed (30/120)</p>
+</div>
+<div class="relative pl-6 border-l-2 border-slate-100 dark:border-slate-800">
+<div class="absolute -left-1.5 top-0 h-3 w-3 rounded-full bg-slate-300 dark:bg-slate-600 border-2 border-white dark:border-slate-900"></div>
+<p class="text-sm font-bold">Failed Campaign: Tech Night Passes</p>
+<p class="text-xs text-slate-500 mb-2">SRM Chennai • 210 Orders</p>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
+<div class="bg-slate-300 dark:bg-slate-600 h-full" style="width: 0%;"></div>
+</div>
+<p class="text-[10px] mt-1 text-slate-400">Scheduled for batch processing</p>
+</div>
+</div>
+<button class="w-full mt-6 py-3 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                        View Refund Management
+                    </button>
+</section>
+<!-- Activity Log -->
+<section class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
+<h2 class="text-lg font-bold mb-4">System Activity</h2>
+<div class="space-y-4">
+<div class="flex gap-3">
+<div class="h-8 w-8 rounded bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+</div>
+<div>
+<p class="text-xs font-bold">Payout Approved</p>
+<p class="text-[11px] text-slate-500">Curator #324 (IITM) payout released successfully.</p>
+<span class="text-[10px] text-slate-400">2 mins ago</span>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="h-8 w-8 rounded bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center text-rose-600">
+<span class="material-symbols-outlined text-sm">warning</span>
+</div>
+<div>
+<p class="text-xs font-bold">Refund Failed</p>
+<p class="text-[11px] text-slate-500">Bank error for Order #XY2901 (IITD).</p>
+<span class="text-[10px] text-slate-400">14 mins ago</span>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="h-8 w-8 rounded bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined text-sm">info</span>
+</div>
+<div>
+<p class="text-xs font-bold">New Campus Added</p>
+<p class="text-[11px] text-slate-500">IIM Ahmedabad portal is now live.</p>
+<span class="text-[10px] text-slate-400">1 hour ago</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-4 pb-4 pt-2 lg:hidden">
+<div class="flex justify-around items-center max-w-lg mx-auto">
+<a class="flex flex-col items-center gap-1 active-nav" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-bold">Overview</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">account_balance</span>
+<span class="text-[10px] font-bold">Payouts</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">currency_exchange</span>
+<span class="text-[10px] font-bold">Refunds</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold">Settings</span>
+</a>
+</div>
+</nav>
+<!-- Desktop Sidebar (Hidden on mobile) -->
+<aside class="hidden lg:flex fixed left-0 top-0 h-full w-20 flex-col items-center py-8 bg-white dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800 z-[60]">
+<div class="mb-10 text-primary">
+<span class="material-symbols-outlined text-3xl">hub</span>
+</div>
+<div class="flex flex-col gap-8">
+<a class="text-primary group relative" href="#">
+<span class="material-symbols-outlined text-2xl">dashboard</span>
+<span class="absolute left-full ml-4 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity">Overview</span>
+</a>
+<a class="text-slate-400 dark:text-slate-600 hover:text-primary group relative" href="#">
+<span class="material-symbols-outlined text-2xl">account_balance</span>
+<span class="absolute left-full ml-4 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity">Payouts</span>
+</a>
+<a class="text-slate-400 dark:text-slate-600 hover:text-primary group relative" href="#">
+<span class="material-symbols-outlined text-2xl">currency_exchange</span>
+<span class="absolute left-full ml-4 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity">Refunds</span>
+</a>
+<a class="text-slate-400 dark:text-slate-600 hover:text-primary group relative" href="#">
+<span class="material-symbols-outlined text-2xl">school</span>
+<span class="absolute left-full ml-4 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity">Campuses</span>
+</a>
+</div>
+<div class="mt-auto">
+<a class="text-slate-400 dark:text-slate-600 hover:text-primary group relative" href="#">
+<span class="material-symbols-outlined text-2xl">settings</span>
+<span class="absolute left-full ml-4 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity">Settings</span>
+</a>
+</div>
+</aside>
+<style>
+        @media (min-width: 1024px) {
+            header { padding-left: 5rem; }
+            main { padding-left: 6rem; }
+        }
+    </style>
+</body></html>

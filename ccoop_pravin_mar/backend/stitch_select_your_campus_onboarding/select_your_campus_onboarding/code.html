@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Select Your Campus - ccoop</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-dark": "#1d2630",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased min-h-screen flex flex-col overflow-x-hidden">
+<!-- Status Bar Spacer for iOS -->
+<div class="h-12 w-full flex-shrink-0"></div>
+<!-- Header Section -->
+<header class="px-6 pt-4 pb-2">
+<h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">Welcome to ccoop</h1>
+<p class="text-base text-gray-500 dark:text-gray-400 font-normal">Select your campus to start shopping for exclusive merch.</p>
+</header>
+<!-- Search & Location Action -->
+<div class="sticky top-0 z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-6 py-4 transition-all">
+<!-- Search Bar -->
+<div class="group relative flex items-center w-full h-12 rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-gray-200 dark:border-gray-700 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all duration-200">
+<div class="flex items-center justify-center pl-4 pr-2 text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</div>
+<input class="w-full bg-transparent border-none text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-0 focus:outline-none text-base h-full rounded-xl pr-4" placeholder="Find your college..." type="text"/>
+</div>
+<!-- Use Current Location Button -->
+<button class="w-full mt-3 flex items-center justify-center gap-2 py-2.5 rounded-xl text-primary font-semibold text-sm hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[20px] fill-1">my_location</span>
+<span>Use Current Location</span>
+</button>
+</div>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col pb-8">
+<!-- Trending Campuses Section -->
+<section class="py-4">
+<h3 class="px-6 text-lg font-bold text-gray-900 dark:text-white mb-4">Trending Campuses</h3>
+<div class="flex overflow-x-auto no-scrollbar gap-5 px-6 pb-2">
+<!-- Trending Item 1 -->
+<button class="flex flex-col items-center gap-2 min-w-[80px] group">
+<div class="w-16 h-16 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 p-1 shadow-sm group-hover:border-primary transition-colors overflow-hidden">
+<img alt="College building logo abstract" class="w-full h-full rounded-full object-cover opacity-90" data-alt="Abstract college logo placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGlmfD0YiuL0_ucpWSGsZYDeVr2bSCVioSUax-TERZ3955RhhuiTo77aJ3r1VRwIwtp1U-SukpSU-KbSOyPvZVxBDYdogJ4I-pm35bw-tvDbxoyjxNvJmaI6EHSnghhXcM0Fi9yUii091Blf4bmUQQ0XBKD944vsdweKynNEWhzHdZdSelK_3JqQMfoavaCnq3jCh7KOAH8K7Xn4AnchaN731y5g3CoxDpQ2d5LIk_oYOpE4o2zsBwrIcnYo4_l85UXbG1tQuBP10"/>
+</div>
+<span class="text-xs font-medium text-center text-gray-700 dark:text-gray-300 w-full truncate">IIT Delhi</span>
+</button>
+<!-- Trending Item 2 -->
+<button class="flex flex-col items-center gap-2 min-w-[80px] group">
+<div class="w-16 h-16 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 p-1 shadow-sm group-hover:border-primary transition-colors overflow-hidden">
+<img alt="University crest abstract" class="w-full h-full rounded-full object-cover opacity-90" data-alt="Abstract university crest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeSeNj3JJZ_vc-xfd-VlHMBLd8T320m-D9n9vu_4hE43c3uGfhlmUMnR9UiIIAGNVCe9-BFyDpIkerJH2-2tEnx02uOMQ1vezRX_XJe5zLlsENPSEoC0FHjypQkA7TsXItpqnZ4-0S061OzH1swx3vl7SICUpTTfEjqxCLcqdAG2EkGCgCE70ytjlbxaGT63AW5iftP0M_7F7hXQxXQiDiWiyvsVGfLG1A4G86y-vZGYbeC-l68FpSq0wgbsXtv34_zn1JL--u6nE"/>
+</div>
+<span class="text-xs font-medium text-center text-gray-700 dark:text-gray-300 w-full truncate">BITS Pilani</span>
+</button>
+<!-- Trending Item 3 -->
+<button class="flex flex-col items-center gap-2 min-w-[80px] group">
+<div class="w-16 h-16 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 p-1 shadow-sm group-hover:border-primary transition-colors overflow-hidden">
+<img alt="Campus shield logo abstract" class="w-full h-full rounded-full object-cover opacity-90" data-alt="Abstract campus shield logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFQZOLR_-omrJFDLzTFfOQFwx_9hebGpsJGXgTig3ktyH6aVyHguDt1qt_OfKCev0Z6FOTMMYH9pC2QI-dIbrx8nAFfettZjOhVFvNoVOGascw-Nuga8sjc2GV4_3GMDS4cZDXIxU32GHkPJinTWUPWnfuY9yi4Hf_pXeF_vhBZ_XGgPqmaEbh8HEXDwLLkEVVqE1G84KzbgAlmSUSvmwLQADLCW13RpK4yvmWAe8V2fcOywVcLq88jeZzIgeWh7Lo8REAsViS7H4"/>
+</div>
+<span class="text-xs font-medium text-center text-gray-700 dark:text-gray-300 w-full truncate">DU North</span>
+</button>
+<!-- Trending Item 4 -->
+<button class="flex flex-col items-center gap-2 min-w-[80px] group">
+<div class="w-16 h-16 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 p-1 shadow-sm group-hover:border-primary transition-colors overflow-hidden">
+<img alt="Academic institution logo abstract" class="w-full h-full rounded-full object-cover opacity-90" data-alt="Abstract academic institution logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtBOzi-FuQmb7EoRn6gEsPqtKmjwOmOi7Job2tOuLadYsGbFsh_ohaRCwP4VMsYL-3aQEOMfTTDxO3I8op1eExT3lACDsw90m08urT_dVQ1HGSsqkrPRlzt4DXfxI4Azy8ayXdaE5-1oZoSaJSYgV9qNALBaGAFAZZBUJPJjQeeYPJDfLgSmwLvF-w_8w_gCUCPrbBAw2Q9a3BQMdwzU2iiiaQJzBa0v_r62OjgspBmAymrFhEL0EHQav2W2gXHqXpgltuuk3a040"/>
+</div>
+<span class="text-xs font-medium text-center text-gray-700 dark:text-gray-300 w-full truncate">VIT Vellore</span>
+</button>
+</div>
+</section>
+<!-- Divider -->
+<div class="h-px bg-gray-200 dark:bg-gray-800 mx-6 my-2"></div>
+<!-- All Campuses List -->
+<section class="flex-1 px-4 mt-2">
+<div class="flex items-center justify-between px-2 mb-4">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">All Campuses</h3>
+<button class="text-xs font-medium text-primary hover:text-primary/80">Sort by name</button>
+</div>
+<div class="flex flex-col gap-3">
+<!-- List Item 1 -->
+<button class="group w-full flex items-center gap-4 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm hover:border-primary/50 dark:hover:border-primary/50 active:scale-[0.98] transition-all duration-200 text-left">
+<div class="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex-shrink-0 overflow-hidden">
+<img alt="Modern blue logo on white" class="w-full h-full object-cover" data-alt="Generic blue logo for IIT Bombay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALyVpK_0uzoYJQh5ITdUHmjynZYJmccpb8MOUxNxcI56SBO1_1yjZ-7jghXCQK7NNOd4AzCPIUYhqgOp4gPaflFspE3ZRFz7kafDEbw07a5hzORcHC47BS4kppmOdD02CoYyHJdTG3IHglQ4LG0zcDHQl-0s6CK0qc5cpS5m_pBXnf9Eiv2s2XxvT6DTxZvZk5_RU6SS2pqIVYN4hWvqmUZb49hlqigx50jl6VPZCNBXtfC0epGIksD2R4-bog-kKuSZK94JM4w-o"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-base font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">IIT Bombay</h4>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-gray-400">location_on</span>
+<p class="text-sm text-gray-500 dark:text-gray-400 truncate">Powai, Mumbai</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- List Item 2 -->
+<button class="group w-full flex items-center gap-4 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm hover:border-primary/50 dark:hover:border-primary/50 active:scale-[0.98] transition-all duration-200 text-left">
+<div class="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex-shrink-0 overflow-hidden">
+<img alt="Abstract geometric red logo" class="w-full h-full object-cover" data-alt="Generic red logo for SRM" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpQwc8hoiOpggujhEVskBxuvXPXP199X7tM7mxQevBFGLPB-NeEOWOmkSvlYPcXnZchhgOsMmMi-xf258YW0Buxa09TFtVNwFVUTIaEc0pCJ6I5py6iwy8yc4HXrWAWGOF8K-vMt0eT8qWvVQQmzZLmYDlvI0HutEbw74EY8EN2pSLwJfVv5dWMyIfaw8A9_1H6vFqPCJ_45dzIleljKlTuvT5zL5GkWQA_EbEcdIenfPJDq-ydFvquqDQ-sUFyxcsXmpkYFaa3Bk"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-base font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">SRM University</h4>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-gray-400">location_on</span>
+<p class="text-sm text-gray-500 dark:text-gray-400 truncate">Kattankulathur, Chennai</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- List Item 3 -->
+<button class="group w-full flex items-center gap-4 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm hover:border-primary/50 dark:hover:border-primary/50 active:scale-[0.98] transition-all duration-200 text-left">
+<div class="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex-shrink-0 overflow-hidden">
+<img alt="Minimalist orange logo" class="w-full h-full object-cover" data-alt="Generic orange logo for Manipal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCZIxyGxKbK57AHyHiPVNFe-74LSWwsF8CsqLUHLQa7ySS5aq_uVRHpugi5S0OpmR1yfYXNaWdK5g69miUNrnEHO_1WHBQ1xCW_c6V6j1tz2rT3CQVCxytSQ05A-wdhTSx6NDz5MIdPDrRMugXGVXd3mxcNjYV2TgejGU0aJXzYyic1CiGfVhmcN8cPuXi-oChV1_marGcS9ev3Jmua9J4jorslKL1Vl-p6k2dLIl3SKreXnEe9d_ffqHYLWfu6XG1FHkUKrwfI_c"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-base font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Manipal Institute of Tech</h4>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-gray-400">location_on</span>
+<p class="text-sm text-gray-500 dark:text-gray-400 truncate">Manipal, Karnataka</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- List Item 4 -->
+<button class="group w-full flex items-center gap-4 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm hover:border-primary/50 dark:hover:border-primary/50 active:scale-[0.98] transition-all duration-200 text-left">
+<div class="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex-shrink-0 overflow-hidden">
+<img alt="Green academic symbol" class="w-full h-full object-cover" data-alt="Generic green logo for VIT" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4mO4DqZ3gC_VDiRp5FFVHkNmwkT8M_8qYNDAdr75fYNxpNxESDXk0RC_ENoPAnEZgQKlmU3FOG0TPReNL-iMKqNquiD4CaxGiC0FT0vLJ4TSSfWzrQQTwD7jgpXrZQpVBGp-ejEU1nuL3ZLJHpyVsU0uUkIimyxEL_3FhiZxbcFtO0zoHaEAISuxPV8AOvhT1Ev_evBrcYN9ztCMJcjq3vehfPwJ3jwrL7Q_MS4JUbRGAfd9lw5iwlEOyA0pVL5Thq1mCGImqVXA"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-base font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">VIT Vellore</h4>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-gray-400">location_on</span>
+<p class="text-sm text-gray-500 dark:text-gray-400 truncate">Vellore, Tamil Nadu</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- List Item 5 -->
+<button class="group w-full flex items-center gap-4 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm hover:border-primary/50 dark:hover:border-primary/50 active:scale-[0.98] transition-all duration-200 text-left">
+<div class="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex-shrink-0 overflow-hidden flex items-center justify-center">
+<span class="text-lg font-bold text-gray-400">N</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-base font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">NIT Trichy</h4>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-gray-400">location_on</span>
+<p class="text-sm text-gray-500 dark:text-gray-400 truncate">Tiruchirappalli, Tamil Nadu</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+<!-- Not found CTA -->
+<div class="mt-8 mb-6 p-6 rounded-2xl border-2 border-dashed border-gray-200 dark:border-gray-800 flex flex-col items-center justify-center text-center">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-primary text-[24px]">school</span>
+</div>
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white mb-1">Don't see your campus?</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400 mb-3 max-w-[200px]">We are expanding rapidly! Request your campus to be added next.</p>
+<button class="text-sm font-bold text-primary hover:text-primary/80 hover:underline">Request Campus</button>
+</div>
+</section>
+</main>
+</body></html>

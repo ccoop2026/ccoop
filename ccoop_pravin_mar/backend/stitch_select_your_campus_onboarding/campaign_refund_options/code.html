@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Campaign Refund Options</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "card-dark": "#1e242b",
+                        "border-dark": "#2d3642",
+                        "subtle-text": "#9dabb9",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom radio button styling to match the theme */
+        input[type="radio"]:checked + div {
+            border-color: #137fec;
+            background-color: rgba(19, 127, 236, 0.05);
+        }
+        
+        .safe-area-top {
+            padding-top: env(safe-area-inset-top);
+        }
+        
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen text-slate-900 dark:text-white overflow-x-hidden selection:bg-primary/30">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto shadow-2xl safe-area-top safe-area-bottom bg-background-light dark:bg-background-dark">
+<!-- Header -->
+<div class="flex items-center sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md p-4 pb-2 justify-between border-b border-gray-200 dark:border-border-dark">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">
+                Campaign Update
+            </h2>
+</div>
+<!-- Main Content Scroll Area -->
+<div class="flex flex-col flex-1 px-5 py-6">
+<!-- Hero Section -->
+<div class="flex flex-col gap-6 mb-8">
+<!-- Status Badge -->
+<div class="inline-flex self-start items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 dark:text-orange-400">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span class="text-xs font-bold uppercase tracking-wider">MOQ Not Met</span>
+</div>
+<h1 class="text-slate-900 dark:text-white tracking-tight text-[32px] font-extrabold leading-[1.1]">
+                    Winter Drop Update
+                </h1>
+<p class="text-slate-600 dark:text-subtle-text text-base font-normal leading-relaxed">
+                    We didn't quite hit our Minimum Order Quantity (MOQ) this time. To stay sustainable, we only produce what is ordered.
+                </p>
+<!-- Product Thumbnail Context -->
+<div class="flex items-center gap-4 p-3 rounded-xl bg-white dark:bg-card-dark border border-gray-200 dark:border-border-dark shadow-sm">
+<div class="w-16 h-16 shrink-0 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden relative">
+<img alt="Folded winter hoodie merchandise on a table" class="w-full h-full object-cover" data-alt="Folded winter hoodie merchandise on a table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOCObkajU7IDLfyAyphBJFFdTU2cElK7N0Pnhl0czv0DbDEpNqm9ThOTjnKXGD34Gnghp0x9WY7OaAAmdouiLWfr-ocLgB6_cFybJRqlOI3aeYBUfhoFGH7ub5UOfyepje8_wZrXKepm66zGZuJ_-ARxgtb71efW_FmA2Z4HSWtwsVw0gqznINN0Z2Q9QoR9VQEpyyYdlODMXAS9EgQXg31v7CrHsG4P4bTrXxloNapd1mfwN8CR3jqojj24crXvJMvV3KI29rU9U"/>
+</div>
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-white font-bold text-sm">Winter Drop Hoodie</span>
+<span class="text-slate-500 dark:text-gray-400 text-xs">Ccoop.in Limited Edition</span>
+</div>
+</div>
+</div>
+<!-- Options Section -->
+<div class="flex flex-col gap-4">
+<h3 class="text-slate-900 dark:text-white text-sm font-bold uppercase tracking-widest text-opacity-80 mb-2 px-1">
+                    Select Refund Option
+                </h3>
+<!-- Option 1: Store Credit (Recommended) -->
+<label class="group relative cursor-pointer">
+<input checked="" class="peer sr-only" name="refund_option" type="radio" value="credit"/>
+<div class="flex flex-col gap-3 rounded-xl border-2 border-transparent bg-white dark:bg-card-dark p-4 shadow-sm transition-all hover:border-primary/50 peer-checked:border-primary peer-checked:bg-primary/[0.03] ring-1 ring-black/5 dark:ring-white/5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 dark:bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</span>
+<p class="text-slate-900 dark:text-white text-base font-bold">110% Store Credit</p>
+</div>
+<div class="h-5 w-5 rounded-full border-2 border-gray-300 dark:border-gray-500 peer-checked:border-primary group-hover:border-primary/50 flex items-center justify-center">
+<div class="h-2.5 w-2.5 rounded-full bg-primary opacity-0 transition-opacity peer-checked:opacity-100 peer-checked:group-[:has(:checked)]:opacity-100 hidden group-[:has(:checked)]:block"></div>
+<!-- CSS hack to show dot based on peer checked status since sibling selector can't go backwards easily without :has support or proper structure. 
+                                     Using simpler Tailwind peer pattern on the SVG below instead. -->
+<span class="material-symbols-outlined text-primary text-[20px] absolute opacity-0 scale-50 transition-all peer-checked:opacity-100 peer-checked:scale-100 right-4 top-4">check_circle</span>
+</div>
+</div>
+<div class="pl-10">
+<p class="text-slate-500 dark:text-subtle-text text-sm font-medium leading-normal mb-2">
+                                Get more value instantly for future drops.
+                            </p>
+<span class="inline-flex items-center px-2 py-1 rounded text-[10px] font-bold uppercase bg-green-500/10 text-green-600 dark:text-green-400 border border-green-500/20">
+<span class="material-symbols-outlined text-[12px] mr-1">bolt</span>
+                                Instant &amp; Recommended
+                            </span>
+</div>
+</div>
+</label>
+<!-- Option 2: Refund -->
+<label class="group relative cursor-pointer">
+<input class="peer sr-only" name="refund_option" type="radio" value="refund"/>
+<div class="flex flex-col gap-3 rounded-xl border-2 border-transparent bg-white dark:bg-card-dark p-4 shadow-sm transition-all hover:border-gray-400 dark:hover:border-gray-600 peer-checked:border-white dark:peer-checked:border-white ring-1 ring-black/5 dark:ring-white/5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-300">
+<span class="material-symbols-outlined text-[20px]">credit_card</span>
+</span>
+<p class="text-slate-900 dark:text-white text-base font-bold">Original Payment</p>
+</div>
+<span class="material-symbols-outlined text-white text-[20px] absolute opacity-0 scale-50 transition-all peer-checked:opacity-100 peer-checked:scale-100 right-4 top-4">check_circle</span>
+</div>
+<div class="pl-10">
+<p class="text-slate-500 dark:text-subtle-text text-sm font-medium leading-normal">
+                                Refund to your card/bank.
+                            </p>
+<p class="text-slate-400 dark:text-gray-500 text-xs mt-1">
+                                Takes 7-10 business days depending on your bank.
+                            </p>
+</div>
+</div>
+</label>
+</div>
+<!-- Footer Note -->
+<div class="mt-8 mb-4 p-4 rounded-xl bg-gray-50 dark:bg-background-dark/50 border border-dashed border-gray-300 dark:border-border-dark">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-slate-400 text-[20px] mt-0.5">storefront</span>
+<p class="text-slate-500 dark:text-subtle-text text-xs leading-relaxed">
+<strong class="text-slate-700 dark:text-gray-300">Missed out?</strong> Keep an eye on the retail store—limited quantities might drop later, though pricing may vary.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Action -->
+<div class="sticky bottom-0 w-full p-4 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-xl border-t border-gray-200 dark:border-border-dark safe-area-bottom">
+<button class="w-full cursor-pointer flex items-center justify-center gap-2 rounded-xl h-14 bg-primary hover:bg-blue-600 active:scale-[0.98] transition-all text-white shadow-lg shadow-blue-900/20">
+<span class="text-base font-bold tracking-wide">Confirm Selection</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Script to handle simple radio selection visual logic for the checkmark if needed, though CSS peer covers most -->
+<script>
+        // Simple logic to ensure the correct checkmark is shown (redundant with CSS but good for robustness if CSS :has fails on older browsers)
+        const radios = document.querySelectorAll('input[name="refund_option"]');
+        radios.forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                // The visual changes are largely handled by Tailwind CSS peer classes
+            });
+        });
+    </script>
+</body></html>

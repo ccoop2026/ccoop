@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Campus Curator - Active Campaign Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-primary/20 p-4 sticky top-0 z-10">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<div class="flex-1 ml-2">
+<h1 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">Winter Oversized Hoodie</h1>
+<p class="text-xs text-slate-500 dark:text-primary/60 font-medium">IIT Delhi • Batch of 2024</p>
+</div>
+<div class="flex items-center gap-2">
+<div class="bg-primary/10 text-primary px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Live</div>
+<button class="flex items-center justify-center rounded-xl p-2 bg-transparent text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</header>
+<!-- High-Level Stats -->
+<div class="flex flex-wrap gap-4 p-4">
+<div class="flex min-w-[150px] flex-1 flex-col gap-1 rounded-xl p-5 bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 shadow-sm">
+<p class="text-slate-500 dark:text-primary/70 text-sm font-medium">Pledges / MOQ</p>
+<div class="flex items-baseline gap-2">
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">184 / 200</p>
+</div>
+<div class="w-full bg-slate-200 dark:bg-white/10 h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 92%;"></div>
+</div>
+<p class="text-primary text-xs font-semibold mt-1">92% Target Reached</p>
+</div>
+<div class="flex min-w-[150px] flex-1 flex-col gap-1 rounded-xl p-5 bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 shadow-sm">
+<p class="text-slate-500 dark:text-primary/70 text-sm font-medium">Conv. Rate</p>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">76.4%</p>
+<p class="text-emerald-600 dark:text-emerald-400 text-xs font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +4.2% today
+                </p>
+</div>
+<div class="flex min-w-[150px] flex-1 flex-col gap-1 rounded-xl p-5 bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 shadow-sm">
+<p class="text-slate-500 dark:text-primary/70 text-sm font-medium">Revenue (Est.)</p>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">₹2,34,500</p>
+<p class="text-slate-500 dark:text-primary/60 text-xs">142 Paid / 42 Pending</p>
+</div>
+</div>
+<!-- Real-time Funnel -->
+<section class="px-4 py-2">
+<h3 class="text-slate-900 dark:text-slate-100 text-md font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">filter_alt</span> Real-time Funnel
+            </h3>
+<div class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 rounded-xl p-4">
+<div class="space-y-4">
+<!-- Funnel Step 1 -->
+<div class="relative">
+<div class="flex justify-between items-end mb-1">
+<span class="text-xs font-bold text-slate-500 dark:text-primary/60 uppercase tracking-tight">Pledged</span>
+<span class="text-sm font-bold text-slate-900 dark:text-slate-100">184</span>
+</div>
+<div class="h-3 bg-slate-200 dark:bg-white/10 rounded-full w-full">
+<div class="bg-primary/40 h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Funnel Step 2 -->
+<div class="relative">
+<div class="flex justify-between items-end mb-1">
+<span class="text-xs font-bold text-slate-500 dark:text-primary/60 uppercase tracking-tight">Payment Notified</span>
+<span class="text-sm font-bold text-slate-900 dark:text-slate-100">168</span>
+</div>
+<div class="h-3 bg-slate-200 dark:bg-white/10 rounded-full w-full">
+<div class="bg-primary/70 h-full rounded-full" style="width: 91%;"></div>
+</div>
+</div>
+<!-- Funnel Step 3 -->
+<div class="relative">
+<div class="flex justify-between items-end mb-1">
+<span class="text-xs font-bold text-slate-500 dark:text-primary/60 uppercase tracking-tight">Paid (Success)</span>
+<span class="text-sm font-bold text-slate-900 dark:text-slate-100">142</span>
+</div>
+<div class="h-3 bg-slate-200 dark:bg-white/10 rounded-full w-full">
+<div class="bg-primary h-full rounded-full" style="width: 77%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-100 dark:border-primary/10 flex justify-between items-center">
+<p class="text-xs text-slate-500 dark:text-primary/60 italic">42 Unpaid pledges require attention</p>
+<button class="text-primary text-xs font-bold underline">View List</button>
+</div>
+</div>
+</section>
+<!-- Variant-level Performance -->
+<section class="px-4 py-6">
+<h3 class="text-slate-900 dark:text-slate-100 text-md font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span> Variant Performance
+            </h3>
+<div class="space-y-3">
+<!-- Variant Item -->
+<div class="flex items-center gap-3 p-3 bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 rounded-xl">
+<div class="size-10 rounded bg-slate-900 flex items-center justify-center text-white text-[10px] font-bold">BLK</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Midnight Black (All Sizes)</p>
+<span class="text-xs font-bold text-emerald-600 dark:text-emerald-400">MOQ MET</span>
+</div>
+<div class="w-full bg-slate-200 dark:bg-white/10 h-1 rounded-full">
+<div class="bg-emerald-500 h-full rounded-full" style="width: 100%;"></div>
+</div>
+<p class="text-[10px] text-slate-500 dark:text-primary/60 mt-1">82 Pledges / 50 MOQ</p>
+</div>
+</div>
+<!-- Variant Item -->
+<div class="flex items-center gap-3 p-3 bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 rounded-xl">
+<div class="size-10 rounded bg-slate-200 flex items-center justify-center text-slate-800 text-[10px] font-bold">GRY</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Oxford Grey (All Sizes)</p>
+<span class="text-xs font-bold text-primary">76%</span>
+</div>
+<div class="w-full bg-slate-200 dark:bg-white/10 h-1 rounded-full">
+<div class="bg-primary h-full rounded-full" style="width: 76%;"></div>
+</div>
+<p class="text-[10px] text-slate-500 dark:text-primary/60 mt-1">38 Pledges / 50 MOQ</p>
+</div>
+</div>
+<!-- Variant Item -->
+<div class="flex items-center gap-3 p-3 bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 rounded-xl">
+<div class="size-10 rounded bg-[#1e3a8a] flex items-center justify-center text-white text-[10px] font-bold">NVY</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Navy Blue (All Sizes)</p>
+<span class="text-xs font-bold text-slate-400">42%</span>
+</div>
+<div class="w-full bg-slate-200 dark:bg-white/10 h-1 rounded-full">
+<div class="bg-slate-400 h-full rounded-full" style="width: 42%;"></div>
+</div>
+<p class="text-[10px] text-slate-500 dark:text-primary/60 mt-1">21 Pledges / 50 MOQ</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions -->
+<section class="px-4 py-2 pb-24">
+<h3 class="text-slate-900 dark:text-slate-100 text-md font-bold mb-4">Quick Actions</h3>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex flex-col items-center justify-center gap-2 p-4 bg-primary text-white rounded-xl shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-2xl">notifications_active</span>
+<span class="text-xs font-bold">Nudge Unpaid</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 bg-white dark:bg-primary/10 border border-slate-200 dark:border-primary/20 text-slate-900 dark:text-slate-100 rounded-xl">
+<span class="material-symbols-outlined text-2xl text-primary">schedule</span>
+<span class="text-xs font-bold">Update Timeline</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 bg-white dark:bg-primary/10 border border-slate-200 dark:border-primary/20 text-slate-900 dark:text-slate-100 rounded-xl">
+<span class="material-symbols-outlined text-2xl text-primary">contact_support</span>
+<span class="text-xs font-bold">Contact Host</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 bg-white dark:bg-primary/10 border border-slate-200 dark:border-primary/20 text-slate-900 dark:text-slate-100 rounded-xl">
+<span class="material-symbols-outlined text-2xl text-primary">share</span>
+<span class="text-xs font-bold">Share Link</span>
+</button>
+</div>
+</section>
+<!-- Bottom Nav Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-20 border-t border-slate-200 dark:border-primary/20 bg-white dark:bg-background-dark px-4 pb-4 pt-2">
+<div class="flex gap-2 max-w-md mx-auto">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined !text-[24px]">dashboard</span>
+<p class="text-[10px] font-bold leading-normal tracking-wide">Monitor</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-primary/40" href="#">
+<span class="material-symbols-outlined !text-[24px]">campaign</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Drops</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-primary/40" href="#">
+<span class="material-symbols-outlined !text-[24px]">group</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Buyers</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-primary/40" href="#">
+<span class="material-symbols-outlined !text-[24px]">account_circle</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Profile</p>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

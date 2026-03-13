@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ccoop.in | PRD Part 1: End-User Experience (Continued)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-10 py-3 bg-white dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">ccoop.in</h2>
+</div>
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full border border-slate-200 dark:border-slate-700 overflow-hidden">
+<div class="text-slate-500 flex items-center justify-center pl-4 bg-slate-50 dark:bg-slate-800">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-0 placeholder:text-slate-500 px-4 text-sm font-normal" placeholder="Search documentation..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Retail</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Addresses</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Orders</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Support</a>
+</nav>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-xl size-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary transition-all">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<button class="flex items-center justify-center rounded-xl size-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary transition-all">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDh1ZQsM3cH06gQKL90_cCmZNup_DXMlKqqP7CAnZTn642aH37kY89Iqa5YX6NQXtC9jMyxLy7Werg-7Ef_I59XlL2xkd4ruusi67o2PdRPVnImEoga4sEl0NInMXMyXQTIIYKPWEEZG_Rq-rSYddDCVq30cC8EbqDA9BezMPKLiS_ZOA5i6LUO2CRevVuAyfa-2dwlIXt_eVYdhYZ7RppSRtuCbSKKwdc01R4xHDlLJ-EW8ACtsIcXbNAjJLJ6CK95PoEGWA0wfqs");'></div>
+</div>
+</header>
+<main class="flex flex-1 flex-col lg:flex-row">
+<!-- Sidebar Navigation -->
+<aside class="w-full lg:w-64 border-r border-slate-200 dark:border-slate-800 p-6 flex flex-col gap-6 bg-white dark:bg-background-dark/50">
+<div>
+<h1 class="text-slate-900 dark:text-slate-100 text-base font-bold">PRD Navigation</h1>
+<p class="text-slate-500 text-xs font-normal uppercase tracking-wider mt-1">End-User Experience</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl bg-primary/10 text-primary border border-primary/20" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">shopping_bag</span>
+<span class="text-sm font-semibold">Retail &amp; Logistics</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="text-sm font-medium">Smart Address</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="text-sm font-medium">Multi-Campus</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">help_center</span>
+<span class="text-sm font-medium">Support Center</span>
+</a>
+</nav>
+</aside>
+<!-- Content Area -->
+<section class="flex-1 max-w-5xl mx-auto px-6 md:px-12 py-10">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-8 text-sm font-medium text-slate-500">
+<a class="hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary" href="#">End-User Experience</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-slate-900 dark:text-slate-100">Part 2: Logistics &amp; Support</span>
+</nav>
+<!-- Title Header -->
+<div class="mb-12">
+<h1 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-slate-100 leading-tight tracking-tight mb-4">
+                            PRD Part 1: End-User Experience <span class="text-primary">(Continued)</span>
+</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
+                            A deep dive into the operational logic for retail browsing, intelligent logistics routing, multi-campus switching, and post-purchase lifecycle management.
+                        </p>
+</div>
+<!-- 1. Retail Store Experience -->
+<div class="mb-16 border-l-4 border-primary pl-6 py-2">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">storefront</span>
+                            1. Retail Store &amp; Checkout Experience
+                        </h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<h3 class="font-bold text-slate-800 dark:text-slate-200">Inventory-Based Logic</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    The system prioritizes <strong>Real-Time Availability</strong>. Products are tagged with campus-specific warehouse identifiers. If an item is out of stock at the "Current Campus," the UI suggests a switch to another campus or provides an "Inbound" notification date.
+                                </p>
+<ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+<li class="flex gap-2 items-start"><span class="material-symbols-outlined text-xs text-primary mt-1">check_circle</span> Category/Tag-based filtering (Essential, Electronics, Food).</li>
+<li class="flex gap-2 items-start"><span class="material-symbols-outlined text-xs text-primary mt-1">check_circle</span> Price sorting and "Quick Add" to cart from thumbnails.</li>
+</ul>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700">
+<h3 class="font-bold text-slate-800 dark:text-slate-200 mb-4 text-sm">Checkout Flow Logic</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-3 bg-white dark:bg-background-dark p-3 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<div class="text-xs">
+<p class="font-bold">Shipping Mode</p>
+<p class="text-slate-500">Doorstep delivery to Hostels/Home.</p>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-white dark:bg-background-dark p-3 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-primary">hail</span>
+<div class="text-xs">
+<p class="font-bold">Campus Pickup</p>
+<p class="text-slate-500">Collect from nearest Drop Host point.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Address & Logistics Management -->
+<div class="mb-16 border-l-4 border-slate-300 dark:border-slate-700 pl-6 py-2">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">location_on</span>
+                            2. Address &amp; Logistics Management
+                        </h2>
+<div class="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden mb-6">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30">
+<h3 class="font-bold text-slate-800 dark:text-slate-200">The "Smart Address Book"</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Intelligent categorization for high-velocity campus delivery.</p>
+</div>
+<div class="p-6 grid sm:grid-cols-3 gap-6">
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary">apartment</span>
+<p class="font-bold text-sm">Hostel Address</p>
+<p class="text-xs text-slate-500">Linked to specific Blocks/Rooms. Triggers automated internal campus routing.</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary">home</span>
+<p class="font-bold text-sm">Home Address</p>
+<p class="text-xs text-slate-500">Standard 3rd party shipping (Bluedart/Delhivery) for vacation periods.</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary">person_pin_circle</span>
+<p class="font-bold text-sm">Custom Drop</p>
+<p class="text-xs text-slate-500">Pin locations for library, canteen, or common area deliveries.</p>
+</div>
+</div>
+</div>
+<div class="bg-primary/5 p-6 rounded-2xl border border-primary/20">
+<p class="text-sm text-slate-700 dark:text-slate-300 italic leading-relaxed">
+<strong>Logistics Engine:</strong> When a user selects a "Hostel" address, the system runs a geo-fencing check against the <span class="text-primary font-bold uppercase">Drop Host Grid</span>. It automatically assigns the delivery to the nearest Drop Host (student delivery partner) based on load balance and proximity.
+                            </p>
+</div>
+</div>
+<!-- 3. Multi-Campus Context -->
+<div class="mb-16 border-l-4 border-primary pl-6 py-2">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">swap_horiz</span>
+                            3. Multi-Campus Context
+                        </h2>
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1 space-y-4">
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Users can belong to multiple campuses (e.g., Undergraduate Campus and Summer School Campus). The UI features a <strong>"Campus Switcher"</strong> in the global header.
+                                </p>
+<div class="space-y-3">
+<div class="flex gap-4 items-center">
+<div class="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center font-bold text-primary">1</div>
+<p class="text-sm text-slate-600 dark:text-slate-400">Single Identity: Shared profile, wallet, and history across all sites.</p>
+</div>
+<div class="flex gap-4 items-center">
+<div class="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center font-bold text-primary">2</div>
+<p class="text-sm text-slate-600 dark:text-slate-400">Isolated Basket: Switching campuses prompts a basket "Migration" or "Clear" logic to prevent shipping conflicts.</p>
+</div>
+</div>
+</div>
+<div class="w-full md:w-64">
+<div class="bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-xl">
+<div class="flex items-center justify-between mb-4 border-b border-slate-100 dark:border-slate-800 pb-2">
+<p class="text-xs font-bold uppercase text-slate-400">Current Campus</p>
+<span class="material-symbols-outlined text-xs">keyboard_arrow_down</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="text-sm font-bold">BITS Pilani</span>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">radio_button_unchecked</span>
+<span class="text-sm">IIT Delhi</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Post-Purchase Support -->
+<div class="mb-12 border-l-4 border-slate-300 dark:border-slate-700 pl-6 py-2">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">support_agent</span>
+                            4. Post-Purchase Support
+                        </h2>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-primary/50 transition-colors group">
+<span class="material-symbols-outlined text-3xl text-primary mb-4 block">assignment_return</span>
+<h4 class="font-bold text-slate-800 dark:text-slate-200 mb-2">Instant Returns</h4>
+<p class="text-xs text-slate-500 leading-relaxed">Request a pickup directly from your hostel room within 48 hours for retail items.</p>
+</div>
+<div class="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-primary/50 transition-colors group">
+<span class="material-symbols-outlined text-3xl text-primary mb-4 block">forum</span>
+<h4 class="font-bold text-slate-800 dark:text-slate-200 mb-2">Concierge Support</h4>
+<p class="text-xs text-slate-500 leading-relaxed">24/7 chat support for order tracking or delivery disputes with Drop Hosts.</p>
+</div>
+<div class="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-primary/50 transition-colors group">
+<span class="material-symbols-outlined text-3xl text-primary mb-4 block">currency_exchange</span>
+<h4 class="font-bold text-slate-800 dark:text-slate-200 mb-2">Wallet Refunds</h4>
+<p class="text-xs text-slate-500 leading-relaxed">Instant credit to ccoop Wallet for cancellations or returned merchandise.</p>
+</div>
+</div>
+</div>
+<!-- Footer / Next Actions -->
+<div class="mt-20 border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<div class="size-10 rounded-full border-2 border-white dark:border-background-dark bg-slate-300 overflow-hidden" data-alt="Reviewer avatar John Doe" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqM4U5omZAwEjldaguWlqKCcbMa2DrhTz0z8-xCFynDcFN2MWEH8L5o-GGh6oYf1Rsg9dFOEkwDKZB2-ZfMyhWWrbuYmE9qxqK1--aWv7wHYOnwikXd4F3GBUdrTSujrCbCFhCjCAQQFlKl6zBr6rF3PW4VrStTvcaR7d4QPVyVgP6I4FXBTCAPzlW3EwNOcqUwpK9MRqK-RVP4V5YKOu48vi3_5yhyqF6vPRNfpwoL84U2pDANMtAoTrB7bZgdbqEC5_p_Y3itMI');"></div>
+<div class="size-10 rounded-full border-2 border-white dark:border-background-dark bg-slate-300 overflow-hidden" data-alt="Reviewer avatar Alice Smith" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDND1BaL5ual_lzbkIRr_PjjB0-RtHEpf7UgM6-h0CdUhBWnhMAYoMN9AsQXcvXpRwWODnvZq5ps9IRyLNdwA-7GnlVPbyLeglqtCtWsRGelyvO5cBcGEau4O_VDLJ41VFUddn00NxfTHttxoK0_cqp8g8BPg0IUYtjF6g9fnMM7vC-N6iUr9_aPpKsiG40274bY2b9-p8sn7MmpAcOqFfm4HBcT6chWAmlZ5W38G7FOtFxzTSjd0gzUUoy4s2Pe1XN3Yh6YkfcevY');"></div>
+<div class="size-10 rounded-full border-2 border-white dark:border-background-dark bg-slate-300 flex items-center justify-center text-[10px] font-bold text-slate-600 bg-slate-100">+4</div>
+</div>
+<p class="text-xs text-slate-500">Document approved by Product &amp; Ops Teams</p>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">Download PDF</button>
+<button class="px-6 py-2.5 rounded-xl bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">Next: Merchant PRD</button>
+</div>
+</div>
+</section>
+</main>
+</div>
+</div>
+</body></html>

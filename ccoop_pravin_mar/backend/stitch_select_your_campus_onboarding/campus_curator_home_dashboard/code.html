@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Campus Curator - IIT Delhi</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-20">
+<!-- Header -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800">
+<div class="flex size-10 shrink-0 items-center overflow-hidden rounded-full bg-primary/10">
+<img alt="User Profile" class="h-full w-full object-cover" data-alt="Professional headshot of a campus store manager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbDfWVjVgFyFf5PpXC90Dz2IUqeTl0YA1QJKnYMvrnO1nYKWKApetlRrdqLQI-3NCGUcgB6zo3MVolKichNyPJFDG68pOEF4jjjuhJjcG6tb2L8xF9IlZQdU-auF9DQvvOZVtW4CTbNpzn5H5x-9bdq51er5lar6oxhzeZMqRAQA1xkB702qyhKEaSe0I4v6VysbKpp4Cs8U0I6i0z_QuvXU4DLSzbndzl7Oakrprhtm8mcA9D15Pmpo8Xut8Jnpsm9BTL3BOLnHc"/>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 ml-3">IIT Delhi Store Manager</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-xl h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<!-- Profile / Hero Section -->
+<div class="flex p-4 @container">
+<div class="flex w-full flex-col gap-4">
+<div class="flex gap-4 items-center">
+<div class="bg-primary/20 aspect-square rounded-2xl min-h-20 w-20 flex items-center justify-center overflow-hidden border-2 border-primary/30">
+<img alt="IIT Delhi Logo" class="h-full w-full object-cover" data-alt="IIT Delhi campus landmark or official logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE-NNj-RrZxwEkfhA25Xd8iAV5lQ0S3NfsZPg_SFVtGQm10xb3mVyv0onHbJlcSfUREQB_ADNfyZNmEp_vtF0f_WhAGYgdQpMETwUunTSyd3VKxRoypic0Ek-nL7mvtphFqQInAa5bvyMsNO1fkvcwY7WWut_smbKYa7NHQCT3dB9gt8UAFim_8FeMcnQtP_3gp2lE1TsDr4wTGYCjCoJe9BxhHHCEr-g7dgtHsJ3tCiKT94HNdzEx_Qki9uIUC8EMEDPZ-8eFafU"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight">Campus Curator</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">IIT Delhi Store</p>
+<div class="mt-1">
+<span class="inline-flex items-center rounded-full bg-primary px-2.5 py-0.5 text-xs font-bold text-white uppercase tracking-wider">
+                                Curator
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-1 gap-4 p-4 @[520px]:grid-cols-2">
+<div class="flex flex-col gap-2 rounded-xl p-5 bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-700">
+<div class="flex items-center justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Revenue</p>
+<span class="material-symbols-outlined text-primary text-sm">trending_up</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 tracking-tight text-2xl font-bold">₹45,200</p>
+<div class="flex items-center gap-1">
+<span class="text-emerald-500 text-xs font-bold">+12.5%</span>
+<span class="text-slate-400 text-xs italic">Active Drops</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-5 bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-700">
+<div class="flex items-center justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Pledges vs Payments</p>
+<span class="material-symbols-outlined text-primary text-sm">payments</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 tracking-tight text-2xl font-bold">85 / 72</p>
+<div class="w-full bg-slate-100 dark:bg-slate-700 h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 84%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-5 bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-700 @[520px]:col-span-2">
+<div class="flex items-center justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Active Campaigns</p>
+<span class="material-symbols-outlined text-primary text-sm">campaign</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 tracking-tight text-2xl font-bold">12</p>
+<p class="text-slate-400 text-xs">+2 launched this week</p>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="px-4 pt-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight mb-4">Quick Actions</h3>
+<div class="flex flex-col gap-3">
+<button class="flex items-center justify-between w-full p-4 bg-primary text-white rounded-xl font-bold shadow-lg shadow-primary/20">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">rocket_launch</span>
+<span>Launch New Drop</span>
+</div>
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 rounded-xl font-semibold border border-slate-200 dark:border-slate-700">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">inventory_2</span>
+<span>Manage Inventory</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 rounded-xl font-semibold border border-slate-200 dark:border-slate-700">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<span>View Sales Reports</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Recent Activity Placeholder -->
+<div class="px-4 pt-8">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Recent Activity</h3>
+<a class="text-primary text-sm font-bold" href="#">See all</a>
+</div>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+</div>
+<div>
+<p class="text-sm font-semibold">New Pledge: IIT-D Hoodie</p>
+<p class="text-xs text-slate-500">2 minutes ago • Order #1294</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary text-base">local_shipping</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Batch Dispatched</p>
+<p class="text-xs text-slate-500">1 hour ago • 45 items to Nilgiri Hostel</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm px-4 pb-6 pt-2 z-50">
+<div class="flex justify-between items-center max-w-lg mx-auto">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Catalog</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">pie_chart</span>
+<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Analytics</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Profile</p>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

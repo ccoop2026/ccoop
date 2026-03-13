@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#138aec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header / Top Nav -->
+<header class="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center p-4 justify-between max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-3">
+<div class="bg-primary/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">dashboard_customize</span>
+</div>
+<div>
+<h1 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">Global Admin</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Campus Performance Scorecard</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center gap-2 bg-slate-200 dark:bg-slate-800 px-3 py-1.5 rounded-lg text-sm font-medium">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+                    Last 30 Days
+                </button>
+<button class="flex size-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-full border border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full p-4 space-y-6">
+<!-- Filters Row -->
+<div class="flex flex-wrap items-center gap-3">
+<div class="flex items-center gap-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-2 rounded-lg">
+<span class="material-symbols-outlined text-slate-500 text-sm">filter_alt</span>
+<span class="text-sm font-medium">Region:</span>
+<select class="bg-transparent border-none text-sm font-bold focus:ring-0 p-0 pr-6 text-primary cursor-pointer">
+<option>All Regions</option>
+<option>North America</option>
+<option>Europe</option>
+<option>Asia Pacific</option>
+<option>Latin America</option>
+</select>
+</div>
+<div class="flex gap-2 overflow-x-auto no-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary text-white px-4 text-sm font-medium">
+                    Total Revenue
+                </button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-4 text-sm font-medium">
+                    Enrollment
+                </button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-4 text-sm font-medium">
+                    Retention
+                </button>
+</div>
+</div>
+<!-- KPI Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Active Drops</p>
+<span class="material-symbols-outlined text-red-500">trending_down</span>
+</div>
+<p class="text-slate-900 dark:text-white text-3xl font-bold">1,240</p>
+<div class="flex items-center gap-1">
+<span class="text-red-500 text-xs font-bold">-5.2%</span>
+<span class="text-slate-400 text-xs">from last month</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Revenue</p>
+<span class="material-symbols-outlined text-green-500">trending_up</span>
+</div>
+<p class="text-slate-900 dark:text-white text-3xl font-bold">$4.2M</p>
+<div class="flex items-center gap-1">
+<span class="text-green-500 text-xs font-bold">+12.4%</span>
+<span class="text-slate-400 text-xs">target achieved</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Pledges vs Payments</p>
+<span class="material-symbols-outlined text-primary">conversion_path</span>
+</div>
+<p class="text-slate-900 dark:text-white text-3xl font-bold">82.5%</p>
+<div class="flex items-center gap-1">
+<span class="text-green-500 text-xs font-bold">+3.1%</span>
+<span class="text-slate-400 text-xs">conversion rate</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Fulfillment Lead Time</p>
+<span class="material-symbols-outlined text-orange-500">timer</span>
+</div>
+<p class="text-slate-900 dark:text-white text-3xl font-bold">14.2d</p>
+<div class="flex items-center gap-1">
+<span class="text-red-500 text-xs font-bold">-2.0%</span>
+<span class="text-slate-400 text-xs">avg processing time</span>
+</div>
+</div>
+</div>
+<!-- Comparison Visualization Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Campus Rankings Table -->
+<div class="lg:col-span-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 overflow-hidden flex flex-col">
+<div class="p-6 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center">
+<h2 class="text-lg font-bold">Top Performing Campuses</h2>
+<button class="text-primary text-sm font-medium hover:underline">View Full Report</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-slate-500 dark:text-slate-400 text-xs uppercase tracking-wider">
+<th class="px-6 py-4 font-medium">Campus Name</th>
+<th class="px-6 py-4 font-medium">Region</th>
+<th class="px-6 py-4 font-medium">Revenue</th>
+<th class="px-6 py-4 font-medium">Conv %</th>
+<th class="px-6 py-4 font-medium">Trend</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-primary/20 flex items-center justify-center text-primary font-bold text-xs">ST</div>
+<span class="font-semibold">Stanford Global</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">North America</td>
+<td class="px-6 py-4 text-sm font-bold">$1.2M</td>
+<td class="px-6 py-4">
+<div class="w-24 bg-slate-200 dark:bg-slate-700 h-2 rounded-full">
+<div class="bg-primary h-full rounded-full" style="width: 88%"></div>
+</div>
+</td>
+<td class="px-6 py-4"><span class="material-symbols-outlined text-green-500">trending_up</span></td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-primary/20 flex items-center justify-center text-primary font-bold text-xs">OX</div>
+<span class="font-semibold">Oxford Intl</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Europe</td>
+<td class="px-6 py-4 text-sm font-bold">$940k</td>
+<td class="px-6 py-4">
+<div class="w-24 bg-slate-200 dark:bg-slate-700 h-2 rounded-full">
+<div class="bg-primary h-full rounded-full" style="width: 76%"></div>
+</div>
+</td>
+<td class="px-6 py-4"><span class="material-symbols-outlined text-green-500">trending_up</span></td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-primary/20 flex items-center justify-center text-primary font-bold text-xs">SN</div>
+<span class="font-semibold">Singapore North</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Asia Pacific</td>
+<td class="px-6 py-4 text-sm font-bold">$820k</td>
+<td class="px-6 py-4">
+<div class="w-24 bg-slate-200 dark:bg-slate-700 h-2 rounded-full">
+<div class="bg-primary h-full rounded-full" style="width: 65%"></div>
+</div>
+</td>
+<td class="px-6 py-4"><span class="material-symbols-outlined text-slate-400">trending_flat</span></td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-primary/20 flex items-center justify-center text-primary font-bold text-xs">MU</div>
+<span class="font-semibold">Munich Hub</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Europe</td>
+<td class="px-6 py-4 text-sm font-bold">$710k</td>
+<td class="px-6 py-4">
+<div class="w-24 bg-slate-200 dark:bg-slate-700 h-2 rounded-full">
+<div class="bg-primary h-full rounded-full" style="width: 58%"></div>
+</div>
+</td>
+<td class="px-6 py-4"><span class="material-symbols-outlined text-red-500">trending_down</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Regional Distribution / Visual -->
+<div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-6 flex flex-col gap-6">
+<div>
+<h2 class="text-lg font-bold">Revenue by Region</h2>
+<p class="text-sm text-slate-500">Market share distribution</p>
+</div>
+<div class="relative h-48 w-full flex items-end justify-between gap-2 px-2">
+<div class="flex-1 bg-primary/40 rounded-t-lg group relative h-[80%]">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">42%</div>
+</div>
+<div class="flex-1 bg-primary rounded-t-lg group relative h-[65%]">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">30%</div>
+</div>
+<div class="flex-1 bg-primary/60 rounded-t-lg group relative h-[45%]">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">18%</div>
+</div>
+<div class="flex-1 bg-primary/20 rounded-t-lg group relative h-[25%]">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">10%</div>
+</div>
+</div>
+<div class="space-y-3 pt-4">
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-2">
+<span class="size-3 rounded-full bg-primary/40"></span>
+<span>North America</span>
+</div>
+<span class="font-bold">42%</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-2">
+<span class="size-3 rounded-full bg-primary"></span>
+<span>Europe</span>
+</div>
+<span class="font-bold">30%</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-2">
+<span class="size-3 rounded-full bg-primary/60"></span>
+<span>Asia Pacific</span>
+</div>
+<span class="font-bold">18%</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Nav Bar -->
+<nav class="sticky bottom-0 z-50 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1c2227] px-4 pb-6 pt-2 md:pb-3">
+<div class="max-w-md mx-auto flex gap-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[24px]">leaderboard</span>
+<p class="text-xs font-medium leading-normal">Scorecard</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-[#9dacb9]" href="#">
+<span class="material-symbols-outlined text-[24px]">map</span>
+<p class="text-xs font-medium leading-normal">Regions</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-[#9dacb9]" href="#">
+<span class="material-symbols-outlined text-[24px]">description</span>
+<p class="text-xs font-medium leading-normal">Reports</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-[#9dacb9]" href="#">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+<p class="text-xs font-medium leading-normal">Settings</p>
+</a>
+</div>
+</nav>
+</body></html>

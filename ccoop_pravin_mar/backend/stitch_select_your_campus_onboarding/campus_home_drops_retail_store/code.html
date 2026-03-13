@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
+<!-- Main Container -->
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-20">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">location_on</span>
+<h2 class="text-xl font-bold leading-tight tracking-tight">IIT Delhi</h2>
+</div>
+<button class="flex size-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">swap_horiz</span>
+</button>
+</div>
+<!-- Tab Switcher -->
+<div class="px-4">
+<div class="flex gap-4">
+<button class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-2 flex-1 font-bold text-sm">
+                        Active Drops
+                    </button>
+<button class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-2 flex-1 font-semibold text-sm">
+                        Campus Store
+                    </button>
+</div>
+</div>
+</header>
+<!-- Notification Banner -->
+<div class="p-4">
+<div class="flex flex-col items-start justify-between gap-4 rounded-xl border border-primary/20 bg-primary/5 p-4 @container sm:flex-row sm:items-center">
+<div class="flex gap-3">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">notifications_active</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-bold leading-tight">Never miss a drop</p>
+<p class="text-slate-600 dark:text-slate-400 text-xs font-normal">Enable notifications for launch alerts.</p>
+</div>
+</div>
+<button class="w-full sm:w-auto flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-sm font-bold shadow-sm shadow-primary/20">
+                    Enable
+                </button>
+</div>
+</div>
+<!-- Section Title & Status -->
+<div class="px-4 py-2 flex items-center justify-between">
+<h3 class="text-lg font-bold">Featured Pre-orders</h3>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[11px] font-bold uppercase tracking-wider">
+<span class="flex h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                Currently Open
+            </div>
+</div>
+<!-- Drops Grid -->
+<div class="grid grid-cols-1 gap-4 p-4">
+<!-- Drop Card 1 -->
+<div class="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+<div class="relative aspect-[16/9] w-full overflow-hidden">
+<img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Premium IIT Delhi branded hoodie in navy blue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcSKvimQooLNL6aPxiOJ-wfDfMdTMZR__Piqg4Eq2poEC7t4nqgC1-av6Nd31hpxmxRYvQrHBgJiHWh629MCOiDXR6C0FAeta4U4Suknvx_TsNB2pEj3A8kl6wD-TjSkLJDyraao7hpFV-IvbwQFSqKXjU7pyqe8RwLxq_SbpoEWc9QNRVTVxUuU6Qz-M6Vo2oRDQciNO3rUgIJjifJKAvmfEF7FEzQ5exzr_OhdOgdBYzOUtix4yOQ8fu6Pg9J8QJCouobpxA5jQ"/>
+<div class="absolute top-3 right-3 flex items-center gap-1.5 rounded-lg bg-black/60 backdrop-blur-md px-2.5 py-1.5 text-xs font-bold text-white">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                        02d : 14h : 45m
+                    </div>
+</div>
+<div class="p-4">
+<div class="mb-3 flex items-start justify-between">
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Official '24 Varsity Hoodie</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Limited Edition • Winter Collection</p>
+</div>
+<p class="text-lg font-bold text-primary">₹1,499</p>
+</div>
+<!-- MOQ Progress -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-slate-500">
+<span>MOQ Progress</span>
+<span class="text-primary">84/100 Orders</span>
+</div>
+<div class="h-2 w-full rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 84%;"></div>
+</div>
+<p class="text-[10px] text-slate-400 dark:text-slate-500 italic">Drop confirmed at 100 orders</p>
+</div>
+</div>
+</div>
+<!-- Drop Card 2 -->
+<div class="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm opacity-90">
+<div class="relative aspect-[16/9] w-full overflow-hidden">
+<img class="h-full w-full object-cover grayscale-[0.2]" data-alt="Minimalist campus t-shirt with modern typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAALHW23CZAh1QX85P8TMQ8FpDFXnCHpDRpb99pzsZ7IQmOXxFgAgs_Xr5EyRdCe4dUKVjfLDaUBf4ETo3ZzO4cH20Gqbqu9-j_Mc-gN9YW2CtB_098CeV4MvmQzqi_yJUdWvCLRrbUQAw9WMvkzt-1zrPZgrZnb2YWq3jI1vlrZ2F5OITvNRgGrbE7vzBbIXuI9FFZp0h5byAHae-tq0JqnEOZep-6P1bIVW90g6Yf0D18BCh1VwPBHLsFxaBcAsLYVKyPDOVwxn4"/>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="absolute top-3 right-3 flex items-center gap-1.5 rounded-lg bg-primary px-2.5 py-1.5 text-xs font-bold text-white">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+                        Next Drop: Tomorrow
+                    </div>
+</div>
+<div class="p-4 bg-slate-50/50 dark:bg-slate-800/50">
+<div class="mb-3 flex items-start justify-between">
+<div>
+<h4 class="font-bold text-slate-700 dark:text-slate-300">"Hauz Khas" Oversized Tee</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Campus Culture Series</p>
+</div>
+<p class="text-lg font-bold text-slate-400 italic">₹799</p>
+</div>
+<button class="w-full flex items-center justify-center gap-2 rounded-lg border-2 border-primary/30 py-2 text-sm font-bold text-primary hover:bg-primary/5 transition-colors">
+                        Notify Me
+                    </button>
+</div>
+</div>
+</div>
+<!-- Campus Store Section Label -->
+<div class="px-4 py-2 mt-4 border-t border-slate-100 dark:border-slate-800 pt-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold">Retail Essentials</h3>
+<a class="text-xs font-bold text-primary flex items-center gap-1" href="#">
+                    View Store <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Quick Inventory Scroll -->
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-4">
+<div class="min-w-[140px] flex flex-col gap-2">
+<div class="aspect-square w-full rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden relative">
+<img class="object-cover h-full w-full" data-alt="IIT Delhi branded ceramic coffee mug" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClaZqeUnKMOyRthdXoU1FN6_zCrX82X3DDec7d28A8HAHhqR43UnFoXz_5D9XPac2hU1TFSgTfXbIJn66JPRGpfkwkQqRGUsEaGTyPDO9BHt4YkCuUAHwC30YZd6rF0nLbALJTdY9TLqIUqQh_UkFLNXNI40kTrleaOTQNnH2TrXi3YB-N9UHo90h7jn2HvWe_70ZlGqihwCGQa3uMR7ARX6eRt4LkPjwudlllFA5iSTnbC-JLaSLqJvQhZhNkj40fistDDMk7188"/>
+</div>
+<div>
+<p class="text-xs font-bold truncate">Campus Mug</p>
+<p class="text-xs text-slate-500">₹349</p>
+</div>
+</div>
+<div class="min-w-[140px] flex flex-col gap-2">
+<div class="aspect-square w-full rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden relative">
+<img class="object-cover h-full w-full" data-alt="Branded college tote bag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-ZqmCB2JaXiIK2NX25lqDcVHYMxpXLBYcsFvRPkHiRU26dhePSVfMxTaDdKSHokpsz2JCuhyK1JijO_7IcjvpSYsmZJPEUhDgJ4o0WK9U83mklTGWpkfeV2qHlXwikFLP9Rnujzd5Ol2aZ61UMruR7FW_P4_xgPlXSetuvW1j4J3bk9luecxYJWNhpeoM-oJEo0jKmPH8og5XBhFuwDA0MukPPmreS5F8-PuCCRm_QsisAKH_hoY_kfs7c8BtTzgpqQPxL9PkIYI"/>
+</div>
+<div>
+<p class="text-xs font-bold truncate">Canvas Tote</p>
+<p class="text-xs text-slate-500">₹199</p>
+</div>
+</div>
+<div class="min-w-[140px] flex flex-col gap-2">
+<div class="aspect-square w-full rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden relative">
+<img class="object-cover h-full w-full" data-alt="College branded metal keychain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT_hbLxMqsN1XxMRKeuqaS3c2NBn2V1vat7j3u71FCl_YQz5nrHqLkKK65_ddHOTuU9uFKRar_K4v5xTzjzAmXdq_xU7moss7dA69CqQLk4xIdacQgijmxAarm4uTSs-Oj4FRYlMDeaNAnfzDVkRF9FdFGHnuqDB260YlfH9w4n-04CIRV3WNpGkvYUY0Hh5QnvmnrEsrUW-pA628HE4pJo9q-fju6H5deEZamvjLZVBSyCOmTy2WmikMAgdQMKinQNTiU6nztAd4"/>
+</div>
+<div>
+<p class="text-xs font-bold truncate">Metal Keychain</p>
+<p class="text-xs text-slate-500">₹129</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-around bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 px-4 pb-6 pt-3">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">home</span>
+<p class="text-[10px] font-bold uppercase tracking-widest">Home</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">rocket_launch</span>
+<p class="text-[10px] font-bold uppercase tracking-widest">Drops</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<p class="text-[10px] font-bold uppercase tracking-widest">Store</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-bold uppercase tracking-widest">Profile</p>
+</a>
+</nav>
+</div>
+</body></html>

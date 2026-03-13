@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Final Payment &amp; Arrival</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#138aec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800">
+<button class="text-slate-900 dark:text-slate-100 p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Final Payment &amp; Arrival</h1>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Status Banner -->
+<div class="bg-primary/10 border-b border-primary/20 p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<h2 class="text-lg font-bold text-primary">Item Arrived at Campus</h2>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1 ml-9">Your package is ready for pickup at the designated Drop Host location.</p>
+</div>
+<!-- Item Card -->
+<div class="p-4">
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-slate-900 p-4 shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="flex flex-col justify-center gap-1 flex-[2_2_0px]">
+<span class="text-primary text-xs font-semibold uppercase tracking-wider">Arrived</span>
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight">Textbook: Advanced Calculus</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Order #88291</p>
+</div>
+<div class="w-32 h-24 bg-center bg-no-repeat bg-cover rounded-lg shrink-0" data-alt="A thick blue hardcover mathematics textbook" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8mzWc19XIDV1XHj7Pc9st5jxRpnBZFGWV8wixWqIKYUElQb1964I7NOfkiZODwcEb2udmlFIUw9Dxinx_P01rGF6_GyOpYwUO2QcUSKTWnBPLvuJNcchPyFFtRPXLrusKLemO0quVqHupWKpLhbNoerl7qo8gLKP4EJYLG6rzxX9gZ5xzaKY4pl8OBh0tLqchjNuzy_1ghVlWboVFBqpoLzG_OZxCfdBgSe8JV_6nrCnhhVKQTkDGgudMe72gvAs-jqtgZpgViC8");'>
+</div>
+</div>
+</div>
+<!-- Payment Summary -->
+<div class="p-4 mx-4 rounded-xl bg-slate-100 dark:bg-slate-800/50">
+<h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase mb-3">Payment Details</h3>
+<div class="flex justify-between py-1.5">
+<p class="text-slate-600 dark:text-slate-400 text-sm">Total Price</p>
+<p class="text-slate-900 dark:text-slate-100 text-sm font-medium">$120.00</p>
+</div>
+<div class="flex justify-between py-1.5">
+<p class="text-slate-600 dark:text-slate-400 text-sm">Paid (50% Deposit)</p>
+<p class="text-slate-900 dark:text-slate-100 text-sm font-medium">-$60.00</p>
+</div>
+<div class="h-px bg-slate-200 dark:border-slate-700 my-2"></div>
+<div class="flex justify-between py-1.5">
+<p class="text-slate-900 dark:text-slate-100 font-bold">Remaining Balance</p>
+<p class="text-primary font-bold text-lg">$60.00</p>
+</div>
+<button class="w-full mt-4 bg-primary text-white font-bold py-3 rounded-lg shadow-lg hover:opacity-90 transition-opacity">
+                Pay $60.00 Now
+            </button>
+</div>
+<!-- Drop Host Info -->
+<div class="p-4">
+<h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase mb-3 px-1">Drop Host Location</h3>
+<div class="rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="p-4 flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">storefront</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-slate-900 dark:text-white">University Student Union</p>
+<p class="text-sm text-slate-500 dark:text-slate-400 italic">"Look for the blue desk near the north entrance."</p>
+<div class="mt-2 flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 w-fit px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                            9:00 AM - 6:00 PM
+                        </div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="h-48 w-full bg-slate-200 dark:bg-slate-800 relative group overflow-hidden" data-location="University Campus Library Area" style="">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&amp;fit=crop&amp;q=80&amp;w=600')] bg-cover bg-center opacity-60 dark:opacity-40" data-alt="Stylized map showing campus buildings and roads"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative">
+<span class="material-symbols-outlined text-primary text-5xl drop-shadow-md">location_on</span>
+<div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-3 h-1 bg-black/20 rounded-full blur-[1px]"></div>
+</div>
+</div>
+<button class="absolute bottom-3 right-3 bg-white dark:bg-slate-900 p-2 rounded-lg shadow-md flex items-center gap-2 text-xs font-bold text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-sm">directions</span>
+                        Get Directions
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pb-4 pt-2 flex justify-around">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium uppercase tracking-tighter">Home</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-[1]">package_2</span>
+<p class="text-[10px] font-medium uppercase tracking-tighter">Orders</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">map</span>
+<p class="text-[10px] font-medium uppercase tracking-tighter">Campus</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<p class="text-[10px] font-medium uppercase tracking-tighter">Profile</p>
+</a>
+</nav>
+</body></html>

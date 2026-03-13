@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pledge Fulfillment &amp; Payment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 15px; /* Half of w-8 (32px) approx minus stroke width */
+            top: 2rem;
+            bottom: -1rem;
+            width: 2px;
+            background-color: #e5e7eb;
+            z-index: 0;
+        }
+        .dark .timeline-line::before {
+            background-color: #374151;
+        }
+        .last-item::before {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white overflow-x-hidden min-h-screen flex flex-col">
+<!-- Top App Bar -->
+<div class="flex items-center bg-white dark:bg-[#101922] p-4 sticky top-0 z-50 border-b border-gray-100 dark:border-gray-800">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer text-[#111418] dark:text-white">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Pledge Secured</h2>
+</div>
+<main class="flex-1 flex flex-col p-4 gap-6 max-w-md mx-auto w-full">
+<!-- Celebration Header & Timer -->
+<div class="text-center space-y-2">
+<div class="inline-flex items-center justify-center size-16 bg-green-100 dark:bg-green-900/30 rounded-full mb-2">
+<span class="material-symbols-outlined text-3xl text-green-600 dark:text-green-400">celebration</span>
+</div>
+<h1 class="text-2xl font-bold text-[#111418] dark:text-white">Goal Reached! 🎉</h1>
+<p class="text-sm text-gray-500 dark:text-gray-400 max-w-[280px] mx-auto">We hit the green light. Time to secure your gear before production starts.</p>
+<!-- Urgency Timer -->
+<div class="mt-4 inline-flex items-center gap-2 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 px-4 py-2 rounded-full border border-red-100 dark:border-red-900/50">
+<span class="material-symbols-outlined text-lg">timer</span>
+<span class="text-sm font-bold font-mono">23:59:45 remaining</span>
+</div>
+</div>
+<!-- Product Card -->
+<div class="bg-white dark:bg-[#1A2633] rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800 flex gap-4 items-center">
+<div class="w-20 h-20 shrink-0 rounded-lg bg-gray-100 dark:bg-gray-800 overflow-hidden relative">
+<img alt="Navy blue hoodie folded" class="w-full h-full object-cover" data-alt="Navy blue hoodie folded on a clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8d3UF1F2AhfM5dZY-S1wnGrSCiVBtQx9hMdSN_t8dzlfFHG8GUe3JKVLF-1bOOIxnGjaAWRzUDDUVoPclGXzR0D48RFqwyzNR7OkwVJyL4K3RgRStuKwBMxdVWw8zHmus-zth4Du4Vvml-XZtzlJLztAJ64Qv42gqi4Ld2xxpX6A8Ytpoi0op045YyYUCHLM5zLAHSR6jOzu3CYHMZyimJ-iflPWkGoAtoSyO6y7AA790uMbCac9nUtLaWGj7W6fxpSnELN5eqw4"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-bold text-[#111418] dark:text-white truncate">IIT-D Campus Hoodie</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Navy Blue • Size L</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded font-medium">Batch '24</span>
+</div>
+</div>
+</div>
+<!-- Payment Options -->
+<div class="space-y-4">
+<h3 class="text-base font-bold text-[#111418] dark:text-white px-1">Choose Payment Option</h3>
+<!-- Option 1: 50% Token -->
+<label class="relative block cursor-pointer group">
+<input checked="" class="peer sr-only" name="payment_option" type="radio"/>
+<div class="p-4 rounded-xl border-2 border-primary bg-primary/5 dark:bg-primary/10 peer-checked:bg-white dark:peer-checked:bg-[#1A2633] transition-all relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg">
+                        POPULAR
+                    </div>
+<div class="flex items-center gap-3">
+<div class="size-5 rounded-full border-2 border-gray-300 dark:border-gray-600 peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center shrink-0">
+<div class="size-2 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<span class="font-bold text-[#111418] dark:text-white">Pay 50% Token</span>
+<span class="font-bold text-primary">₹499</span>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400">Secure your spot now, pay the rest upon delivery.</p>
+</div>
+</div>
+</div>
+</label>
+<!-- Option 2: Full Amount -->
+<label class="relative block cursor-pointer group">
+<input class="peer sr-only" name="payment_option" type="radio"/>
+<div class="p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1A2633] peer-checked:border-primary peer-checked:bg-primary/5 transition-all">
+<div class="flex items-center gap-3">
+<div class="size-5 rounded-full border-2 border-gray-300 dark:border-gray-600 peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center shrink-0">
+<div class="size-2 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<span class="font-bold text-[#111418] dark:text-white">Pay Full Amount</span>
+<span class="font-bold text-[#111418] dark:text-white">₹999</span>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400">Pay everything upfront. One and done.</p>
+</div>
+</div>
+</div>
+</label>
+</div>
+<!-- Production Timeline -->
+<div class="bg-white dark:bg-[#1A2633] rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-800">
+<h3 class="text-sm font-bold text-[#111418] dark:text-white mb-4 uppercase tracking-wider text-xs text-gray-500 dark:text-gray-400">Production Timeline</h3>
+<div class="relative pl-2">
+<!-- Step 1: Goal Met -->
+<div class="relative flex gap-4 pb-6 timeline-line">
+<div class="relative z-10 size-8 rounded-full bg-green-100 dark:bg-green-900/40 flex items-center justify-center shrink-0 text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-[#111418] dark:text-white">Goal Met</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Today</p>
+</div>
+</div>
+<!-- Step 2: Manufacturing -->
+<div class="relative flex gap-4 pb-6 timeline-line">
+<div class="relative z-10 size-8 rounded-full bg-primary flex items-center justify-center shrink-0 text-white shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-primary">Manufacturing Starts</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Starts in 24h once payments are secured</p>
+</div>
+</div>
+<!-- Step 3: Delivery -->
+<div class="relative flex gap-4 last-item">
+<div class="relative z-10 size-8 rounded-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center shrink-0 text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+</div>
+<div>
+<h4 class="text-sm font-medium text-gray-500 dark:text-gray-400">Estimated Delivery</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Oct 15 - Oct 20</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Action Bar -->
+<div class="sticky bottom-0 bg-white dark:bg-[#101922] border-t border-gray-100 dark:border-gray-800 p-4 pb-6 z-40 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<div class="max-w-md mx-auto flex flex-col gap-3">
+<div class="flex items-center justify-center gap-1 text-xs text-gray-500 dark:text-gray-400 mb-1">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span>Secure Payment • 100% Refundable if cancelled</span>
+</div>
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-primary/25 transition-colors flex items-center justify-center gap-2">
+<span>Pay Now</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</body></html>

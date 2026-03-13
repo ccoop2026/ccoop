@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>PRD Part 1: End-User Experience - ccoop.in</title>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16 items-center">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="text-white font-bold">C</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">ccoop<span class="text-primary">.in</span></span>
+</div>
+<div class="hidden md:flex space-x-8 text-sm font-medium">
+<a class="text-primary border-b-2 border-primary px-1 pt-1" href="#">Product Design</a>
+<a class="text-slate-500 hover:text-primary transition-colors px-1 pt-1" href="#">API Docs</a>
+<a class="text-slate-500 hover:text-primary transition-colors px-1 pt-1" href="#">Architecture</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full font-bold uppercase tracking-wider">MVP v1.0</span>
+</div>
+</div>
+</div>
+</nav>
+<!-- Header Section -->
+<header class="py-12 bg-white dark:bg-slate-900/50 border-b border-primary/5">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3 text-primary mb-4">
+<span class="material-icons">description</span>
+<span class="font-semibold tracking-widest text-xs uppercase">Internal Documentation</span>
+</div>
+<h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-slate-100 mb-6">PRD Part 1: End-User Experience</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                Defining the student and alumni journey for the ccoop.in marketplace. This document outlines the core interactions, financial commitment logic, and fulfillment cycles for the MVP.
+            </p>
+</div>
+</header>
+<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<!-- Section 1: User Profile -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-icons">groups</span>
+</div>
+<h2 class="text-2xl font-bold">1. User Profile &amp; Objectives</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<h3 class="font-bold text-lg text-primary">The Persona</h3>
+<p class="text-slate-600 dark:text-slate-400">The primary user is a current university student (ages 18-24) or young alumni (ages 22-30) who takes pride in their academic identity but feels disconnected from standard campus retail.</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm">
+<span class="material-icons text-primary text-xs mt-1">check_circle</span>
+<span>High demand for "exclusive" department-specific apparel.</span>
+</li>
+<li class="flex items-start gap-2 text-sm">
+<span class="material-icons text-primary text-xs mt-1">check_circle</span>
+<span>Motivated by group-buying savings and community participation.</span>
+</li>
+</ul>
+</div>
+<div class="bg-primary/5 rounded-xl p-6 border border-primary/10">
+<h3 class="font-bold text-lg mb-3">Key Pain Points</h3>
+<div class="space-y-4">
+<div class="flex gap-3">
+<span class="text-primary font-bold">01.</span>
+<div>
+<p class="font-semibold text-sm">Excessive Pricing</p>
+<p class="text-xs text-slate-500">Retail merch is often overpriced due to middle-man markups.</p>
+</div>
+</div>
+<div class="flex gap-3">
+<span class="text-primary font-bold">02.</span>
+<div>
+<p class="font-semibold text-sm">Poor Customization</p>
+<p class="text-xs text-slate-500">Generic designs that don't reflect specific departments or batch pride.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Onboarding -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-icons">person_add</span>
+</div>
+<h2 class="text-2xl font-bold">2. Onboarding &amp; Academic Identity</h2>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-primary/10 overflow-hidden">
+<div class="p-6 border-b border-primary/5">
+<p class="text-slate-600 dark:text-slate-400 italic">"The onboarding process is not just about data collection; it's about curating the storefront."</p>
+</div>
+<div class="p-6 grid md:grid-cols-3 gap-6">
+<div class="text-center">
+<div class="w-12 h-12 bg-background-light dark:bg-background-dark rounded-full flex items-center justify-center mx-auto mb-3">
+<span class="material-icons text-primary">school</span>
+</div>
+<h4 class="font-bold text-sm mb-1">Campus ID</h4>
+<p class="text-xs text-slate-500">Selection of current/alma mater campus (Multi-select allowed).</p>
+</div>
+<div class="text-center">
+<div class="w-12 h-12 bg-background-light dark:bg-background-dark rounded-full flex items-center justify-center mx-auto mb-3">
+<span class="material-icons text-primary">account_tree</span>
+</div>
+<h4 class="font-bold text-sm mb-1">Department</h4>
+<p class="text-xs text-slate-500">Mapping to specific faculties for tailored design drops.</p>
+</div>
+<div class="text-center">
+<div class="w-12 h-12 bg-background-light dark:bg-background-dark rounded-full flex items-center justify-center mx-auto mb-3">
+<span class="material-icons text-primary">calendar_today</span>
+</div>
+<h4 class="font-bold text-sm mb-1">Batch Year</h4>
+<p class="text-xs text-slate-500">Drives personalization of "Class of XX" product variants.</p>
+</div>
+</div>
+<div class="p-4 bg-primary/5 text-xs">
+<strong class="text-primary uppercase tracking-wider block mb-1">Logic Note:</strong>
+                    The system triggers Push/SMS alerts when a campaign hits 50% MOQ specifically for the user's primary campus.
+                </div>
+</div>
+</section>
+<!-- Section 3: Pre-Order Flow -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-icons">shopping_basket</span>
+</div>
+<h2 class="text-2xl font-bold">3. The Two-Stage Pre-Order Flow</h2>
+</div>
+<div class="space-y-8">
+<!-- Stage 1 -->
+<div class="relative pl-8 border-l-2 border-primary/30">
+<div class="absolute -left-[11px] top-0 w-5 h-5 bg-primary rounded-full"></div>
+<h3 class="text-xl font-bold mb-3">Stage 1: The Pledge (Soft Launch)</h3>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/10 shadow-sm">
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Users "Pledge" to buy without paying upfront. This serves as a demand discovery phase.</p>
+<div class="flex flex-wrap gap-3">
+<div class="px-3 py-1.5 bg-background-light dark:bg-background-dark rounded text-xs border border-primary/5">Zero-Payment Pledge</div>
+<div class="px-3 py-1.5 bg-background-light dark:bg-background-dark rounded text-xs border border-primary/5">MOQ Target Bar (Live)</div>
+<div class="px-3 py-1.5 bg-background-light dark:bg-background-dark rounded text-xs border border-primary/5">Refer-to-Unlock Mechanic</div>
+</div>
+</div>
+</div>
+<!-- Stage 2 -->
+<div class="relative pl-8 border-l-2 border-primary/30">
+<div class="absolute -left-[11px] top-0 w-5 h-5 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+<h3 class="text-xl font-bold mb-3">Stage 2: Payment &amp; Commitment</h3>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/10 shadow-sm">
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Once MOQ is met, the campaign enters the 'Locked' phase. Users must confirm within 48-72 hours.</p>
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-3 rounded-lg bg-green-500/5 border border-green-500/20">
+<span class="material-icons text-green-500">payments</span>
+<span class="text-xs font-medium">50% Token Payment required to confirm order.</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-orange-500/5 border border-orange-500/20">
+<span class="material-icons text-orange-500">swap_horiz</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400">Variant Substitutions: If a specific color (e.g. Navy) fails MOQ but the product (Hoodie) succeeds, users are offered the winning variant.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Fulfillment -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-icons">local_shipping</span>
+</div>
+<h2 class="text-2xl font-bold">4. Fulfillment &amp; Campus Pickup</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="group overflow-hidden rounded-xl border border-primary/10 transition-all hover:shadow-lg">
+<div class="h-40 bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
+<img alt="Package tracking" class="w-full h-full object-cover" data-alt="Warehouse logistics and package sorting visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJBauKNKKj7UU_m8tNAG0y8K39ewx3ZhHBMRCM_IwKQ7Ut2aHL5d-cJksXQXwKJNkOrxGtfRUl05I2Dxt8-B6LMLdBorPdylP3tChOUE7RSZgS6fKgBViIBZr8Pvw37JeKomcsD09nv63dYN77qnOJKowtLCHNERiimzSJIEciYqmHi8fLK-944ebactU7jZiSgG19fgYfzSQPXPJ0guZs5EV22wdWM69hWQN8cg6Xtr04HwBjGK8A27ar2M62iwJJ2WS8u92U3D0"/>
+</div>
+<div class="p-5">
+<h4 class="font-bold mb-2">Live Production Tracking</h4>
+<p class="text-xs text-slate-500">Visual status updates: [Design] → [Factory] → [In-Transit] → [Arrived].</p>
+</div>
+</div>
+<div class="group overflow-hidden rounded-xl border border-primary/10 transition-all hover:shadow-lg">
+<div class="h-40 bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
+<img alt="QR Pickup" class="w-full h-full object-cover" data-alt="Person scanning QR code for campus pickup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV3toEnByOOVI82htmSZxdRyxgJVeYq6ZLdA9LWdUxzjMfNYR7acJZUpN0iZUP9ZVoBzyX45yPWpU11IZEhu6V8kqonEmLOacxxUr-0GEFRoi0n_UJzXkqEe-J0G0p3l4r8LSR5g4fKJ4T5V3cl95x0SWZ_vDUMkWpSL28GRuENnvUlXyx9sZmPxWFuwSKwN0OBtfiw5AMvPeTN8cCUhNq93CynpNlQ5M2ldJR-m-SjlOLr6HE9n7tNdtNNJOleismqIEDqGyGtcA"/>
+</div>
+<div class="p-5">
+<h4 class="font-bold mb-2">QR-Based Campus Hubs</h4>
+<p class="text-xs text-slate-500">Pickups occur at designated 'Campus Hubs'. Final 50% payment can be made via QR at the hub.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Wallet & Trust -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-icons">account_balance_wallet</span>
+</div>
+<h2 class="text-2xl font-bold">5. Wallet &amp; Financial Trust</h2>
+</div>
+<div class="bg-background-dark text-slate-100 rounded-2xl p-8 relative overflow-hidden">
+<!-- Abstract Design Decor -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="relative z-10">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<h3 class="text-xl font-bold mb-4">Building Trust in the Crowd</h3>
+<p class="text-slate-400 text-sm mb-6">Since campaigns depend on collective action, the wallet is the safety net for the student's money.</p>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<div class="w-6 h-6 rounded bg-primary flex items-center justify-center shrink-0">
+<span class="material-icons text-[16px]">add</span>
+</div>
+<p class="text-sm"><strong class="text-primary">The 110% Bonus:</strong> If a campaign fails after token payment, the student gets 100% refund + 10% credit bonus for the next drop.</p>
+</li>
+<li class="flex gap-3">
+<div class="w-6 h-6 rounded bg-primary flex items-center justify-center shrink-0">
+<span class="material-icons text-[16px]">account_balance</span>
+</div>
+<p class="text-sm"><strong class="text-primary">Instant Withdrawal:</strong> Credits can be withdrawn to original payment method (UPI/Card) at any time without fees.</p>
+</li>
+</ul>
+</div>
+<div class="w-full md:w-64 bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl text-center">
+<span class="text-xs uppercase tracking-widest text-primary font-bold">Wallet View</span>
+<div class="mt-4 mb-2 text-3xl font-bold">₹2,450.00</div>
+<div class="text-[10px] text-slate-500">Available Credit Balance</div>
+<div class="mt-6 space-y-2">
+<button class="w-full py-2 bg-primary rounded text-xs font-bold">Use for Next Drop</button>
+<button class="w-full py-2 bg-white/10 rounded text-xs font-bold">Refund to Bank</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Meta -->
+<footer class="bg-white dark:bg-slate-900 border-t border-primary/5 py-12">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2 grayscale opacity-50">
+<div class="w-6 h-6 bg-slate-400 rounded flex items-center justify-center">
+<span class="text-white font-bold text-[10px]">C</span>
+</div>
+<span class="text-sm font-bold tracking-tight text-slate-900 dark:text-slate-100">ccoop.in Internal Docs</span>
+</div>
+<div class="flex gap-4 text-xs text-slate-500 font-medium">
+<span>Confidential</span>
+<span>•</span>
+<span>Last Updated: Oct 2023</span>
+<span>•</span>
+<a class="text-primary hover:underline" href="#">Next: PRD Part 2 →</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

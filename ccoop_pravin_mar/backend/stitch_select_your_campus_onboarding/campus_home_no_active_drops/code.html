@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Campus Home - No Active Drops</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab {
+            border-bottom: 3px solid #ec5b13;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="relative flex h-screen w-full flex-col overflow-hidden max-w-md mx-auto shadow-2xl bg-background-light dark:bg-background-dark">
+<!-- Header -->
+<header class="flex items-center p-4 justify-between bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-slate-800">
+<div class="flex size-10 shrink-0 items-center justify-center text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">menu</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center font-display">Campus Home</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="relative flex items-center justify-center text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<!-- Tabs -->
+<nav class="flex border-b border-slate-200 dark:border-slate-800">
+<a class="flex flex-col items-center justify-center active-tab text-primary pb-3 pt-4 flex-1" href="#">
+<p class="text-sm font-bold leading-normal tracking-wide">Campus Drops</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-3 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4 flex-1" href="#">
+<p class="text-sm font-bold leading-normal tracking-wide">Retail Store</p>
+</a>
+</nav>
+<!-- Scrollable Content -->
+<main class="flex-1 overflow-y-auto">
+<!-- Retail Store Status Alert (Semester Break) -->
+<div class="m-4 p-4 rounded-xl bg-primary/10 border border-primary/20 flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">info</span>
+<div>
+<p class="text-sm font-bold text-primary">Retail Store: Closed</p>
+<p class="text-xs text-slate-600 dark:text-slate-400">Our physical store is currently closed for semester break. Online orders resume next month.</p>
+</div>
+</div>
+<!-- Empty State Section -->
+<div class="flex flex-col px-6 py-10 items-center text-center">
+<div class="w-64 h-64 mb-8 bg-slate-200 dark:bg-slate-800 rounded-full flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-20 bg-gradient-to-tr from-primary to-transparent" data-alt="Abstract orange and gray geometric pattern gradient"></div>
+<span class="material-symbols-outlined text-8xl text-slate-400 dark:text-slate-600">inventory_2</span>
+</div>
+<h3 class="text-2xl font-bold font-display mb-2">No Active Drops</h3>
+<p class="text-slate-500 dark:text-slate-400 text-base leading-relaxed max-w-xs">
+                    The next exclusive campus drop is being prepared. Our designers are finishing the final details.
+                </p>
+</div>
+<!-- Teaser Section -->
+<div class="mx-4 mb-8 p-6 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Next Drop Preview</span>
+<div class="flex gap-1">
+<span class="size-2 rounded-full bg-primary"></span>
+<span class="size-2 rounded-full bg-slate-300 dark:bg-slate-700"></span>
+<span class="size-2 rounded-full bg-slate-300 dark:bg-slate-700"></span>
+</div>
+</div>
+<div class="flex items-center gap-4 mb-6">
+<div class="size-16 rounded-lg bg-slate-200 dark:bg-slate-800 flex-shrink-0 flex items-center justify-center overflow-hidden">
+<div class="w-full h-full bg-slate-300 dark:bg-slate-700" data-alt="Blurry silhouette of a limited edition hoodie"></div>
+</div>
+<div>
+<h4 class="font-bold text-lg">"The Varsity" Hoodie</h4>
+<p class="text-xs text-slate-500">Limited Edition • 50 Pieces Only</p>
+</div>
+</div>
+<!-- Countdown Timer -->
+<div class="flex justify-between items-center mb-6">
+<div class="flex flex-col items-center">
+<span class="text-2xl font-bold">03</span>
+<span class="text-[10px] uppercase text-slate-500">Days</span>
+</div>
+<span class="text-xl text-slate-300">:</span>
+<div class="flex flex-col items-center">
+<span class="text-2xl font-bold">14</span>
+<span class="text-[10px] uppercase text-slate-500">Hours</span>
+</div>
+<span class="text-xl text-slate-300">:</span>
+<div class="flex flex-col items-center">
+<span class="text-2xl font-bold">22</span>
+<span class="text-[10px] uppercase text-slate-500">Mins</span>
+</div>
+<span class="text-xl text-slate-300">:</span>
+<div class="flex flex-col items-center">
+<span class="text-2xl font-bold">45</span>
+<span class="text-[10px] uppercase text-slate-500">Secs</span>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 rounded-xl h-12 bg-primary text-white text-sm font-bold transition-transform active:scale-95">
+<span class="material-symbols-outlined text-lg">notifications_active</span>
+                    Notify Me When Live
+                </button>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<footer class="flex border-t border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark px-4 pb-6 pt-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">home</span>
+<p class="text-[10px] font-medium">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">local_offer</span>
+<p class="text-[10px] font-medium">Drops</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<p class="text-[10px] font-medium">Store</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium">Profile</p>
+</a>
+</footer>
+</div>
+</body></html>

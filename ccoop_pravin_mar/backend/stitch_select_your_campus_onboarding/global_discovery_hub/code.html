@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>ccoop.in | Discovery Hub</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Header Navigation -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">hub</span>
+<h1 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white uppercase">ccoop.in</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto pb-24">
+<!-- Hero Section -->
+<section class="relative px-4 py-8 @container">
+<div class="relative overflow-hidden rounded-xl bg-slate-900 aspect-[16/7] flex flex-col justify-end p-6 md:p-12">
+<div class="absolute inset-0 opacity-40 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="Modern university campus building with green courtyard" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdA8zubKYiUjh_aPr5PMOMbhmVllxMU9eiXFMnu011LdBMRCVZNMgL_h_9Y9krUKZurYDuvc5V-dyq3n3crToGOtZW12HmNS5adpjOdgmyjXpLLYXnXZ08h0qzxxkkBMKQ8xmjqOcTGridBqB2q64q4q7q0zfyCIF8zoBEzhIluM-WqEXxlP6e411YPKbo6oc9BIplMgUIO3dCl7Y9um4bnCsl6V_-1njxsPtoOYql2VZAsD02T_lF6y2i8VM5qrYmBDvakQRQR1E')"></div>
+<div class="relative z-20 space-y-4 max-w-2xl">
+<span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-primary text-white rounded-full">Explore ccoop</span>
+<h2 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">Your Campus, <br/> Your Community.</h2>
+<p class="text-slate-200 text-lg max-w-md">Discover exclusive drops, local events, and campus-specific deals tailored for students.</p>
+</div>
+</div>
+</section>
+<!-- Search Bar Section -->
+<section class="px-4 -mt-12 relative z-30">
+<div class="bg-white dark:bg-slate-900 p-2 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 max-w-3xl mx-auto">
+<div class="flex flex-col md:flex-row items-center gap-2">
+<div class="flex w-full items-center bg-slate-100 dark:bg-slate-800 rounded-xl px-4 py-3">
+<span class="material-symbols-outlined text-slate-400 mr-3">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-slate-900 dark:text-white placeholder:text-slate-500 font-medium" placeholder="Search for your college or city..." type="text"/>
+</div>
+<button class="w-full md:w-auto bg-primary text-white px-8 py-3 rounded-xl font-bold hover:opacity-90 transition-opacity whitespace-nowrap">
+                        Find My Campus
+                    </button>
+</div>
+<div class="px-4 py-3 flex items-center gap-2 text-xs font-medium text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm text-primary">info</span>
+                    Selecting your campus unlocks <span class="text-primary font-bold">Local Pickup</span> and exclusive campus-only pricing.
+                </div>
+</div>
+</section>
+<!-- Trending Drops Across India -->
+<section class="mt-12 px-4">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">local_fire_department</span>
+                    Trending Drops India
+                </h3>
+<a class="text-primary font-bold text-sm hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Drop Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-slate-200 mb-3">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist white oversized t-shirt mockup" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCd5sbZtEy6ZH-Zdr7As5OXjgxP9esVRGMBo-JrCHLeGVlrZcFUJKV7o8mjt6IUNdAMMeKjZPWYgd2bPQxVyuNl6nuvIHw7zHGShzacG_xakcEQC85uGsejZYrj7T6IfWDZLfTvUVW2AdyYPzTNz_pmQ-WMb9t2qRslvgy6qtxV3tukUXhZl1j9BH6ejfuGRGe2H73XvePprVRnJfzZwE4IO1ZEB3-NufRDYTkd5_jftnXlcelG_crrx38O3NUB8Asizxj8W6fzNaM')"></div>
+<div class="absolute top-2 right-2 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-2 py-1 rounded-lg text-[10px] font-bold text-slate-900 dark:text-white">LIMITED</div>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white truncate">Oversized '24 Varsity Tee</h4>
+<p class="text-sm text-slate-500">₹899.00</p>
+<div class="mt-1 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-[10px] text-slate-400 font-bold uppercase">Trending at IIT Bombay</span>
+</div>
+</div>
+<!-- Drop Card 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-slate-200 mb-3">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Black hoodie with minimalist graphic design" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMXE2hgKz-Tr_Cfc3cNe132S8Aw758evHGEURGMz2EfDPu2L0XG9cHU-DDtIy-yW7yJa0p2cGVlQfdxpJmPGuT67ba5-DNpRE7mFiARMtEioTkXGT_J8US8-QeDWs5wyZ4P5d-eLfIU_6r8NFm1CXjZmMbghAeLNtF4ER1YJXw1c6ApghDNVgyeezb88cFsDEOgDnwtWW3EH7vEDtQiFhXu6NOdZnx5rBtww1TDCjT0xEgfUZzvHUJZwRezcSsHZZeGg6NLIu_vWE')"></div>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white truncate">Midnight Stealth Hoodie</h4>
+<p class="text-sm text-slate-500">₹1,499.00</p>
+<div class="mt-1 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-[10px] text-slate-400 font-bold uppercase">Trending at DTU</span>
+</div>
+</div>
+<!-- Drop Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-slate-200 mb-3">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Tote bag with college crest design" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVsWVxLKV3tkA6i5ibxpcX0yPkkD7dYlyM2fVm6ItLoISwZfTSuizPS7WdDBKPUJV0pT_OVorv5sSlEWDva4kcag0lUHrxCluEpGi1jLkcAyEhv8WQ65nuEkAvhlrNHT4w1vFpW696Vs0BEvJu8FyIV3WZiUYw3lXnwYMSNQqRUQ5lK2PvD6W_7eJozdTX7zTmspqd_qWt1les9oj8zDN_2zT2P2egodHkUJHltD4__IBklN3lPvlfXvkgiOmL5qo1sLigFvrQRiY')"></div>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white truncate">Essential Canvas Tote</h4>
+<p class="text-sm text-slate-500">₹450.00</p>
+<div class="mt-1 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-[10px] text-slate-400 font-bold uppercase">Trending at Christ Univ</span>
+</div>
+</div>
+<!-- Drop Card 4 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-slate-200 mb-3">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Aesthetic ceramic coffee mug for students" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAPe5Py0QupxXCSaCHnqQPMZvAfhn2k7q0GEFvARp0hkcO9kYR_O39xJdGwuqogXLuJo7vCtiESxCWK4xonLekjzznd4PlLhX_dn-CDnrMKKknAB03tFDINryAdmEKtEKF1l8o5CB4FxJrbBrmw81d6kCnwd34-vMr2tMzHTc8MbCHh1HzivrM2xSUgU9vNl-ntaxjY8kBaRexVRkoNBFDFsewebivYO2GsrYsjaBneREaBskdaOC9kSQT_TRVdLk129TSGf0MLEXg')"></div>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white truncate">Late-Night Study Mug</h4>
+<p class="text-sm text-slate-500">₹320.00</p>
+<div class="mt-1 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-[10px] text-slate-400 font-bold uppercase">Trending at SRM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Campus Collections -->
+<section class="mt-16 px-4">
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Featured Campus Collections</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Campus 1 -->
+<div class="relative h-64 rounded-2xl overflow-hidden group cursor-pointer shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="Delhi University historic red brick building" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhFhAL6u7V09Y6oXhgsvWw-NBu33S-jrdTcW43ooJ0dAPLMNbCz-Oic1recUAbEM9m6x7rfMYK1zr8YpKsVHuZhRJuZGXcwl3x1Y6Ds_0edsjFhuY2hPcZe0XWhno8Ch6YLp_DuqrjQbD7tFEllTxunbYi501G1bpPIEaj4B_tZY9D6i0mElJgMTkL5-UyvOlSbUX6vbnuYwyofcT8610zrnNAzAWtR6ktwLIVCAA8EPDFrJTJRAl-2CUd5aUtJ54BXpdL_bJjRw0')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="text-primary text-xs font-bold uppercase tracking-wider mb-1">North Campus</p>
+<h4 class="text-white text-2xl font-bold">Delhi University</h4>
+<button class="mt-4 flex items-center gap-2 text-white text-sm font-bold bg-white/20 backdrop-blur-md px-4 py-2 rounded-lg hover:bg-primary transition-colors">
+                            Explore Store <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Campus 2 -->
+<div class="relative h-64 rounded-2xl overflow-hidden group cursor-pointer shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="Modern tech campus infrastructure" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTFwRJGLVPop9AX3iNIi38YCfQfGc0MZspDpgOZqkRobuJbJZR91CJfClK878LvsEpoeXDAbhUFyoQt6yQWJ8N_fQGiUDTQpCTM_7geHt-UsAgkR3da1-Lt_2BucOMIEA5uJ3iWRCT1c6_AWY18zjto_ipVseBK0GYmjqievdXWct56oW_EW-uaP8Nr6_27vYuJvGFe0YkaH0Ao0uLfUbqZZd0dJOfyDfsoSzU_aiFsS2z2R7FrqHBoQf5J0qwJvF_iXqJ3hzrErg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Powai Campus</p>
+<h4 class="text-white text-2xl font-bold">IIT Bombay</h4>
+<button class="mt-4 flex items-center gap-2 text-white text-sm font-bold bg-white/20 backdrop-blur-md px-4 py-2 rounded-lg hover:bg-primary transition-colors">
+                            Explore Store <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Campus 3 -->
+<div class="relative h-64 rounded-2xl overflow-hidden group cursor-pointer shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="Green college campus with trees" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKcGUBGTWk7PP3yx3LE0cOCiEvQUhrw3leoXJU2Yo5koEB1EHWcMhXudm7zRbsjZOEA05MY1uvgCyYQC9EqOg5eB7TZZmmNo8Je-OlXOHlfnUUWOD8KvgDBHHk3nyK-HwxO_0k0KJ93lXNEeaaJALr-_F4krLzFUjyrb7cnkETSrsOPjAj75gfcwF2SgvugcS_cRPEQzxbIN8zLGHRwE2aKUiY16USgAdo78ssoYT1CUYi-9T5rWUok5d7HLUe2SP6RWsRhEXEvgc')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Bengaluru</p>
+<h4 class="text-white text-2xl font-bold">Christ University</h4>
+<button class="mt-4 flex items-center gap-2 text-white text-sm font-bold bg-white/20 backdrop-blur-md px-4 py-2 rounded-lg hover:bg-primary transition-colors">
+                            Explore Store <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-16 px-4">
+<div class="bg-primary/10 dark:bg-primary/20 border-2 border-dashed border-primary/30 rounded-3xl p-8 md:p-12 text-center max-w-4xl mx-auto">
+<span class="material-symbols-outlined text-5xl text-primary mb-4">storefront</span>
+<h3 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Own a Campus Brand?</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-8 max-w-lg mx-auto">Launch your own campus collective on ccoop and reach your fellow students directly. We handle logistics, you handle the design.</p>
+<button class="bg-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-primary/30 transition-all">
+                    Start a Collective
+                </button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Mobile Friendly) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 z-50">
+<div class="max-w-7xl mx-auto flex items-center justify-around py-2 px-4">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined font-variation-fill">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Discover</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Campuses</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Cart</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Profile</span>
+</a>
+</div>
+</nav>
+<style>
+        /* Custom styles to handle material icons fill property via class */
+        .font-variation-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</body></html>

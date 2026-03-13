@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>ccoop.in PRD - Core Commerce Logic</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 px-6 lg:px-40 py-3 bg-white dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<span class="material-symbols-outlined text-3xl">hub</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">ccoop.in PRD</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Product</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary leading-normal" href="#">Logic</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Design</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Docs</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 lg:gap-8">
+<label class="flex flex-col min-w-40 !h-10 max-w-64 hidden sm:block">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
+<div class="text-slate-400 flex items-center justify-center pl-4 rounded-l-xl">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:outline-0 focus:ring-0 h-full placeholder:text-slate-400 px-4 text-base font-normal" placeholder="Search Logic..."/>
+</div>
+</label>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-xl h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">
+<span class="truncate">Export PDF</span>
+</button>
+</div>
+</header>
+<div class="flex flex-1 flex-col lg:flex-row px-4 lg:px-40 py-8 gap-8">
+<aside class="w-full lg:w-72 flex flex-col gap-6 sticky top-24 self-start">
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Project C-Coop</h1>
+<p class="text-slate-500 text-sm">v1.0.2 - Core Commerce Logic</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">subject</span>
+<span class="text-sm font-medium">1. Introduction</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary rounded-lg border-l-4 border-primary" href="#">
+<span class="material-symbols-outlined text-[20px] fill-1">shopping_bag</span>
+<span class="text-sm font-bold">2. Commerce &amp; Fulfillment</span>
+</a>
+<div class="ml-8 flex flex-col gap-1 mt-1 border-l border-slate-200 dark:border-slate-800">
+<a class="pl-4 py-1.5 text-xs text-slate-500 hover:text-primary" href="#pledge">Pledge Engine</a>
+<a class="pl-4 py-1.5 text-xs text-slate-500 hover:text-primary" href="#storefront">Integrated Store</a>
+<a class="pl-4 py-1.5 text-xs text-slate-500 hover:text-primary" href="#fulfillment">Fulfillment Logic</a>
+<a class="pl-4 py-1.5 text-xs text-slate-500 hover:text-primary" href="#post-purchase">Post-Purchase</a>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+<span class="text-sm font-medium">3. User Flow</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<span class="text-sm font-medium">4. Technical Spec</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+<span class="text-sm font-medium">5. Design System</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+<span class="text-sm font-medium">6. Analytics</span>
+</a>
+</nav>
+</aside>
+<main class="flex-1 flex flex-col gap-12">
+<section class="flex flex-col gap-4" id="header">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold w-fit uppercase tracking-wider">
+                            Section 2
+                        </div>
+<h2 class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-tight">Commerce &amp; Fulfillment</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-3xl">The core logic governing the ccoop.in marketplace, pledge engine, and campus-led fulfillment. This section defines how users discover, commit to, and receive products.</p>
+</section>
+<section class="bg-white dark:bg-slate-900/40 p-8 rounded-2xl border border-slate-200 dark:border-slate-800" id="pledge">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+<h3 class="text-2xl font-bold">The Two-Stage Pledge Engine</h3>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="flex flex-col gap-4 p-5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-primary uppercase">Phase 1</span>
+<span class="material-symbols-outlined text-slate-400">touch_app</span>
+</div>
+<h4 class="text-lg font-bold">Soft Launch (Pledge)</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Zero-cost interest gathering to validate demand. Users 'Pledge' their interest without immediate payment. This enables demand forecasting before stock commitment.</p>
+<div class="mt-4 p-3 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700">
+<div class="h-24 w-full bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center overflow-hidden">
+<div class="relative w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-primary/5" data-alt="Screenshot of product pledge button interface">
+<span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">{{DATA:SCREEN:SCREEN_69}}</span>
+</div>
+</div>
+<p class="text-[10px] mt-2 text-slate-400 italic text-center">Pledge CTA &amp; Progress Bar UI</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 p-5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-primary uppercase">Phase 2</span>
+<span class="material-symbols-outlined text-slate-400">payments</span>
+</div>
+<h4 class="text-lg font-bold">Commitment (Token)</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Once threshold is met, the drop moves to 'Active'. Users pay a 50% token amount to trigger production and secure their spot in the limited run.</p>
+<div class="mt-4 p-3 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700">
+<div class="h-24 w-full bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center overflow-hidden">
+<div class="relative w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-primary/5" data-alt="Screenshot of token payment confirmation screen">
+<span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">{{DATA:SCREEN:SCREEN_74}}</span>
+</div>
+</div>
+<p class="text-[10px] mt-2 text-slate-400 italic text-center">Token Checkout Flow</p>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col gap-6" id="storefront">
+<h3 class="text-2xl font-bold flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">storefront</span>
+                            Integrated Storefront
+                        </h3>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="md:col-span-2 prose dark:prose-invert">
+<p class="text-slate-600 dark:text-slate-400">The campus home page serves as a unified entry point. We distinguish between time-bound 'Drops' and evergreen 'Retail' items through clear visual hierarchy and separate tabs.</p>
+<ul class="space-y-4 mt-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary mt-1">timer</span>
+<div>
+<strong class="block text-slate-900 dark:text-slate-100">C-Coop Drops</strong>
+<span class="text-sm text-slate-500">Crowdfunded, limited-run merchandise with specific milestone dates.</span>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary mt-1">inventory_2</span>
+<div>
+<strong class="block text-slate-900 dark:text-slate-100">Standard Retail</strong>
+<span class="text-sm text-slate-500">Inventory-ready items available for immediate purchase and next-day pickup.</span>
+</div>
+</li>
+</ul>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="aspect-[3/4] w-full bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center justify-center overflow-hidden mb-3">
+<div class="relative w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-transparent" data-alt="Mobile mockup showing drops and retail tabs">
+<span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">{{DATA:SCREEN:SCREEN_62}}</span>
+</div>
+</div>
+<p class="text-[11px] text-slate-500 font-medium text-center">Integrated Marketplace UI</p>
+</div>
+</div>
+</section>
+<section class="grid md:grid-cols-2 gap-12 border-t border-slate-200 dark:border-slate-800 pt-12" id="fulfillment">
+<div class="flex flex-col gap-6">
+<h3 class="text-2xl font-bold flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+                                Fulfillment Logic
+                            </h3>
+<div class="space-y-6">
+<div class="p-4 rounded-xl border-l-4 border-primary bg-slate-50 dark:bg-slate-800/50">
+<h4 class="font-bold mb-2">Split-Order Handling</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Logic for carts containing both 'Retail' and 'Drop' items. Retail items move to fulfillment immediately, while Drops wait for production cycles.</p>
+</div>
+<div class="p-4 rounded-xl border-l-4 border-primary bg-slate-50 dark:bg-slate-800/50">
+<h4 class="font-bold mb-2">Pickup vs. Shipping</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Campus Pickup is the default (free). Shipping is an available add-on for alumni or off-campus residents, calculated at checkout based on weight.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6" id="post-purchase">
+<h3 class="text-2xl font-bold flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">assignment_turned_in</span>
+                                Post-Purchase
+                            </h3>
+<div class="space-y-4">
+<div class="flex items-start gap-4 p-4 rounded-xl bg-primary/5 border border-primary/20">
+<span class="material-symbols-outlined text-primary">timeline</span>
+<div>
+<h4 class="font-bold text-sm">Production Tracking</h4>
+<p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Real-time status updates from "Material Sourcing" to "In Production" to "Quality Check".</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-primary/5 border border-primary/20">
+<span class="material-symbols-outlined text-primary">point_of_sale</span>
+<div>
+<h4 class="font-bold text-sm">Final 50% Settlement</h4>
+<p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Payment trigger sent via app notification when item reaches Campus Hub. Settlement must be completed before pickup QR is active.</p>
+</div>
+</div>
+<div class="mt-2 p-3 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700">
+<div class="h-28 w-full bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center overflow-hidden">
+<div class="relative w-full h-full flex items-center justify-center bg-gradient-to-tr from-primary/5 to-primary/15" data-alt="Order status timeline visualization">
+<span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">{{DATA:SCREEN:SCREEN_23}}</span>
+</div>
+</div>
+<p class="text-[10px] mt-2 text-slate-400 italic text-center">Order Tracker Lifecycle</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="flex items-center justify-between pt-12 border-t border-slate-200 dark:border-slate-800 mt-auto">
+<button class="flex items-center gap-2 text-slate-500 hover:text-primary transition-colors px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">arrow_back</span>
+<span class="text-sm font-medium">Page 1: Introduction</span>
+</button>
+<button class="flex items-center gap-2 text-primary hover:bg-primary/10 transition-colors px-6 py-2 rounded-lg border border-primary/20">
+<span class="text-sm font-bold">Page 3: User Flow</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</footer>
+</main>
+</div>
+</div>
+</div>
+</body></html>

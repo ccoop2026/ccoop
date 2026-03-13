@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Unified Pickup QR</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 justify-between border-b border-slate-200 dark:border-slate-800">
+<button class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Pickup QR</h2>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Instruction Section -->
+<div class="px-6 py-6 text-center">
+<h1 class="text-2xl font-bold mb-2">One Code, All Pickups</h1>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Scan this at any campus locker or service desk to collect your items.</p>
+</div>
+<!-- QR Code Section -->
+<div class="px-6 flex justify-center">
+<div class="bg-white p-6 rounded-xl shadow-xl dark:shadow-primary/5">
+<div class="size-64 bg-white bg-center bg-no-repeat bg-contain" data-alt="A clean high-contrast black and white QR code for identification" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAj0c3WYHX_TRwRvNBiIxl8Suv1oo-bbi9Tj2PyhM6Xst8MRYkHNuUjS8OeJuI3ZrIFPXjdXIG1U9HxYm1S457UN7Q4xxSWckpDVVUiw4Tg3qN1-a4ijqKfoPQ2gGqRBf0A-__W2V1-n6vClFMUVE9Uyj7BnZZiZwSDZ3YMK8-RclNLDy0ZRBPyFddmhJ94a7l07IV7mL5MslHWNj6G_SywxF6GZJUEqbRJrVZzolqSR6ObrQ1HFH7viAGJQ20KL4VBqSqUUhA9RvA");'>
+</div>
+<div class="mt-4 text-center">
+<span class="text-xs font-mono text-slate-400 tracking-widest uppercase">ID: STU-9928-XP</span>
+</div>
+</div>
+</div>
+<!-- Alert Section: Pay Balance -->
+<div class="mx-6 mt-8 p-4 bg-primary/10 border border-primary/30 rounded-xl flex items-start gap-4">
+<div class="bg-primary p-2 rounded-lg text-white">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div class="flex-1">
+<h4 class="text-primary font-bold text-sm">Pay Balance to Unlock</h4>
+<p class="text-slate-600 dark:text-slate-400 text-xs mt-1">You have a pending balance of $12.50. Some pickups may be restricted until paid.</p>
+<button class="mt-3 bg-primary text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-primary/90 transition-colors">Pay Now</button>
+</div>
+</div>
+<!-- Pickup Locations Section -->
+<div class="mt-8 px-6 pb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight mb-4">Pickup Locations</h3>
+<div class="space-y-3">
+<!-- Location 1 -->
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">home_pin</span>
+</div>
+<div>
+<p class="font-bold text-sm">Student Union</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Main Entrance Lockers</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-green-500/20 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase tracking-wider rounded">Ready</span>
+</div>
+<!-- Location 2 -->
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-amber-500/20 text-amber-500 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">local_library</span>
+</div>
+<div>
+<p class="font-bold text-sm">University Library</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Desk 4, Level 1</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-amber-500/20 text-amber-600 dark:text-amber-400 text-[10px] font-bold uppercase tracking-wider rounded">Processing</span>
+</div>
+<!-- Location 3 -->
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-800 opacity-60">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-slate-500/20 text-slate-500 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">sports_gymnastics</span>
+</div>
+<div>
+<p class="font-bold text-sm">Rec Center</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Equipment Rental</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-slate-500/20 text-slate-600 dark:text-slate-400 text-[10px] font-bold uppercase tracking-wider rounded flex items-center gap-1">
+<span class="material-symbols-outlined !text-[12px]">lock</span> Locked
+                    </span>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="px-6 mb-8">
+<div class="w-full h-40 bg-slate-200 dark:bg-slate-800 rounded-xl overflow-hidden relative border border-slate-200 dark:border-slate-800">
+<div class="absolute inset-0 bg-cover bg-center opacity-70" data-alt="Abstract schematic map of a university campus" data-location="University Campus Map" style='background-image: url("https://placeholder.pics/svg/300");'>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<button class="bg-background-dark/80 backdrop-blur-sm text-white px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 border border-slate-700">
+<span class="material-symbols-outlined text-sm">map</span> View Map
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 px-4 pb-4 pt-2">
+<div class="flex gap-2 max-w-lg mx-auto">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-xs font-medium leading-normal">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<p class="text-xs font-medium leading-normal">Orders</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">qr_code_2</span>
+<p class="text-xs font-medium leading-normal">Pickups</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-xs font-medium leading-normal">Profile</p>
+</a>
+</div>
+</nav>
+</body></html>

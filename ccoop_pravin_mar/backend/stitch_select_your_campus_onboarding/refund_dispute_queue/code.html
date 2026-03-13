@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Global Admin - Refund &amp; Dispute Queue</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#138aec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header Section -->
+<header class="sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-5xl mx-auto w-full">
+<div class="flex items-center gap-3">
+<div class="text-primary flex size-10 items-center justify-center rounded-lg bg-primary/10">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<div>
+<h1 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Refund &amp; Dispute Queue</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Escalated Student Requests</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex size-10 items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Search & Quick Filters -->
+<div class="px-4 pb-4 max-w-5xl mx-auto w-full space-y-3">
+<label class="relative flex flex-col w-full">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input block w-full pl-10 pr-4 py-3 rounded-xl border-none bg-slate-200/50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-slate-800 transition-all" placeholder="Search Order ID or Student Name" type="text"/>
+</label>
+<div class="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-white px-4 text-sm font-medium">
+<span>All Requests</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-4 text-sm font-medium">
+<span class="size-2 rounded-full bg-yellow-500"></span>
+<span>Pending</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-4 text-sm font-medium">
+<span class="size-2 rounded-full bg-blue-500"></span>
+<span>Processing</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-4 text-sm font-medium">
+<span class="size-2 rounded-full bg-red-500"></span>
+<span>Flagged</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Queue List -->
+<main class="flex-1 max-w-5xl mx-auto w-full p-4 space-y-4 mb-20">
+<!-- Request Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+<div class="p-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="bg-primary/20 size-14 rounded-full flex items-center justify-center shrink-0 overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" data-alt="Student profile picture of Rahul Sharma" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjAbAOFBpi_sHrx0-dZ11MxGIw4-i1r0MIiccYUm4ow7SdJNRnbE41dc6zEApx1vyN11fPavojhnds7qxOxPunfbR4ke8sUPzom2VFvfxrfwZSwzMXXll0ufvhCA3WiAxjeIyJtpreWyPOlIf19TNJhdg0q90lo0X-QdZ88ft0EaraHMVepioTMna_YFKciVLlSmbOict8hMQkYg7s13VhCmI5QOUFc32IsQmWMQi2OZ8IZZUVNUSMitKO4LoQSICm4OHKnnFVXY0"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-slate-900 dark:text-slate-100 font-semibold">Order #88291 — Rahul Sharma</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-yellow-500/10 text-yellow-600 dark:text-yellow-500 border border-yellow-500/20">Pending</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Requested: <span class="text-primary font-medium">₹1,499</span> • 2 hours ago</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs mt-1">Reason: Course content not as described (Data Science Pro)</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="flex-1 md:flex-none px-4 py-2 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary/90 transition-colors">Approve to Wallet</button>
+<button class="flex-1 md:flex-none px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">Return to UPI</button>
+<button class="flex items-center justify-center size-9 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-lg">chat</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Request Card 2 (Processing) -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+<div class="p-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="bg-primary/20 size-14 rounded-full flex items-center justify-center shrink-0 overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" data-alt="Student profile picture of Priya Nair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJv5Q5O7-4a_id-6iTRp944kLuUpvz--L4oQUHkncxBfyYXoCYZ8z4XhR9a8AfFQTpMVtCzNIzYGNfw_BHdNPqRPBFh2arE3wQL9jABZFS2wGwQuqO0zXjT6eAxH_85iYA9RycQhAXqpGmd59MozFcIWcEy9rD70iV4-E2JWitRYHwN3xPMNXEwpZl9TwzkqBL0FSrmPGQayLg1FOuH0uTHDOzG37uY5UQ15yCzFjOqdDBIg-qnJvxShTQWtWNnqEmuHMQmKAjzik"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-slate-900 dark:text-slate-100 font-semibold">Order #88104 — Priya Nair</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-blue-500/10 text-blue-600 dark:text-blue-500 border border-blue-500/20">Processing</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Requested: <span class="text-primary font-medium">₹2,999</span> • 5 hours ago</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs mt-1">System Note: Manual verification required for high-value refund.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="flex-1 md:flex-none px-4 py-2 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary/90 transition-colors">Approve to Wallet</button>
+<button class="flex-1 md:flex-none px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">Return to UPI</button>
+<button class="flex items-center justify-center size-9 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-lg">chat</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Request Card 3 (Flagged) -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border-l-4 border-red-500 border-y border-r border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+<div class="p-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="bg-primary/20 size-14 rounded-full flex items-center justify-center shrink-0 overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" data-alt="Student profile picture of Amit Patel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoS5qhrOQfn0SB7I2psGFw7zNi_RMzmlM_1iehaZvPiaC5cFbhSJpvXlSXuV_iejHgUuall2Fg7CYFq23SYhkiwcZJdTi-tMmmEiAHwyPMG--xBhVNp6nfGgT1qYReEJP7n3cDiekvQqAed2tTQPPeMs4SmnX16-s1FJUvE1OJmRT_suyqWQPBgTyR1XyS62ZLeiGKbUCSmlaPgRWNTti52dEqZc6MVf5O4Fpl0CumX2bk9qtZ_5KEPpYkNKfp8cmsbajNRKDrjok"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-slate-900 dark:text-slate-100 font-semibold">Order #87955 — Amit Patel</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-red-500/10 text-red-600 dark:text-red-500 border border-red-500/20">Flagged</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Requested: <span class="text-primary font-medium">₹899</span> • 1 day ago</p>
+<p class="text-red-500 dark:text-red-400 text-xs mt-1 font-medium">Alert: Multiple refund requests detected for this account (3 in 30 days).</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="flex-1 md:flex-none px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">Contact User</button>
+<button class="flex-1 md:flex-none px-4 py-2 rounded-lg bg-red-500 text-white text-xs font-bold hover:bg-red-600 transition-colors">Reject Request</button>
+<button class="flex items-center justify-center size-9 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Request Card 4 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm opacity-90">
+<div class="p-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="bg-primary/20 size-14 rounded-full flex items-center justify-center shrink-0 overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" data-alt="Student profile picture of Sneha Kapoor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVewuAhYqxSVJ277ygGiMwbc9IoiHWk2iSHfG0k0nxyBaUsLf7rJBxUDExG82r3H1kCUuIJbZAe84fU0HanA-otp17NfJHal1MFhEyAUQ7CqfsHC1sgqhAwLcG-b3Zx5gtgRAzlboez3_94nP5pZ2gwjAGxMsXYZ7COfP5Rp9KvnkvUarR7fIFKvJ64VrRHRuaJ8umdZxbXNuawgw2ZQnVryqwd9BCdiW3hiuFFSdEU8DXR6IfT5d35qmUWbro7cT5Q2Wr86s2w3I"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-slate-900 dark:text-slate-100 font-semibold">Order #88001 — Sneha Kapoor</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-yellow-500/10 text-yellow-600 dark:text-yellow-500 border border-yellow-500/20">Pending</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Requested: <span class="text-primary font-medium">₹5,499</span> • 6 hours ago</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs mt-1">Reason: Duplicate payment by mistake.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="flex-1 md:flex-none px-4 py-2 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary/90 transition-colors">Approve to Wallet</button>
+<button class="flex-1 md:flex-none px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">Return to UPI</button>
+<button class="flex items-center justify-center size-9 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-lg">chat</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 z-30">
+<div class="flex max-w-lg mx-auto px-4 pb-3 pt-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">format_list_bulleted</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Queue</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Analytics</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Students</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Settings</p>
+</a>
+</div>
+</nav>
+</body></html>

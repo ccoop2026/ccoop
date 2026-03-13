@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Production Tracker MES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#138aec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .step-line {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            bottom: -24px;
+            width: 2px;
+            background-color: rgba(19, 138, 236, 0.2);
+        }
+        .step-line-active {
+            background-color: #138aec;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header Navigation -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-5xl mx-auto w-full">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-2 rounded-lg text-white">
+<span class="material-symbols-outlined block">factory</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight">Production MES</h1>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">account_circle</span>
+</button>
+</div>
+</div>
+<!-- Tabs Navigation -->
+<div class="max-w-5xl mx-auto px-4">
+<nav class="flex gap-6 overflow-x-auto no-scrollbar">
+<a class="border-b-2 border-primary text-primary py-3 px-1 text-sm font-semibold whitespace-nowrap" href="#">Active Campaigns</a>
+<a class="border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 py-3 px-1 text-sm font-medium whitespace-nowrap" href="#">Pending Approval</a>
+<a class="border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 py-3 px-1 text-sm font-medium whitespace-nowrap" href="#">Completed</a>
+<a class="border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 py-3 px-1 text-sm font-medium whitespace-nowrap" href="#">Archives</a>
+</nav>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 max-w-5xl mx-auto w-full p-4 space-y-6">
+<!-- Search and Filters -->
+<div class="flex flex-col sm:flex-row gap-4">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm" placeholder="Search by PO, Campaign or Vendor..." type="text"/>
+</div>
+<button class="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                Filters
+            </button>
+</div>
+<!-- Campaign Card 1 -->
+<section class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+<div class="p-4 sm:p-6 border-b border-slate-100 dark:border-slate-800 flex flex-wrap justify-between items-start gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">PO #84920</span>
+<span class="px-2 py-0.5 rounded-full bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 text-[10px] font-bold">IN PRODUCTION</span>
+</div>
+<h3 class="text-lg font-bold">Summer '24 Essentials - Tech Tee</h3>
+<p class="text-sm text-slate-500">Scheduled Delivery: Oct 24, 2023</p>
+</div>
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-900 object-cover" data-alt="Profile of production manager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWhtcPVfqAXGSR-yrJKU_7GcgY8zGrOQ9x_cg8hncwGR3nhIUjBstjg6U7iZJTcbmEbIv1CobGpjcHBlBPvsuDybTdY7myEFu5HrJf2pNXmcY-OALWXgIK8pLBwgXZCURvs0t_FqFc7bKzAxBShQFIsW7H_2Of178yZHEgIl9CSXCy6Hxh9WMFtFOMqGGO64F1XOl8cqami6bAUzwF0mjaoOrswDzI8N-HL3g716X1SzF_IWrKaaU3RtMtW22b1s6v_guTzASBbWo"/>
+<img class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-900 object-cover" data-alt="Profile of CMT lead" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsJnhl4WwTntBdu3NLYWw-ufDUdMczzZaHgbqI_0lV86NkKDL4N1H--dvvoKYwPVvujOcjStgzbvjpJE79DEim5RmBmJm0S6x-mxKW-LOEzyFtcjTCgDxG5o2YFCXzsmvBA3iqcU4K6FanJ35eNHlFu8Z4q4099Qz4PHPaWdxiypPvksh1MbUPYIxVO4qJJ-DJUuYHjWuO3eFL-l6k1rEPbFLsipVSs_en6dtVEjGuffLKemUYP-lcbM8kVzv8gt2dRlj71ir6JTI"/>
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-900 bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-[10px] font-bold">+2</div>
+</div>
+</div>
+<!-- Tracker Steps -->
+<div class="p-4 sm:p-6 space-y-8 relative">
+<!-- Step 1: CMT -->
+<div class="relative flex gap-6">
+<div class="step-line step-line-active"></div>
+<div class="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">content_cut</span>
+</div>
+<div class="flex-1 pb-2">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold">CMT (Cut, Make, Trim)</h4>
+<p class="text-xs text-slate-500">Vendor: Elite Stitching Co.</p>
+</div>
+<!-- Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="mt-3 flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">Fabric Inspected</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">Pattern Cut</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">Assembled</span>
+</div>
+</div>
+</div>
+<!-- Step 2: Printer -->
+<div class="relative flex gap-6">
+<div class="step-line"></div>
+<div class="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">print</span>
+</div>
+<div class="flex-1 pb-2">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Screen Printing</h4>
+<p class="text-xs text-slate-500">Vendor: InkMasters Studio</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Current status: Setting up screens for front logo. Estimated completion in 2 days.</p>
+<div class="mt-4 w-full bg-slate-100 dark:bg-slate-800 rounded-full h-1.5">
+<div class="bg-primary h-1.5 rounded-full w-1/3"></div>
+</div>
+</div>
+</div>
+<!-- Step 3: Embroider -->
+<div class="relative flex gap-6">
+<div class="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-400">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-slate-400 dark:text-slate-600">Embroidery</h4>
+<p class="text-xs text-slate-500">Vendor: Fine Thread Works</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<p class="mt-1 text-xs text-slate-400 italic">Awaiting printer release...</p>
+</div>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 p-4 flex justify-between items-center">
+<div class="text-sm font-medium">Total Progress: 45%</div>
+<button class="text-primary text-sm font-bold hover:underline">View Details</button>
+</div>
+</section>
+<!-- Campaign Card 2 -->
+<section class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm opacity-90">
+<div class="p-4 sm:p-6 border-b border-slate-100 dark:border-slate-800 flex flex-wrap justify-between items-start gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">PO #84925</span>
+<span class="px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-[10px] font-bold">QA PENDING</span>
+</div>
+<h3 class="text-lg font-bold">Winter Capsule - Wool Parka</h3>
+<p class="text-sm text-slate-500">Scheduled Delivery: Nov 12, 2023</p>
+</div>
+</div>
+<div class="p-4 sm:p-6 space-y-4">
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-500">check_circle</span>
+<span>CMT Phase</span>
+</div>
+<span class="text-slate-400">Complete</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-500">check_circle</span>
+<span>Printing Phase</span>
+</div>
+<span class="text-slate-400">Complete</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined">sync</span>
+<span class="font-bold">Embroidery Phase</span>
+</div>
+<span class="font-bold">90% Done</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<footer class="sticky bottom-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pb-safe">
+<div class="flex max-w-5xl mx-auto px-4 py-2 gap-1">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors py-1" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Dashboard</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary py-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">stacks</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Campaigns</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors py-1" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Vendors</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors py-1" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Settings</p>
+</a>
+</div>
+</footer>
+</body></html>

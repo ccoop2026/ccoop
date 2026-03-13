@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Outbound Dispatch</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scanner overlay styles */
+        .scanner-corner {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-color: #137fec;
+            border-width: 4px;
+        }
+        .top-left { top: 0; left: 0; border-right: 0; border-bottom: 0; border-radius: 12px 0 0 0; }
+        .top-right { top: 0; right: 0; border-left: 0; border-bottom: 0; border-radius: 0 12px 0 0; }
+        .bottom-left { bottom: 0; left: 0; border-right: 0; border-top: 0; border-radius: 0 0 0 12px; }
+        .bottom-right { bottom: 0; right: 0; border-left: 0; border-top: 0; border-radius: 0 0 12px 0; }
+        
+        /* Scanline animation */
+        @keyframes scan {
+            0% { top: 0%; opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+        .scan-line {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #137fec;
+            box-shadow: 0 0 15px #137fec;
+            animation: scan 2s linear infinite;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased min-h-screen flex flex-col overflow-hidden">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between px-4 py-4 bg-background-light dark:bg-background-dark z-20">
+<div class="space-y-3">
+<button class="w-full h-12 border-2 border-primary text-primary hover:bg-primary/5 font-bold rounded-lg flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined">notifications_active</span>
+        Send Payment Reminder (WhatsApp)
+    </button>
+<div class="flex gap-3">
+<button class="flex-1 h-12 bg-slate-300 dark:bg-slate-700 text-slate-500 dark:text-slate-500 font-bold rounded-lg flex items-center justify-center gap-2 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined">send</span>
+            Confirm Dispatch
+        </button>
+<button class="h-12 w-12 flex items-center justify-center rounded-lg border border-slate-300 dark:border-slate-600 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white transition-colors hover:bg-primary/20">
+<span class="material-symbols-outlined text-xl">keyboard</span>
+</button>
+<button class="flex items-center justify-center h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white transition-colors hover:bg-primary/20">
+<span class="material-symbols-outlined text-xl">flash_on</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 relative flex flex-col w-full max-w-md mx-auto h-full">
+<!-- Stats Dashboard (Floating) -->
+<div class="absolute top-4 left-4 right-4 z-10">
+<div class="bg-white/90 dark:bg-[#1e2936]/90 backdrop-blur-md rounded-xl p-4 shadow-lg border border-slate-200 dark:border-slate-700 flex items-center justify-between">
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider mb-0.5">Today's Tally</p>
+<div class="flex items-baseline gap-1.5">
+<span class="text-slate-900 dark:text-white text-2xl font-bold">14</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm">items dispatched</span>
+</div>
+</div>
+<div class="h-10 w-10 rounded-full bg-green-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-green-500 text-xl">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Scanner Viewfinder -->
+<div class="flex-1 relative bg-black flex flex-col items-center justify-center overflow-hidden">
+<!-- Background Image mimicking camera feed -->
+<img class="absolute inset-0 w-full h-full object-cover opacity-60" data-alt="Blurred background showing a warehouse or store environment representing a camera feed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs7wxotIf6-5Qhnv8UTJyZwYo5wQaWkTERt6vYGXAPtaoCcyEdQQnG7YRJVYs4HBCh9DhOqJysu1wed2QUP6AZ5snQCtRmzvhsmUEin-UXIiutqBGdCNVIOaU57LKXicJ7vcUMVfyXTXYWjyJ3FIEvOJ7emXXGgEwHDgOmaO6O9FgZktsUQYZOU3W9l2sbuP4QIIPFs7qLCmYEIqf0QCfok1wmobjwN--98tvBYZRS4PTdMjSwhA7cM-crkJpIqGCDroJ6hHST6Z0"/>
+<!-- Scanner Overlay UI -->
+<div class="relative z-10 w-64 h-64 border-0">
+<div class="scanner-corner top-left"></div>
+<div class="scanner-corner top-right"></div>
+<div class="scanner-corner bottom-left"></div>
+<div class="scanner-corner bottom-right"></div>
+<div class="scan-line"></div>
+</div>
+<p class="relative z-10 mt-8 text-white/80 text-center font-medium px-6 py-2 bg-black/40 rounded-full backdrop-blur-sm text-sm">
+                Align QR code or Barcode within frame
+            </p>
+<!-- Bottom Camera Controls -->
+<div class="absolute bottom-6 flex items-center gap-8 z-10">
+<button class="flex flex-col items-center gap-1 text-white/70 hover:text-white transition-colors">
+<div class="h-12 w-12 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-2xl">image</span>
+</div>
+<span class="text-xs font-medium">Gallery</span>
+</button>
+<button class="h-20 w-20 rounded-full border-4 border-white flex items-center justify-center bg-white/10 backdrop-blur-sm active:scale-95 transition-transform">
+<div class="h-14 w-14 bg-white rounded-full"></div>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/70 hover:text-white transition-colors">
+<div class="h-12 w-12 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-2xl">history</span>
+</div>
+<span class="text-xs font-medium">Recent</span>
+</button>
+</div>
+</div>
+<!-- Result Bottom Sheet (Conditional Display Simulation) -->
+<div class="absolute bottom-0 left-0 right-0 z-30 transform transition-transform duration-300 translate-y-0">
+<!-- Handle -->
+<div class="mx-auto w-12 h-1.5 bg-white/20 rounded-full mb-2"></div>
+<!-- Card Content -->
+<div class="bg-background-light dark:bg-[#111418] rounded-t-3xl shadow-[0_-8px_30px_rgba(0,0,0,0.3)] border-t border-slate-200 dark:border-slate-700 overflow-hidden">
+<!-- Success State Header -->
+<div class="bg-amber-500/10 border-b border-amber-500/20 px-6 py-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-500 text-lg">pending_actions</span>
+<span class="text-amber-600 dark:text-amber-400 text-sm font-bold uppercase tracking-wide">Payment Pending</span>
+</div>
+<span class="text-amber-600 dark:text-amber-400 text-sm font-bold">$15.00 Remaining</span>
+</div>
+<div class="p-6">
+<div class="flex items-start gap-4 mb-6">
+<img class="w-16 h-16 rounded-full object-cover border-2 border-slate-200 dark:border-slate-600" data-alt="Profile picture of student Alex Johnson" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqP-D-rApuv143woVsuwrWJHHN6YaRbnVf_Mz9NBdeZIGJiNP0uV0iXORkf_MsjNBuVgjmksZ3l4ho9p8bQz9W4lUhpAiSn9kSIa2pRKG8LBQharQZjVHQBusKBe0ZdeMlr5YxWljneoudYUiIb14Wc0uuvxTwD-YIvQAG0VXirSH81pXbmZzhkCo9fzKc5D36C1i3ZJwtlVeWgTQC1Br09qsrheggXUiGVYFR7ne-DjQdzztjZQkEeuNFco3birw0YsJDTMf98qk"/>
+<div class="flex-1">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Alex Johnson</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Year 2 • Campus A</p>
+<div class="mt-2 flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-300">
+                                    #ORD-8921
+                                </span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-3 mb-6">
+<div class="bg-slate-100 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Total Price</p>
+<p class="text-slate-900 dark:text-white font-bold">$45.00</p>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Pledge</p>
+<p class="text-green-500 font-bold flex items-center gap-1"><span class="material-symbols-outlined text-xs">verified</span>OK</p>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Balance</p>
+<p class="text-amber-500 font-bold">$15.00</p>
+</div>
+</div><div class="bg-slate-100 dark:bg-[#1e2936] rounded-xl p-4 mb-6 border border-slate-200 dark:border-slate-700">
+<h4 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Order Details</h4>
+<ul class="space-y-3">
+<li class="flex items-center justify-between">
+<div class="space-y-3">
+<button class="w-full h-12 border-2 border-primary text-primary hover:bg-primary/5 font-bold rounded-lg flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined">notifications_active</span>
+        Send Payment Reminder (WhatsApp)
+    </button>
+<div class="flex gap-3">
+<button class="flex-1 h-12 bg-slate-300 dark:bg-slate-700 text-slate-500 dark:text-slate-500 font-bold rounded-lg flex items-center justify-center gap-2 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined">send</span>
+            Confirm Dispatch
+        </button>
+<button class="h-12 w-12 flex items-center justify-center rounded-lg border border-slate-300 dark:border-slate-600 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+<span class="material-symbols-outlined text-green-500 text-sm">check</span>
+</li>
+<li class="flex items-center justify-between">
+<div class="space-y-3">
+<button class="w-full h-12 border-2 border-primary text-primary hover:bg-primary/5 font-bold rounded-lg flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined">notifications_active</span>
+        Send Payment Reminder (WhatsApp)
+    </button>
+<div class="flex gap-3">
+<button class="flex-1 h-12 bg-slate-300 dark:bg-slate-700 text-slate-500 dark:text-slate-500 font-bold rounded-lg flex items-center justify-center gap-2 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined">send</span>
+            Confirm Dispatch
+        </button>
+<button class="h-12 w-12 flex items-center justify-center rounded-lg border border-slate-300 dark:border-slate-600 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+<span class="material-symbols-outlined text-green-500 text-sm">check</span>
+</li>
+</ul>
+</div>
+<div class="space-y-3">
+<button class="w-full h-12 border-2 border-primary text-primary hover:bg-primary/5 font-bold rounded-lg flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined">notifications_active</span>
+        Send Payment Reminder (WhatsApp)
+    </button>
+<div class="flex gap-3">
+<button class="flex-1 h-12 bg-slate-300 dark:bg-slate-700 text-slate-500 dark:text-slate-500 font-bold rounded-lg flex items-center justify-center gap-2 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined">send</span>
+            Confirm Dispatch
+        </button>
+<button class="h-12 w-12 flex items-center justify-center rounded-lg border border-slate-300 dark:border-slate-600 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Example of Payment Pending State (Hidden by default, shown here for completeness in code) -->
+<!-- 
+    <div class="absolute bottom-0 left-0 right-0 z-40 transform translate-y-full"> 
+         <div class="bg-background-light dark:bg-[#111418] rounded-t-3xl shadow-[0_-8px_30px_rgba(0,0,0,0.3)] border-t border-slate-200 dark:border-slate-700 overflow-hidden">
+             <div class="bg-red-500/10 border-b border-red-500/20 px-6 py-3 flex items-center gap-2 justify-between">
+                 <div class="flex items-center gap-2">
+                     <span class="material-symbols-outlined text-red-500 text-lg">error</span>
+                     <span class="text-red-600 dark:text-red-400 text-sm font-bold uppercase tracking-wide">Payment Pending</span>
+                 </div>
+                 <span class="text-red-600 dark:text-red-400 text-sm font-bold">$25.00 Due</span>
+             </div>
+             
+             <div class="p-6">
+                 <div class="flex items-center gap-4 mb-6 opacity-70">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=100&auto=format&fit=crop" class="w-16 h-16 rounded-full object-cover">
+                     <div>
+                         <h3 class="text-slate-900 dark:text-white text-lg font-bold">Sarah Lee</h3>
+                         <p class="text-slate-500 dark:text-slate-400 text-sm">Payment missing for Hoodie</p>
+                     </div>
+                 </div>
+                 <button class="w-full h-12 border-2 border-red-500 text-red-600 dark:text-red-400 font-bold rounded-lg flex items-center justify-center gap-2 hover:bg-red-500/10 transition-colors">
+                     <span class="material-symbols-outlined">notifications_active</span>
+                     Send Payment Reminder
+                 </button>
+             </div>
+         </div>
+    </div> 
+    -->
+</body></html>

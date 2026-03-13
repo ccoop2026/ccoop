@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>System-Wide Broadcast Tool</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#138aec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header / TopAppBar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 border-b border-slate-200 dark:border-slate-800 justify-between sticky top-0 z-10">
+<div class="flex items-center gap-4">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10" data-icon="ArrowLeft">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">System-Wide Broadcast</h2>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Global Admin Dashboard</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    Save Draft
+                </button>
+</div>
+</header>
+<main class="flex-1 max-w-5xl mx-auto w-full p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Left Column: Draft & Options -->
+<div class="lg:col-span-2 space-y-6">
+<!-- Message Content -->
+<section class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+                        Message Content
+                    </h3>
+<div class="flex flex-col gap-4">
+<label class="flex flex-col">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium pb-2">Internal Reference Name</p>
+<input class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-2" placeholder="e.g., Emergency System Maintenance" type="text"/>
+</label>
+<label class="flex flex-col">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium pb-2">Broadcast Message</p>
+<textarea class="form-input flex w-full min-h-36 rounded-lg text-slate-900 dark:text-slate-100 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary p-4 text-base font-normal leading-relaxed resize-none" placeholder="Draft your urgent alert message here..."></textarea>
+</label>
+</div>
+</section>
+<!-- Target Audience -->
+<section class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">groups</span>
+                        Target Audience
+                    </h3>
+<div class="flex flex-wrap gap-3">
+<label class="flex items-center gap-2 cursor-pointer bg-primary/10 border border-primary/30 rounded-lg px-4 py-2 text-primary">
+<input checked="" class="rounded border-primary text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="text-sm font-medium">All Curators</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer bg-primary/10 border border-primary/30 rounded-lg px-4 py-2 text-primary">
+<input checked="" class="rounded border-primary text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="text-sm font-medium">All Drop Hosts</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2 text-slate-700 dark:text-slate-300">
+<input class="rounded border-slate-400 dark:border-slate-600 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="text-sm font-medium">All Students</span>
+</label>
+</div>
+</section>
+<!-- Delivery Methods -->
+<section class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">campaign</span>
+                        Delivery Methods
+                    </h3>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="flex flex-col p-4 rounded-lg border border-primary bg-primary/5">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-primary">sms</span>
+<input checked="" class="rounded border-primary text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<span class="text-sm font-bold">SMS</span>
+<span class="text-xs text-slate-500">Direct mobile alert</span>
+</div>
+<div class="flex flex-col p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-slate-400">chat</span>
+<input class="rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<span class="text-sm font-bold">WhatsApp</span>
+<span class="text-xs text-slate-500">Official channel</span>
+</div>
+<div class="flex flex-col p-4 rounded-lg border border-primary bg-primary/5">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-primary">notification_important</span>
+<input checked="" class="rounded border-primary text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<span class="text-sm font-bold">In-app Banner</span>
+<span class="text-xs text-slate-500">Global sticky UI</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Preview & Action -->
+<div class="space-y-6">
+<!-- Live Preview Section -->
+<section class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<h3 class="text-slate-900 dark:text-slate-100 text-sm font-bold leading-tight tracking-uppercase mb-4">Mobile Preview</h3>
+<div class="relative mx-auto border-8 border-slate-800 dark:border-slate-700 rounded-[2.5rem] h-[400px] w-[200px] bg-slate-100 dark:bg-slate-950 overflow-hidden">
+<div class="absolute top-0 w-full h-6 bg-slate-800 dark:border-slate-700 flex justify-center">
+<div class="w-20 h-4 bg-slate-900 rounded-b-xl"></div>
+</div>
+<div class="p-3 pt-10">
+<!-- SMS Preview Card -->
+<div class="bg-white dark:bg-slate-800 rounded-lg p-2 shadow-lg mb-3 border-l-4 border-primary">
+<p class="text-[10px] font-bold text-primary mb-1 uppercase">Alert System</p>
+<p class="text-[11px] leading-snug">The system will undergo urgent maintenance in 15 minutes. Please save all work.</p>
+</div>
+<!-- In-App Banner Preview -->
+<div class="bg-primary p-2 rounded-md shadow-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-white">warning</span>
+<p class="text-[10px] text-white font-medium">Urgent Maintenance</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Actions Section -->
+<section class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<h3 class="text-slate-900 dark:text-slate-100 text-sm font-bold mb-4">Finalize Broadcast</h3>
+<div class="space-y-3">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">send</span>
+                            Send Now
+                        </button>
+<button class="w-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-100 font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined">schedule</span>
+                            Schedule
+                        </button>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+<span>Estimated Recipients</span>
+<span class="font-bold text-slate-900 dark:text-slate-100">12,482</span>
+</div>
+</div>
+</section>
+<!-- Status Logs -->
+<section class="bg-slate-50 dark:bg-slate-900/30 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Recent Broadcasts</h4>
+<div class="space-y-3">
+<div class="flex items-start gap-3">
+<div class="size-2 mt-1.5 rounded-full bg-green-500"></div>
+<div>
+<p class="text-xs font-medium">Welcome Pack Sent</p>
+<p class="text-[10px] text-slate-500">2 hours ago • All Students</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="size-2 mt-1.5 rounded-full bg-primary"></div>
+<div>
+<p class="text-xs font-medium">New Feature Drop</p>
+<p class="text-[10px] text-slate-500">Yesterday • All Curators</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<div class="h-8"></div>
+</div>
+</body></html>
