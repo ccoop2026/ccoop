@@ -9,8 +9,9 @@ import Register from './components/Register';
 import Campuses from './components/Campuses';
 import CampusDrops from './components/CampusDrops';
 import Dashboard from './components/Dashboard';
+import Campaigns from './components/Campaigns';
+import Store from './components/Store';
 
-// Protected Route Component
 function ProtectedRoute({ children }) {
   const isAuthenticated = localStorage.getItem('auth_token');
   return isAuthenticated ? children : <Navigate to="/login" />;
@@ -25,6 +26,22 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route
+            path="/campaigns"
+            element={
+              <ProtectedRoute>
+                <Campaigns />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/store"
+            element={
+              <ProtectedRoute>
+                <Store />
+              </ProtectedRoute>
+            }
+          />
           <Route
             path="/dashboard"
             element={

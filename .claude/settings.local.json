@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(pandoc --version)",
+      "Bash(node -e \"require\\('marked'\\)\")",
+      "Bash(npx --yes md-to-pdf --version)",
+      "Bash(python -c \"import markdown; print\\('markdown ok'\\)\")",
+      "Bash(python -c \"import weasyprint; print\\('weasyprint ok'\\)\")",
+      "Bash(python -m markdown --version)"
+    ]
+  }
+}

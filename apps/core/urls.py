@@ -9,5 +9,6 @@ router.register(r'pledges', views.PledgeViewSet, basename='pledge')
 
 urlpatterns = [
     path('hello/', views.hello, name='hello'),
+    path('check-phone/', views.check_phone, name='check-phone'),
     path('', include(router.urls)),
 ]

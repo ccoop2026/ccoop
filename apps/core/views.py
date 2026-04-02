@@ -5,12 +5,21 @@ from rest_framework.response import Response
 
 from .models import Campus, Drop, Variant, Pledge
 from .serializers import CampusSerializer, DropSerializer, VariantSerializer, PledgeSerializer
+from django.contrib.auth import get_user_model
 
+User = get_user_model()
 
-# simple API view for sanity
 
 def hello(request):
     return JsonResponse({"message": "Hello from Django API"})
+
+
+def check_phone(request):
+    phone = request.GET.get('phone', '').strip()
+    if not phone:
+        return JsonResponse({'available': False, 'error': 'Phone number is required'}, status=400)
+    taken = User.objects.filter(phone=phone).exists()
+    return JsonResponse({'available': not taken})
 
 
 class CampusViewSet(viewsets.ReadOnlyModelViewSet):
